@@ -1,0 +1,62 @@
+.register_page {
+    padding: 50px 0;
+}
+.register_icon {
+    padding: 15px 0;
+}
+.register_icon ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.register_icon ul li a {
+    font-size: 30px;
+    color: var(--first-color);
+}
+#registerLeftSide {
+    background-color: var(--first-color);
+    padding-top: 50px;
+}
+#registerLeft {
+    padding: 0 50px;
+    color: var(--white-color);
+}
+#registerLeft a {
+    background-color: var(--white-color);
+    color: var(--first-color);
+}
+#registerLeft a:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+#registerRightSide {
+    background-color: var(--white-color);
+    padding: 50px 0;
+}
+#register_form {
+    padding: 0 50px;
+}
+#register_form button {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#register_form button:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .register_page {
+        padding: 30px 0;
+    }
+    #registerLeftSide {
+        padding: 30px 0;
+    }
+    #register_form {
+        padding: 10px 30px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    #registerLeftSide {
+        padding: 30px 0;
+    }
+}

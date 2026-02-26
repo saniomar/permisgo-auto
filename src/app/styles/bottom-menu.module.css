@@ -1,0 +1,23 @@
+#mobile_menu {
+    padding: 5px 20px;
+    background: var(--white-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#mobile_menu a {
+    color: var(--black-color);
+}
+#mobile_menu a p {
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #mobile_menu {
+        display: block;
+    }
+}

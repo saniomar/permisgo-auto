@@ -1,0 +1,86 @@
+#main_footer {
+    background-color: var(--first-color);
+    padding: 30px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#main_footer .footerLogo {
+    width: 200px !important;
+    margin-bottom: 15px;
+}
+#main_footer p {
+    color: var(--white-color);
+}
+#main_footer .footer_social ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer_menu ul li {
+    padding-bottom: 15px;
+}
+.footer_menu ul li a {
+    color: var(--white-color);
+}
+.footer_contact ul li {
+    padding-bottom: 20px;
+    color: var(--white-color);
+}
+#main_footer .footer_social ul li a {
+    font-size: 20px;
+    color: var(--white-color);
+}
+#main_footer button {
+    background-color: var(--second-color) !important;
+    color: var(--white-color);
+}
+#main_footer h4 {
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-size: 21px;
+    font-weight: 600;
+}
+#copywrite {
+    background-color: var(--first-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#copywrite p {
+    color: var(--white-color);
+}
+#copywrite p a {
+    color: var(--white-color);
+}
+#copywrite ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+#copywrite ul li a {
+    color: var(--white-color);
+}
+#copywrite hr {
+    color: var(--white-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #main_footer .footerLogo {
+        width: 170px !important;
+    }
+    #main_footer h4 {
+        margin-top: 20px;
+    }
+    #copywrite {
+        background-color: var(--first-color);
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+    #copywrite p {
+        text-align: center;
+    }
+    .footer_support_menu {
+        text-align: center;
+        margin-top: 20px !important;
+    }
+    .footer_support_menu ul {
+        text-align: center !important;
+    }
+}

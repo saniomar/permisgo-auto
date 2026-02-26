@@ -1,0 +1,229 @@
+#about_hero_section {
+    padding-top: 50px;
+}
+#about_hero_section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#about_hero_section h1 span {
+    background: linear-gradient(30deg, var(--first-color), var(--second-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+#about_hero_section a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}   
+#about_hero_section a:hover {
+    background-color: var(--first-color);
+}
+#mission_section {
+    padding: 50px 0;
+}
+#mission_box {
+    padding: 40px;
+    background-color: var(--second-light-color);
+    border-radius: 10px;
+}
+#mission_box h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#mission_box h3 span {
+    background: linear-gradient(30deg, var(--first-color), var(--second-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.expert_box_height {
+    height: 400px;
+    overflow-y: scroll;
+}
+#mentor_box {
+    padding: 40px;
+    background-color: var(--third-light-color);
+    border-radius: 10px;
+}
+#mentor_box img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#mentor_box h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#mentor_box h3 span {
+    background: linear-gradient(30deg, var(--first-color), var(--second-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#programme_box {
+    padding: 40px;
+    background-color: var(--first-light-color);
+    border-radius: 10px;
+}
+#programme_box h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+#programme_box h3 span {
+    background: linear-gradient(30deg, var(--first-color), var(--second-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#programme_box ul li {
+    padding-bottom: 15px;
+}
+#choose_section {
+    padding: 50px 0;
+}
+#choose_section h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+#choose_section h2 span {
+    background: linear-gradient(30deg, var(--first-color), var(--second-color));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.choose_para_section {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.chooseIcon {
+    color: var(--second-color);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.about_choose_box {
+    padding: 30px 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.about_choose_box_one {
+    background-color: var(--first-light-color);
+}
+.about_choose_box_two {
+    background-color: var(--second-light-color);
+}
+.about_choose_box_three {
+    background-color: var(--third-light-color);
+}
+.about_choose_box_four {
+    background-color: var(--forth-light-color);
+}
+.about_choose_box:hover {
+    transform: translateY(-10px);
+    transition: .5s;
+}
+#adventure_section {
+    background-color: var(--second-color);
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+#adventure_section hr {
+    color: var(--white-color);
+}
+#adventure_section h3 {
+    font-size: 40px;
+    color: var(--white-color);
+}
+#advanture_contact_info ul li {
+    font-size: 18px;
+    color: var(--white-color);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+}
+#advanture_contact_info ul li:hover {
+    transition: .5s ease-in-out;
+    transform: translateX(10px);
+}
+#socialMedia ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+#socialMedia ul li a {
+    font-size: 20px;
+    color: var(--white-color);
+}
+#book_btn {
+    background-color: var(--white-color);
+    margin-bottom: 15px;
+}
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #about_hero_section {
+        padding-top: 30px;
+    }
+    #about_hero_section h1 {
+        font-size: 40px;
+    }
+    #about_hero_section iframe {
+        margin-top: 20px;
+    }
+    #mission_section {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    #mentor_box {
+        margin-bottom: 20px;
+    }
+    #programme_box {
+        margin-bottom: 20px;
+    }
+    #mission_box {
+        padding: 25px;
+    }
+    #mission_box h3 {
+        font-size: 30px;
+    }
+    #mentor_box {
+        padding: 25px;
+    }
+    #mentor_box h3 {
+        font-size: 30px;
+    }
+    #programme_box {
+        padding: 25px;
+    }
+    #programme_box h3 {
+        font-size: 30px;
+    }
+    #choose_section {
+        padding: 30px 0;
+    }
+    #choose_section h2 {
+        font-size: 30px;
+    }
+    .about_choose_box {
+        margin-bottom: 15px;
+    }
+    #adventure_section {
+        padding: 30px;
+    }
+    #adventure_section h3 {
+        font-size: 30px;
+    }
+    #book_btn {
+        margin-top: 20px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .about_choose_box {
+        margin-bottom: 15px;
+    }
+    #book_btn {
+        margin-top: 20px;
+    }
+}

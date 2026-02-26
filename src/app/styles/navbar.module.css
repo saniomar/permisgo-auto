@@ -1,0 +1,95 @@
+#top_bar {
+    background-color: var(--offwhite-color);
+    padding: 3px 0;
+}
+#top_bar ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+#top_bar ul li a {
+    color: var(--first-color);
+}
+#topbarSocial ul li a {
+    font-size: 18px;
+}
+.navbarLogo {
+    width: 200px !important;
+}
+#main_menu {
+    background-color: var(--first-color);
+    padding: 8px 0;
+}
+#navbarSelect {
+    /* background-color: transparent; */
+    border: none;
+    /* color: var(--white-color); */
+}
+#navbarSelect:focus-visible {
+    border: none !important;
+    outline: none !important;
+}
+#navbarSelect option {
+    border-radius: 15px;
+    color: var(--black-color);
+}
+.courseFirst {
+    color: var(--white-color) !important;
+}
+#navbarMenu ul li {
+    margin: 0 15px; 
+}
+#navbarMenu ul li a {
+    color: var(--white-color);
+    font-size: 18px;
+}
+#loginBtn {
+    background-color: var(--white-color);
+    font-weight: 500;
+}
+#loginBtn:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+#bookBtn {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 500;
+}
+#bookBtn:hover {
+    background-color: var(--white-color);
+    color: var(--first-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .topEmail {
+        display: none !important;
+    }
+    .topPhone {
+        font-size: 18px;
+    }
+    .navbarLogo {
+        width: 170px !important;
+    }
+    #topbarSocial {
+        display: none;
+    }
+    #bookBtn {
+        display: none;
+    }
+    .mobileNavLogo {
+        width: 150px !important;
+    }
+    #courseSelector {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .mobileNavLogo {
+        width: 150px !important;
+    }
+    #courseSelector {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+}

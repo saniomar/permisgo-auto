@@ -1,0 +1,66 @@
+.login_page {
+    padding: 50px 0;
+}
+#loginLeft {
+    background-color: var(--white-color);
+    padding: 50px;
+}
+#loginLeft button {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+#loginLeft button:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#loginLeft a {
+    color: var(--first-color);
+}
+#logoLeftImg {
+    width: 200px !important;
+}
+#loginRight {
+    background-color: var(--first-color);
+    padding: 50px;
+    background-image: linear-gradient(rgba(36, 46, 109, 0.8),rgba(36, 46, 109, 0.8)),url("../../../../public/image/loginbg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#loginRight p {
+    color: var(--white-color);
+}
+#logoRightImg {
+    width: 200px !important;
+}
+#loginRight #registerBtn {
+    background-color: var(--white-color);
+}
+#loginRight #registerBtn:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+#loginRight hr {
+    color: var(--white-color);
+}
+.loginSocial ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.loginSocial ul li a {
+    font-size: 30px;
+    color: var(--white-color);
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .login_page {
+        padding: 30px 0;
+    }
+    #loginLeft {
+        padding: 30px;
+    }
+    #loginRight {
+        padding: 30px;
+    }
+}

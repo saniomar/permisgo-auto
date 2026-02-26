@@ -1,0 +1,64 @@
+.contact_page {
+    padding: 50px 0;
+}
+.contact_page h1 {
+    color: var(--first-color);
+}
+.contact_page button {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.contact_page button:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#formBox {
+    background-color: var(--white-color);
+    padding: 50px;
+    margin-right: 50px;
+}
+.contact_info ul li {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.map_section {
+    padding-top: 50px;
+}
+.contact_social ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.contact_social ul li a {
+    font-size: 20px;
+    color: var(--first-color);
+}
+.contact_social ul li a:hover {
+    color: var(--second-color);
+}
+.location {
+    font-size: 18px;
+}
+.contact_page h4 {
+    color: var(--second-color);
+}
+#contactRight {
+    padding: 0 50px;
+    border-left: 1px solid var(--line-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #formBox {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    .map_section frame {
+        height: 200px !important;
+    }
+    #contactRight {
+        padding: 0 20px;
+        border-left: none;
+    }
+    #formBox {
+        margin-right: 0;
+    }
+}
