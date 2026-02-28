@@ -106,6 +106,43 @@
     background-color: var(--first-color);
     color: var(--white-color);
 }
+.forthPriceBox {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+.forthPriceBox a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    width: 100%;
+}
+.forthPriceBox a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.forthPriceBox h3 {
+    font-size: 40px;
+    color: var(--second-color);
+}
+.checkIcon {
+    color: var(--second-color);
+}
+.forthPriceBox h4 {
+    color: var(--first-color);
+}
+.forthPriceBox ul li {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.forthPriceNumberPart {
+    background-color: var(--second-light-color);
+    border-radius: 10px;
+    padding: 15px;
+}
+.forthPricePackage {
+    height: 300px;
+    overflow-y: scroll;
+}
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .first_pricing_section {
         padding: 30px 0;

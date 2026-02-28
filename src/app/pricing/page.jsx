@@ -7,6 +7,7 @@ import firstImage from "../../../public/image/price1.webp"
 
 // Icons
 import { LuBadgeCheck } from "react-icons/lu";
+import { FaTimes } from "react-icons/fa";
 
 // Styles
 import pricingStyle from "./styles/pricing.module.css"
@@ -54,6 +55,7 @@ const pricing = () => {
                 <button className="nav-link" id="code-tab" data-bs-toggle="tab" data-bs-target="#code-tab-pane" type="button" role="tab" aria-controls="code-tab-pane" aria-selected="false">Code</button>
               </li>
             </ul>
+            <hr />
             <div className="tab-content" id="myTabContent">
               {/* license */}
               <div className="tab-pane fade show active" id="license-tab-pane" role="tabpanel" aria-labelledby="license-tab" tabIndex="0">
@@ -102,13 +104,13 @@ const pricing = () => {
                               </div>
                               <div className="col-lg-6">
                                 <ul className={pricingStyle.secondPricingBoxMenualList}>
-                                  <li><LuBadgeCheck /> 20 driving lessons</li>
-                                  <li><LuBadgeCheck /> Age: 15 years and older</li>
-                                  <li><LuBadgeCheck /> Initial assessment</li>
-                                  <li><LuBadgeCheck /> Code Training</li>
-                                  <li><LuBadgeCheck /> Training follow-up by a coach</li>
-                                  <li><LuBadgeCheck /> Learning booklet (online)</li>
-                                  <li><LuBadgeCheck /> Preliminary appointment for supervised driving</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Age: 15 years and older</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Training follow-up by a coach</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Learning booklet (online)</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Preliminary appointment for supervised driving</li>
                                 </ul>
                               </div>
                             </div>
@@ -140,13 +142,13 @@ const pricing = () => {
                               </div>
                               <div className="col-lg-6">
                                 <ul className={pricingStyle.secondPricingBoxAutoList}>
-                                  <li><LuBadgeCheck /> 20 driving lessons</li>
-                                  <li><LuBadgeCheck /> Age: 15 years and older</li>
-                                  <li><LuBadgeCheck /> Initial assessment</li>
-                                  <li><LuBadgeCheck /> Code Training</li>
-                                  <li><LuBadgeCheck /> Training follow-up by a coach</li>
-                                  <li><LuBadgeCheck /> Learning booklet (online)</li>
-                                  <li><LuBadgeCheck /> Preliminary appointment for supervised driving</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Age: 15 years and older</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Training follow-up by a coach</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Learning booklet (online)</li>
+                                  <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Preliminary appointment for supervised driving</li>
                                 </ul>
                               </div>
                             </div>
@@ -275,7 +277,102 @@ const pricing = () => {
 
               {/* Code */}
               <div className="tab-pane fade" id="code-tab-pane" role="tabpanel" aria-labelledby="code-tab" tabIndex="0">
+                <div className="mt-4 text-center">
+                  <h2>Permisgo <span>Highway Code</span> Packs</h2>
+                  <p>What is your need?</p>
+                </div>
 
+                <div className="mt-4">
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Eco Code</h3>
+                        <p>Complete review</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="text-center">
+                            <h2>Free</h2>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: Unlimited</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Zen Code</h3>
+                        <p>Complete review + Administrative procedures</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h2 className='mb-0'>€9.99</h2>
+                              <p className='mb-0'>Valentine's Day</p>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>€19.99</h5>
+                              <small>retail price</small>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: 12-month package</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Administrative procedures & Coaching</li>
+                            <li><FaTimes className={pricingStyle.checkIcon} /> A place to take the theory test</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Success Code</h3>
+                        <p>Theory test slot included</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h2 className='mb-0'>€9.99</h2>
+                              <p className='mb-0'>Valentine's Day</p>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>€19.99</h5>
+                              <small>retail price</small>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: 12-month package</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Administrative procedures & Coaching</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> A place to take the theory test</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
