@@ -143,6 +143,12 @@
     height: 300px;
     overflow-y: scroll;
 }
+#pricingFaq {
+    padding: 50px 0;
+}
+#pricingFaq h2 {
+    font-size: 40px;
+}
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .first_pricing_section {
         padding: 30px 0;
@@ -152,5 +158,23 @@
     }
     .second_pricing_section {
         padding: 30px 0;
+    }
+    #pricingFaq {
+        padding: 30px 0;
+    }
+    #pricingFaq h2 {
+        font-size: 30px;
+    }
+    .second_pricing_section h2 {
+        font-size: 30px;
+    }
+    .secondRealPricingBox {
+        margin-bottom: 15px;
+    }
+    .secondPricingBox {
+        padding: 10px;
+    }
+    .secondRealPricingBoxAuto {
+        margin-bottom: 15px;
     }
 }
