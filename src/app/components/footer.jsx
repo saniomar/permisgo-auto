@@ -26,11 +26,18 @@ const Footer = () => {
         <BottomMenu />
         <footer>
             <div id={footerStyle.main_footer}>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-2 col-md-6">
                             <Image src={Logo} className={footerStyle.footerLogo} layout='responsive' alt=''></Image>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam quae officia. Ea necessitatibus iure doloribus fugiat obcaecati! Eos quidem non laboriosam reprehenderit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam quae officia.</p>
+                            <div className={footerStyle.footer_contact}>
+                                <ul>
+                                    <li><FaPhoneSquareAlt /> | +61 4584 5887</li>
+                                    <li><MdOutlineEmail /> | info@permisgoautoecole.com</li>
+                                    <li><GrLocation /> | Road no-2, Sector-6, Uttara, Dhaka, Bangladesh</li>
+                                </ul>
+                            </div>
                             <div className={footerStyle.footer_social}>
                                 <ul>
                                     <li><Link href=""><FaFacebook /></Link></li>
@@ -41,7 +48,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-2 col-md-6">
                             <h4>Quick Link</h4>
                             <div className={footerStyle.footer_menu}>
                                 <ul>
@@ -56,25 +63,44 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h4>Contact Us</h4>
-                            <div className={footerStyle.footer_contact}>
+                        <div className="col-lg-2 col-md-6">
+                            <h4>Partnership Request</h4>
+                            <div className={footerStyle.footer_partnership}>
                                 <ul>
-                                    <li><FaPhoneSquareAlt /> | +61 4584 5887</li>
-                                    <li><MdOutlineEmail /> | info@permisgoautoecole.com</li>
-                                    <li><GrLocation /> | Road no-2, Sector-6, Uttara, Dhaka, Bangladesh</li>
+                                    <li><Link href="">Log in to my partner area</Link></li>
+                                    <li><Link href="">Request for school partnership</Link></li>
+                                    <li><Link href="">B2B partnership request</Link></li>
+                                    <li><Link href="">Becoming an independent instructor</Link></li>
+                                    <li><Link href="">Driving instructor salary</Link></li>
+                                    <li><Link href="">Monitor FAQs</Link></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
-                            <h4>Newsletter</h4>
-                            <p>Subscribe to get the latest updates and offers</p>
-                            <form action="">
-                                <div className="input-group mb-3">
-                                    <input type="text" className="form-control form-control-lg" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                                    <button className="btn btn-lg" type="button" id="button-addon2">Subscribe</button>
-                                </div>
-                            </form>
+                        <div className="col-lg-2 col-md-6">
+                            <h4>Our Services</h4>
+                            <div className={footerStyle.footer_services}>
+                                <ul>
+                                    <li><Link href="">Frequently Asked Questions</Link></li>
+                                    <li><Link href="">Highway Code Glossary</Link></li>
+                                    <li><Link href="">Driving licence glossary</Link></li>
+                                    <li><Link href="">Person with a disability</Link></li>
+                                    <li><Link href="">Sponsorship</Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-6">
+                            <h4>Opening Hours</h4>
+                            <div className={footerStyle.footer_openign_time}>
+                                <ul>
+                                    <li>Monday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Tuesday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Wednesday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Thursday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Friday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Saturday 10am - 1pm and 3pm - 7pm</li>
+                                    <li>Sunday By Appointment</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

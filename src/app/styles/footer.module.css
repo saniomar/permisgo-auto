@@ -1,6 +1,6 @@
 #main_footer {
     background-color: var(--first-color);
-    padding: 30px 0;
+    padding: 30px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -21,6 +21,18 @@
 .footer_menu ul li a {
     color: var(--white-color);
 }
+.footer_services ul li {
+    padding-bottom: 15px;
+}
+.footer_services ul li a {
+    color: var(--white-color);
+}
+.footer_partnership ul li {
+    padding-bottom: 15px;
+}
+.footer_partnership ul li a {
+    color: var(--white-color);
+}
 .footer_contact ul li {
     padding-bottom: 20px;
     color: var(--white-color);
@@ -38,6 +50,10 @@
     color: var(--white-color);
     font-size: 21px;
     font-weight: 600;
+}
+.footer_openign_time ul li {
+    color: var(--white-color);
+    padding-bottom: 10px;
 }
 #copywrite {
     background-color: var(--first-color);

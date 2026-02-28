@@ -1,0 +1,104 @@
+.first_pricing {
+    background-color: var(--first-light-color);
+}
+.first_pricing_section {
+    padding: 50px 0;
+}
+.first_pricing_section h1 span {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--second-color);
+}
+.first_pricing_section a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.first_pricing_section a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.firstImage {
+    width: 70% !important;
+}
+
+.second_pricing_section {
+    padding: 50px 0;
+}
+.second_pricing_section h2 {
+    font-size: 40px;
+}
+.second_pricing_section h2 span {
+    color: var(--second-color);
+}
+.secondPricingBox {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+.secondRealPricingBox {
+    background-color: var(--third-light-color);
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+.secondRealPricingBox h3 {
+    font-size: 50px;
+}
+.secondRealPricingBox h5 span {
+    text-decoration: line-through;
+}
+.secondRealPricingBox a {
+    background-color: var(--second-color);
+    width: 100%;
+    color: var(--white-color);
+}
+.secondRealPricingBox a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.secondRealPricingBoxAuto {
+    background-color: var(--second-light-color);
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+.secondRealPricingBoxAuto h3 {
+    font-size: 50px;
+}
+.secondRealPricingBoxAuto h5 span {
+    text-decoration: line-through;
+}
+.secondRealPricingBoxAuto a {
+    background-color: var(--second-color);
+    width: 100%;
+    color: var(--white-color);
+}
+.secondRealPricingBoxAuto a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.secondPricingBoxMenualList {
+    text-align: left !important;
+}
+.secondPricingBoxMenualList li {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.secondPricingBoxAutoList {
+    text-align: left;
+}
+.secondPricingBoxAutoList li {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .first_pricing_section {
+        padding: 30px 0;
+    }
+    .first_pricing_section h1 span {
+        font-size: 35px;
+    }
+    .second_pricing_section {
+        padding: 30px 0;
+    }
+}

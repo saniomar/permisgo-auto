@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
@@ -15,8 +15,8 @@
   --review-color: #ffc400;
   --background-color: #eef3fb;
   --line-color: #b0b0b0;
-  --first-font: "Poppins", sans-serif;
-  --second-font: "Inter", sans-serif;
+  --first-font: "Outfit", sans-serif;
+  --second-font: "Outfit", sans-serif;
 }
 
 html,
@@ -118,4 +118,11 @@ button:focus:not(:focus-visible) {
 }
 .btn-close {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff' fill-opacity='1'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e") !important;
+}
+
+.second_pricing_section button {
+  color: var(--first-color) !important;
+}
+.second_pricing_section .nav-tabs {
+  border-bottom: 0 !important;
 }
