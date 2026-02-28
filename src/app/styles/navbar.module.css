@@ -13,7 +13,7 @@
     font-size: 18px;
 }
 .navbarLogo {
-    width: 200px !important;
+    width: 180px !important;
 }
 #main_menu {
     background-color: var(--first-color);
@@ -36,7 +36,7 @@
     color: var(--white-color) !important;
 }
 #navbarMenu ul li {
-    margin: 0 15px; 
+    margin: 0 10px; 
 }
 #navbarMenu ul li a {
     color: var(--white-color);
@@ -45,6 +45,7 @@
 #loginBtn {
     background-color: var(--white-color);
     font-weight: 500;
+    font-size: 18px;
 }
 #loginBtn:hover {
     background-color: var(--second-color);
@@ -54,6 +55,7 @@
     background-color: var(--second-color);
     color: var(--white-color);
     font-weight: 500;
+    font-size: 18px;
 }
 #bookBtn:hover {
     background-color: var(--white-color);

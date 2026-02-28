@@ -73,9 +73,9 @@ const Navbar = () => {
                                                 <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <ul className="navbar-nav ms-lg-auto mx-0 mb-2 mb-lg-0">
+                                            <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0 align-items-center">
                                                 <div id={navbarStyle.courseSelector}>
-                                                    <select name="" className='form-select form-select-lg' id={navbarStyle.navbarSelect}>
+                                                    <select name="" className='form-select' id={navbarStyle.navbarSelect}>
                                                         <option value="">-- Courses --</option>
                                                         <option value="">Beginner Course</option>
                                                         <option value="">Standard Course</option>
@@ -103,8 +103,8 @@ const Navbar = () => {
                                 </nav>
                             </div>
                             <div className="d-flex justify-content-between align-items-center gap-4">
-                                <Link href="/login" className='btn btn-lg' id={navbarStyle.loginBtn}>Login</Link>
-                                <Link href="/booking" className='btn btn-lg' id={navbarStyle.bookBtn}>Book Your Lesson</Link>
+                                <Link href="/login" className='btn' id={navbarStyle.loginBtn}>Login</Link>
+                                <Link href="/booking" className='btn' id={navbarStyle.bookBtn}>Book Your Lesson</Link>
                             </div>
                         </div>
                     </div>

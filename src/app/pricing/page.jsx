@@ -64,7 +64,7 @@ const pricing = () => {
               <div className="tab-pane fade" id="supervised-tab-pane" role="tabpanel" aria-labelledby="supervised-tab" tabIndex="0">
                 <div className="py-3">
                   <div className="text-center">
-                    <h2>Our Supervised <span>Driving</span> Package</h2>
+                    <h2 className='mt-3'>Our Supervised <span>Driving</span> Package</h2>
 
                     <div className="py-5">
                       <ul className="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
@@ -75,7 +75,7 @@ const pricing = () => {
                           <button className="nav-link" id="automatic-tab" data-bs-toggle="tab" data-bs-target="#automatic-tab-pane" type="button" role="tab" aria-controls="automatic-tab-pane" aria-selected="false">Automatic</button>
                         </li>
                       </ul>
-                      <div className="tab-content" id="myTabContent">
+                      <div className="tab-content mt-4" id="myTabContent">
                         <div className="tab-pane fade show active" id="menual-tab-pane" role="tabpanel" aria-labelledby="menual-tab" tabIndex="0">
                           <div className={pricingStyle.secondPricingBox}>
                             <h3>Supervised Driving</h3>
@@ -162,7 +162,7 @@ const pricing = () => {
               {/* A La Cart */}
               <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">
                 <div className="mt-4 text-center">
-                  <h2>Discover our à la carte offers</h2>
+                  <h2>Discover our <span>à la carte</span> offers</h2>
                   <p>It is possible to choose your training program à la carte.</p>
                 </div>
 
