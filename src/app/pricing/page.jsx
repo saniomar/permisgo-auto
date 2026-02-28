@@ -51,13 +51,16 @@ const pricing = () => {
                 <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">A la carte</button>
               </li>
               <li className="nav-item" role="presentation">
-                <button className="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">Code</button>
+                <button className="nav-link" id="code-tab" data-bs-toggle="tab" data-bs-target="#code-tab-pane" type="button" role="tab" aria-controls="code-tab-pane" aria-selected="false">Code</button>
               </li>
             </ul>
             <div className="tab-content" id="myTabContent">
+              {/* license */}
               <div className="tab-pane fade show active" id="license-tab-pane" role="tabpanel" aria-labelledby="license-tab" tabIndex="0">
 
               </div>
+
+              {/* Supervised Driving */}
               <div className="tab-pane fade" id="supervised-tab-pane" role="tabpanel" aria-labelledby="supervised-tab" tabIndex="0">
                 <div className="py-3">
                   <div className="text-center">
@@ -155,8 +158,125 @@ const pricing = () => {
                   </div>
                 </div>
               </div>
-              <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">...</div>
-              <div className="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabIndex="0">...</div>
+
+              {/* A La Cart */}
+              <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">
+                <div className="mt-4 text-center">
+                  <h2>Discover our à la carte offers</h2>
+                  <p>It is possible to choose your training program à la carte.</p>
+                </div>
+
+                <div className='mt-5'>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Driving lessons</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$487</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Automatic transmission driving course</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$587</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Preliminary appointment</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$387</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Educational meeting</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$487</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Support during the practical exam</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$487</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={pricingStyle.priceThirdBox}>
+                    <div className='d-flex justify-content-between align-items-center'>
+                      <div>
+                        <h5 className='mb-0'>Support for the practical automatic test</h5>
+                      </div>
+                      <div>
+                        <div className='d-flex justify-content-between align-items-center gap-5'>
+                          <div>
+                            <h4 className='mb-0'>$487</h4>
+                          </div>
+                          <div>
+                            <Link href="" className='btn'>Add</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Code */}
+              <div className="tab-pane fade" id="code-tab-pane" role="tabpanel" aria-labelledby="code-tab" tabIndex="0">
+
+              </div>
             </div>
           </div>
         </div>
