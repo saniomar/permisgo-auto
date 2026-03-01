@@ -140,3 +140,6 @@ button:focus:not(:focus-visible) {
   transition: .5s ease-in-out;
   color: var(--black-color) !important;
 }
+.register_form .nav-link {
+  color: var(--white-color) !important;
+}
