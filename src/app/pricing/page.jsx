@@ -57,9 +57,1098 @@ const pricing = () => {
             </ul>
             <hr />
             <div className="tab-content" id="myTabContent">
+
               {/* license */}
               <div className="tab-pane fade show active" id="license-tab-pane" role="tabpanel" aria-labelledby="license-tab" tabIndex="0">
+                <div className="pt-4">
 
+                  <div className='d-flex justify-content-between align-items-center' id={pricingStyle.mobileLicenseTitle}>
+                    <div className="text-center">
+                      <h2 className='mt-3'>Our <span>Rates</span></h2>
+                    </div>
+                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+                      <li className="nav-item" role="presentation">
+                        <button className="nav-link active" id="license-menual-tab" data-bs-toggle="tab" data-bs-target="#license-menual-tab-pane" type="button" role="tab" aria-controls="license-menual-tab-pane" aria-selected="true">Menual</button>
+                      </li>
+                      <li className="nav-item" role="presentation">
+                        <button className="nav-link" id="license-auto-tab" data-bs-toggle="tab" data-bs-target="#license-auto-tab-pane" type="button" role="tab" aria-controls="license-auto-tab-pane" aria-selected="false">Automatic</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="tab-content" id="myTabContent">
+
+                    <div className="tab-pane fade show active" id="license-menual-tab-pane" role="tabpanel" aria-labelledby="license-menual-tab" tabIndex="0">
+                      <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link active" id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="true">5 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="ten-tab" data-bs-toggle="tab" data-bs-target="#ten-tab-pane" type="button" role="tab" aria-controls="ten-tab-pane" aria-selected="false">10 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="twenty-tab" data-bs-toggle="tab" data-bs-target="#twenty-tab-pane" type="button" role="tab" aria-controls="twenty-tab-pane" aria-selected="false">20 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="thirty-tab" data-bs-toggle="tab" data-bs-target="#thirty-tab-pane" type="button" role="tab" aria-controls="thirty-tab-pane" aria-selected="false">30 Course</button>
+                        </li>
+                      </ul>
+                      <div className="tab-content" id="myTabContent">
+                        <div className="tab-pane fade show active" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="ten-tab-pane" role="tabpanel" aria-labelledby="ten-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="twenty-tab-pane" role="tabpanel" aria-labelledby="twenty-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="thirty-tab-pane" role="tabpanel" aria-labelledby="thirty-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="tab-pane fade" id="license-auto-tab-pane" role="tabpanel" aria-labelledby="license-auto-tab" tabIndex="0">
+                      <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link active" id="five-auto-tab" data-bs-toggle="tab" data-bs-target="#five-auto-tab-pane" type="button" role="tab" aria-controls="five-auto-tab-pane" aria-selected="true">5 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="ten-auto-tab" data-bs-toggle="tab" data-bs-target="#ten-auto-tab-pane" type="button" role="tab" aria-controls="ten-auto-tab-pane" aria-selected="false">10 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="twenty-auto-tab" data-bs-toggle="tab" data-bs-target="#twenty-auto-tab-pane" type="button" role="tab" aria-controls="twenty-auto-tab-pane" aria-selected="false">20 Course</button>
+                        </li>
+                        <li className="nav-item" role="presentation">
+                          <button className="nav-link" id="thirty-auto-tab" data-bs-toggle="tab" data-bs-target="#thirty-auto-tab-pane" type="button" role="tab" aria-controls="thirty-auto-tab-pane" aria-selected="false">30 Course</button>
+                        </li>
+                      </ul>
+                      <div className="tab-content" id="myTabContent">
+                        <div className="tab-pane fade show active" id="five-auto-tab-pane" role="tabpanel" aria-labelledby="five-auto-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="ten-auto-tab-pane" role="tabpanel" aria-labelledby="ten-auto-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="twenty-auto-tab-pane" role="tabpanel" aria-labelledby="twenty-auto-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tab-pane fade" id="thirty-auto-tab-pane" role="tabpanel" aria-labelledby="thirty-auto-tab" tabIndex="0">
+                          <div className="mt-5">
+                            <div className="row">
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Zen Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Most economical offer</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Premium Permit</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>Practical exam date within 30 days</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="col-lg-4">
+                                <div className={pricingStyle.license_menual_box}>
+                                  <div className="text-center">
+                                    <h3>Accelerated Driving Licence</h3>
+                                    <p className='mb-0'>Theory test + 20 driving lessons</p>
+                                    <p className='mb-0'>30-day training course</p>
+                                  </div>
+                                  <hr />
+                                  <div className={pricingStyle.license_pricing_box}>
+                                    <div className="d-flex justify-content-between">
+                                      <div>
+                                        <h5 className='mb-0'>Extension</h5>
+                                        <p className='mb-0'>from</p>
+                                      </div>
+                                      <div>
+                                        <h5 className='mb-0' id={pricingStyle.license_regular_price}>&849</h5>
+                                        <p className='mb-0'>retail price</p>
+                                      </div>
+                                    </div>
+                                    <div className="py-4">
+                                      <h2>&599*</h2>
+                                    </div>
+                                    <p className='mb-0'>Enter your postal code to view your agency's rates.</p>
+                                  </div>
+
+                                  <h4>Package contents:</h4>
+                                  <div className={pricingStyle.license_feature_list}>
+                                    <ul>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Initial assessment</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 20 driving lessons</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Exam date within 30 days</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Code Training</li>
+                                      <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 30-day training course</li>
+                                    </ul>
+                                  </div>
+                                  <div className="mt-4">
+                                    <Link href="" className='btn'>Sign Up</Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </div>
 
               {/* Supervised Driving */}
@@ -374,6 +1463,7 @@ const pricing = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -388,39 +1478,39 @@ const pricing = () => {
             </div>
 
             <div className="py-4">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Accordion Item #1
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                  <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
                       <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Accordion Item #2
                     </button>
                   </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                  <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
                       <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Accordion Item #3
                     </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                  <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
                       <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                     </div>
                   </div>

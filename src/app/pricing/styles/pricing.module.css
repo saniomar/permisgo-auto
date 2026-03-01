@@ -152,6 +152,49 @@
 #pricingFaq h2 {
     font-size: 40px;
 }
+
+.license_menual_box {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+.license_menual_box h3 {
+    font-size: 40px;
+    color: var(--second-color);
+}
+.license_menual_box h4 {
+    margin-top: 20px;
+    color: var(--first-color);
+}
+.license_menual_box a {
+    width: 100%;
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.license_feature_list {
+    height: 200px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+.license_feature_list li {
+    font-size: 18px;
+}
+.license_menual_box a:hover {
+    width: 100%;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.license_menual_box h2 {
+    font-size: 50px;
+}
+.license_pricing_box {
+    background-color: var(--third-light-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+.license_pricing_box #license_regular_price {
+    text-decoration: line-through;
+}
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .first_pricing_section {
         padding: 30px 0;
@@ -162,10 +205,23 @@
     .second_pricing_section {
         padding: 30px 0;
     }
+    .secondRealPricingBoxAuto h3 {
+        font-size: 40px;
+    }
+    .secondRealPricingBox h3 {
+        font-size: 40px;
+    }
     #pricingFaq {
         padding: 30px 0;
     }
     #pricingFaq h2 {
+        font-size: 30px;
+    }
+    .license_menual_box {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .license_menual_box h3 {
         font-size: 30px;
     }
     .second_pricing_section h2 {
@@ -179,5 +235,18 @@
     }
     .secondRealPricingBoxAuto {
         margin-bottom: 15px;
+    }
+    #mobileLicenseTitle {
+        margin-bottom: 20px;
+    }
+    .forthPriceBox {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .forthPriceBox h3 {
+        font-size: 30px;
+    }
+    .license_menual_box h2 {
+        font-size: 40px;
     }
 }
