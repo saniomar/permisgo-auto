@@ -195,6 +195,12 @@
 .license_pricing_box #license_regular_price {
     text-decoration: line-through;
 }
+#tab_border {
+    border: 3px solid var(--first-light-color);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .first_pricing_section {
         padding: 30px 0;

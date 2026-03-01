@@ -78,20 +78,22 @@ const pricing = () => {
                   <div className="tab-content" id="myTabContent">
 
                     <div className="tab-pane fade show active" id="license-menual-tab-pane" role="tabpanel" aria-labelledby="license-menual-tab" tabIndex="0">
-                      <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link active" id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="true">5 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="ten-tab" data-bs-toggle="tab" data-bs-target="#ten-tab-pane" type="button" role="tab" aria-controls="ten-tab-pane" aria-selected="false">10 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="twenty-tab" data-bs-toggle="tab" data-bs-target="#twenty-tab-pane" type="button" role="tab" aria-controls="twenty-tab-pane" aria-selected="false">20 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="thirty-tab" data-bs-toggle="tab" data-bs-target="#thirty-tab-pane" type="button" role="tab" aria-controls="thirty-tab-pane" aria-selected="false">30 Course</button>
-                        </li>
-                      </ul>
+                      <div id={pricingStyle.tab_border}>
+                        <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link active" id="five-tab" data-bs-toggle="tab" data-bs-target="#five-tab-pane" type="button" role="tab" aria-controls="five-tab-pane" aria-selected="true">5 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="ten-tab" data-bs-toggle="tab" data-bs-target="#ten-tab-pane" type="button" role="tab" aria-controls="ten-tab-pane" aria-selected="false">10 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="twenty-tab" data-bs-toggle="tab" data-bs-target="#twenty-tab-pane" type="button" role="tab" aria-controls="twenty-tab-pane" aria-selected="false">20 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="thirty-tab" data-bs-toggle="tab" data-bs-target="#thirty-tab-pane" type="button" role="tab" aria-controls="thirty-tab-pane" aria-selected="false">30 Course</button>
+                          </li>
+                        </ul>
+                      </div>
                       <div className="tab-content" id="myTabContent">
                         <div className="tab-pane fade show active" id="five-tab-pane" role="tabpanel" aria-labelledby="five-tab" tabIndex="0">
                           <div className="mt-5">
@@ -613,20 +615,22 @@ const pricing = () => {
                     </div>
 
                     <div className="tab-pane fade" id="license-auto-tab-pane" role="tabpanel" aria-labelledby="license-auto-tab" tabIndex="0">
-                      <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link active" id="five-auto-tab" data-bs-toggle="tab" data-bs-target="#five-auto-tab-pane" type="button" role="tab" aria-controls="five-auto-tab-pane" aria-selected="true">5 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="ten-auto-tab" data-bs-toggle="tab" data-bs-target="#ten-auto-tab-pane" type="button" role="tab" aria-controls="ten-auto-tab-pane" aria-selected="false">10 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="twenty-auto-tab" data-bs-toggle="tab" data-bs-target="#twenty-auto-tab-pane" type="button" role="tab" aria-controls="twenty-auto-tab-pane" aria-selected="false">20 Course</button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button className="nav-link" id="thirty-auto-tab" data-bs-toggle="tab" data-bs-target="#thirty-auto-tab-pane" type="button" role="tab" aria-controls="thirty-auto-tab-pane" aria-selected="false">30 Course</button>
-                        </li>
-                      </ul>
+                      <div id={pricingStyle.tab_border}>
+                        <ul className="nav nav-tabs d-flex justify-content-center gap-3" id="myTab" role="tablist">
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link active" id="five-auto-tab" data-bs-toggle="tab" data-bs-target="#five-auto-tab-pane" type="button" role="tab" aria-controls="five-auto-tab-pane" aria-selected="true">5 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="ten-auto-tab" data-bs-toggle="tab" data-bs-target="#ten-auto-tab-pane" type="button" role="tab" aria-controls="ten-auto-tab-pane" aria-selected="false">10 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="twenty-auto-tab" data-bs-toggle="tab" data-bs-target="#twenty-auto-tab-pane" type="button" role="tab" aria-controls="twenty-auto-tab-pane" aria-selected="false">20 Course</button>
+                          </li>
+                          <li className="nav-item" role="presentation">
+                            <button className="nav-link" id="thirty-auto-tab" data-bs-toggle="tab" data-bs-target="#thirty-auto-tab-pane" type="button" role="tab" aria-controls="thirty-auto-tab-pane" aria-selected="false">30 Course</button>
+                          </li>
+                        </ul>
+                      </div>
                       <div className="tab-content" id="myTabContent">
                         <div className="tab-pane fade show active" id="five-auto-tab-pane" role="tabpanel" aria-labelledby="five-auto-tab" tabIndex="0">
                           <div className="mt-5">
