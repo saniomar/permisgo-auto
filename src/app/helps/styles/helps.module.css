@@ -4,3 +4,21 @@
 .help_second h2 {
     font-size: 40px;
 }
+#help_third {
+    padding: 50px 0;
+}
+#help_third h3 {
+    font-size: 40px;
+}
+#help_third img {
+    border-radius: 15px;
+}
+#help_third a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.helpSecondBox {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+}

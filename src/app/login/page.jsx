@@ -42,7 +42,7 @@ const Login = () => {
                   </div>
                 </form>
                 <div className="text-end mt-4">
-                  <Link Link href="/forget-password">Forget Password?</Link>
+                  <Link href="/forget-password">Forget Password?</Link>
                 </div>
               </div>
             </div>
