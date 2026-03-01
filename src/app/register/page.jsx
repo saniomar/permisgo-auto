@@ -54,13 +54,13 @@ const Register = () => {
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
-                                        <div className="tab-pane fade show active" id="student-tab-pane" role="tabpanel" aria-labelledby="student-tab" tabindex="0">
+                                        <div className="tab-pane fade show active" id="student-tab-pane" role="tabpanel" aria-labelledby="student-tab" tabIndex="0">
                                             <form action="">
                                                 <div className="row">
                                                     <div className="col-lg-12 mt-3">
                                                         <div className="form-check">
-                                                            <input type="checkbox" name="" className='form-check-input' value="" id="flexCheckChecked" checked />
-                                                            <label className="form-check-label" for="flexCheckChecked">
+                                                            <input type="checkbox" name="" className='form-check-input' value="" id="flexCheckChecked" defaultChecked />
+                                                            <label className="form-check-label" htmlFor="flexCheckChecked">
                                                                 Student Register
                                                             </label>
                                                         </div>
@@ -87,13 +87,13 @@ const Register = () => {
                                                 </div>
                                             </form>
                                         </div>
-                                        <div className="tab-pane fade" id="teacher-tab-pane" role="tabpanel" aria-labelledby="teacher-tab" tabindex="0">
+                                        <div className="tab-pane fade" id="teacher-tab-pane" role="tabpanel" aria-labelledby="teacher-tab" tabIndex="0">
                                             <form action="">
                                                 <div className="row">
                                                     <div className="col-lg-12 mt-3">
                                                         <div className="form-check">
-                                                            <input type="checkbox" name="" className='form-check-input' value="" id="flexCheckChecked" checked />
-                                                            <label className="form-check-label" for="flexCheckChecked">
+                                                            <input type="checkbox" name="" className='form-check-input' value="" id="flexCheckChecked" defaultChecked />
+                                                            <label className="form-check-label" htmlFor="flexCheckChecked">
                                                                 Teacher Register
                                                             </label>
                                                         </div>
