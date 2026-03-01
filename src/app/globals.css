@@ -132,3 +132,11 @@ button:focus:not(:focus-visible) {
   background-color: var(--second-color) !important;
   color: var(--white-color) !important;
 }
+.navbar-nav .dropdown-menu {
+  background-color: var(--second-color);
+  transition: .5s ease-in-out;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+  transition: .5s ease-in-out;
+  color: var(--black-color) !important;
+}

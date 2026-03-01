@@ -73,15 +73,21 @@ const Navbar = () => {
                                                 <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
                                                     aria-label="Close"></button>
                                             </div>
-                                            <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0 align-items-center">
-                                                <div id={navbarStyle.courseSelector}>
-                                                    <select name="" className='form-select' id={navbarStyle.navbarSelect}>
-                                                        <option value="">-- Courses --</option>
-                                                        <option value="">Beginner Course</option>
-                                                        <option value="">Standard Course</option>
-                                                        <option value="">Premium Course</option>
-                                                    </select>
-                                                </div>
+                                            <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0">
+                                                <li className="nav-item dropdown">
+                                                    <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id={navbarStyle.courseDropdown}>
+                                                        Courses
+                                                    </Link>
+                                                    <ul className="dropdown-menu">
+                                                        <li><a className="dropdown-item" href="/beginner-course">Beginner Course</a></li>
+                                                        <li><hr className="dropdown-divider" /></li>
+                                                        <li><a className="dropdown-item" href="/standard-course">Standard Course</a></li>
+                                                        <li><hr className="dropdown-divider" /></li>
+                                                        <li><a className="dropdown-item" href="/premium-course">Premium Course</a></li>
+                                                        <li><hr className="dropdown-divider" /></li>
+                                                        <li><a className="dropdown-item" href="/other-courses">Other Courses</a></li>
+                                                    </ul>
+                                                </li>
                                                 <li className="nav-item">
                                                     <Link className="nav-link active" aria-current="page" href="/pricing">Pricing</Link>
                                                 </li>
