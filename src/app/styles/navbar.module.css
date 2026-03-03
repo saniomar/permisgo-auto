@@ -105,3 +105,8 @@
         padding-left: 10px;
     }
 }
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
+    #bookBtn {
+        display: none;
+    }
+}

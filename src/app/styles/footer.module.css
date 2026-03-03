@@ -81,6 +81,9 @@
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+    #main_footer #column {
+        width: 100%;
+    }
     #main_footer .footerLogo {
         width: 170px !important;
     }
@@ -101,5 +104,21 @@
     }
     .footer_support_menu ul {
         text-align: center !important;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    #main_footer #column {
+        width: 50%;
+    }
+    #main_footer h4 {
+        margin-top: 20px;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
+    #main_footer #column {
+        width: 50%;
+    }
+    #main_footer h4 {
+        margin-top: 20px;
     }
 }
