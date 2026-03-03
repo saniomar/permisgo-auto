@@ -4,6 +4,9 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+#main_footer #column {
+    width: 20%;
+}
 #main_footer .footerLogo {
     width: 200px !important;
     margin-bottom: 15px;

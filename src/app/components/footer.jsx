@@ -28,7 +28,7 @@ const Footer = () => {
             <div id={footerStyle.main_footer}>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                             <Image src={Logo} className={footerStyle.footerLogo} layout='responsive' alt=''></Image>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam quae officia.</p>
                             <div className={footerStyle.footer_contact}>
@@ -48,7 +48,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                             <h4>Quick Link</h4>
                             <div className={footerStyle.footer_menu}>
                                 <ul>
@@ -63,7 +63,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                             <h4>Partnership Request</h4>
                             <div className={footerStyle.footer_partnership}>
                                 <ul>
@@ -76,7 +76,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                             <h4>Our Services</h4>
                             <div className={footerStyle.footer_services}>
                                 <ul>
@@ -88,7 +88,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6">
+                        <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                             <h4>Opening Hours</h4>
                             <div className={footerStyle.footer_openign_time}>
                                 <ul>
