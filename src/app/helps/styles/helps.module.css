@@ -1,3 +1,25 @@
+.help_first {
+    padding: 50px 0;
+}
+.help_first_box {
+    background-color: var(--first-light-color);
+    padding: 30px;
+    border-radius: 20px;
+}
+.help_first_box a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.help_first_box a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.help_first_box img {
+    border-radius: 10px;
+}
+.help_first h1 {
+    font-size: 50px;
+}
 .help_second {
     padding: 50px 0;
 }
@@ -21,4 +43,37 @@
     border: 3px solid var(--first-light-color);
     padding: 30px;
     border-radius: 10px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500) {
+    .help_first {
+        padding: 30px 0;
+    }
+    .help_first_box {
+        padding: 20px;
+    }
+    .help_first h1 {
+        font-size: 35px;
+    }
+    .help_first_box img {
+        margin-top: 20px;
+    }
+    .help_second {
+        padding: 30px 0;
+    }
+    .helpSecondBox {
+        margin-top: 15px;
+    }
+    .help_second h2 {
+        font-size: 30px;
+    }
+    #help_third {
+        padding: 30px 0;
+    }
+    #help_third h3 {
+        font-size: 30px;
+    }
+    #help_third img {
+        margin-top: 20px;
+    }
 }

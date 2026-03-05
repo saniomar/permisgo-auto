@@ -7,6 +7,7 @@ import helpThree from "../../../public/image/help.jpg"
 
 // Icon
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Style
 import helpStyle from "./styles/helps.module.css"
@@ -15,7 +16,27 @@ import helpStyle from "./styles/helps.module.css"
 const helps = () => {
   return (
     <>
-        <section></section>
+        <section>
+          <div className={helpStyle.help_first}>
+            <div className="container">
+              <div className={helpStyle.help_first_box}>
+                <div className="row align-items-center">
+                  <div className="col-lg-6">
+                    <h1>Need help? We're here to help!</h1>
+                    <h5>Ask us all your questions about driving lessons, exams or licenses!</h5>
+                    <div className="mt-5">
+                      <Link href="" className='btn btn-lg'><FaWhatsapp /> | +845 2458 5478</Link>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <Image src={helpThree} layout='responsive' alt=''></Image>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section>
           <div className={helpStyle.help_second}>
             <div className="container">
@@ -48,6 +69,7 @@ const helps = () => {
             </div>
           </div>
         </section>
+
         <section>
           <div id={helpStyle.help_third}>
             <div className="container">
