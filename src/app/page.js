@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./page.module.css";
+import homeStyle from "./page.module.css";
 
 export default function Home() {
   return (
@@ -10,15 +10,23 @@ export default function Home() {
 
 
       <section>
-        <div className="container">
-          <h4>Newsletter</h4>
-          <p>Subscribe to get the latest updates and offers</p>
-          <form action="">
-            <div className="input-group mb-3">
-              <input type="text" className="form-control form-control-lg" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
-              <button className="btn btn-lg" type="button" id="button-addon2">Subscribe</button>
+        <div className={homeStyle.subscribe_home}>
+          <div className="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <div className="row">
+              <div className="col-lg-5">
+                <p>Get weekly update about our product on your email, no spam guaranteed we promise ✌️</p>
+              </div>
+              <div className="col-lg-7">
+                <form action="">
+                  <div className="input-group mb-3">
+                    <input type="text" className="form-control form-control-lg" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <button className="btn btn-lg" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </>
