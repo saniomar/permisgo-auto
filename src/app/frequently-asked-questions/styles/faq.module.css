@@ -26,6 +26,9 @@
     .faq_first {
         padding: 30px 0;
     }
+    .faq_first h1 {
+        font-size: 35px;
+    }
     .faq_second {
         padding: 30px 0;
     }

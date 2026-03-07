@@ -154,3 +154,6 @@ button:focus:not(:focus-visible) {
   margin-bottom: 10px;
   border-radius: 5px;
 }
+.accordion-button {
+  border-radius: 5px !important;
+}
