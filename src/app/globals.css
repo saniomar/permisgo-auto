@@ -46,6 +46,12 @@ a {
   color: inherit;
   text-decoration: none !important;
 }
+p {
+  font-size: 18px;
+}
+li {
+  font-size: 18px;
+}
 
 ul {
   margin-bottom: 0 !important;
@@ -142,4 +148,9 @@ button:focus:not(:focus-visible) {
 }
 .register_form .nav-link {
   color: var(--white-color) !important;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 5px;
 }

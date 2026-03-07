@@ -80,7 +80,7 @@ const Footer = () => {
                             <h4>Our Services</h4>
                             <div className={footerStyle.footer_services}>
                                 <ul>
-                                    <li><Link href="">Frequently Asked Questions</Link></li>
+                                    <li><Link href="/frequently-asked-questions">Frequently Asked Questions</Link></li>
                                     <li><Link href="">Highway Code Glossary</Link></li>
                                     <li><Link href="">Driving licence glossary</Link></li>
                                     <li><Link href="">Person with a disability</Link></li>

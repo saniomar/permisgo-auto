@@ -1,0 +1,32 @@
+.faq_first {
+    padding: 50px 0;
+}
+.rightBox {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+.rightBox a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.rightBox a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.faq_first h1 {
+    font-size: 50px;
+    color: var(--first-color);
+}
+.faq_second {
+    padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .faq_first {
+        padding: 30px 0;
+    }
+    .faq_second {
+        padding: 30px 0;
+    }
+}
