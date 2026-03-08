@@ -1,8 +1,8 @@
 #main_footer {
     background-color: var(--first-color);
     padding: 30px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
 }
 #main_footer #column {
     width: 20%;
@@ -37,8 +37,14 @@
     color: var(--white-color);
 }
 .footer_contact ul li {
-    padding-bottom: 20px;
+    background-color: #97979785;
     color: var(--white-color);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 #main_footer .footer_social ul li a {
     font-size: 20px;
