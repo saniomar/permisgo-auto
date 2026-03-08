@@ -157,3 +157,12 @@ button:focus:not(:focus-visible) {
 .accordion-button {
   border-radius: 5px !important;
 }
+
+.nav-pills .nav-link {
+  text-align: left;
+  color: var(--first-color);
+  font-family: var(--second-font);
+}
+.nav-pills .nav-link.active {
+  background-color: var(--second-color) !important;
+}
