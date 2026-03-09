@@ -1,0 +1,45 @@
+.location_first {
+    padding: 50px 0;
+}
+.location_first h4 {
+    color: var(--second-color);
+}
+.googleLocationSidebar {
+    width: 100%;
+}
+.location_second {
+    padding-bottom: 50px;
+}
+.location_trust {
+    padding: 50px 0;
+}
+.location_trust h3 {
+    font-size: 40px;
+}
+.location_trust a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+.location_trust a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.location_trust h4 span {
+    font-size: 40px;
+    color: var(--second-color);
+}
+.location_trust ul li {
+    display: inline-block;
+    color: var(--review-color);
+    margin-right: 10px;
+    font-size: 25px;
+}
+.location_reviewBox {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+.location_reviewBox ul li {
+    font-size: 16px;
+    margin-right: 5px;
+}
