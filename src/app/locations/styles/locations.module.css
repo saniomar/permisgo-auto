@@ -6,6 +6,8 @@
 }
 .googleLocationSidebar {
     width: 100%;
+    height: 500px;
+    overflow-y: scroll;
 }
 .location_second {
     padding-bottom: 50px;
@@ -15,6 +17,7 @@
 }
 .location_trust h3 {
     font-size: 40px;
+    color: var(--first-color);
 }
 .location_trust a {
     background-color: var(--second-color);
@@ -25,7 +28,8 @@
     color: var(--white-color);
 }
 .location_trust h4 span {
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 700;
     color: var(--second-color);
 }
 .location_trust ul li {
@@ -42,4 +46,22 @@
 .location_reviewBox ul li {
     font-size: 16px;
     margin-right: 5px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .location_first {
+        padding: 30px 0;
+    }
+    .location_second {
+        padding-bottom: 30px;
+    }
+    .location_trust {
+        padding: 30px 0;
+    }
+    .location_trust h3 {
+        font-size: 35px;
+    }
+    .location_trust_left {
+        margin-bottom: 20px;
+    }
 }

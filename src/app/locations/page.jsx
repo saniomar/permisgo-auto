@@ -49,6 +49,27 @@ const location = [
     lat: 48.85262,
     lng: 2.368776,
   },
+  {
+    id: 5,
+    name: "Place de la Bastille",
+    description: "Popular residential area",
+    lat: 48.95262,
+    lng: 2.268776,
+  },
+  {
+    id: 6,
+    name: "Place de la Bastille",
+    description: "Popular residential area",
+    lat: 48.94262,
+    lng: 2.298776,
+  },
+  {
+    id: 7,
+    name: "Place de la Bastille",
+    description: "Popular residential area",
+    lat: 48.39262,
+    lng: 2.298776,
+  },
 ];
 
 
@@ -91,7 +112,8 @@ const locations = () => {
                           }}
                           onClick={() => setActiveMarker(loc.id)}
                         >
-                          {loc.name}
+                          <h5>{loc.name}</h5>
+                          <p className='mb-0'>{loc.description}</p>
                         </li>
                       ))}
                     </ul>
@@ -130,7 +152,7 @@ const locations = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-4">
-              <div>
+              <div className={locationCss.location_trust_left}>
                 <h3>They trust us</h3>
                 <h5>Over 1,000,000 satisfied students</h5>
                 <ul>
