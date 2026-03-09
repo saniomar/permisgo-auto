@@ -64,4 +64,8 @@
     .location_trust_left {
         margin-bottom: 20px;
     }
+    .googleLocationSidebar {
+        height: 300px;
+        margin-bottom: 20px;
+    }
 }
