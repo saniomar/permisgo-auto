@@ -105,6 +105,9 @@ input::placeholder {
     background-color: rgb(255, 255, 255);
 }
 
+.accordion-button {
+  background-color: var(--first-light-color) !important;
+}
 .accordion-button:not(.collapsed) {
     background-color: var(--white-color) !important;
     color: var(--first-color) !important;
