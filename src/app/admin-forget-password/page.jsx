@@ -32,8 +32,8 @@ const forgetPassword = () => {
                             </form>
                             
                             <div className="text-center mt-5 d-flex justify-content-center gap-3">
-                                <Link href="/register" id={forgetStyle.forgetRegisBtn}>Register</Link>
-                                <Link href="/login" id={forgetStyle.forgetLoginBtn}>Login</Link>
+                                <Link href="/admin-register" id={forgetStyle.forgetRegisBtn}>Register</Link>
+                                <Link href="/admin-login" id={forgetStyle.forgetLoginBtn}>Login</Link>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@ const Login = () => {
                   </div>
                 </form>
                 <div className="text-end mt-4">
-                  <Link href="/forget-password">Forget Password?</Link>
+                  <Link href="/admin-forget-password">Forget Password?</Link>
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@ const Login = () => {
 
                 <div className="mt-5">
                   <p>Don't you have an account?</p>
-                  <Link href="/register" id={loginStyle.registerBtn} className='btn btn-lg'>Register</Link>
+                  <Link href="/admin-register" id={loginStyle.registerBtn} className='btn btn-lg'>Register</Link>
                 </div>
 
                 <div className="py-4">

@@ -55,7 +55,7 @@ const UserLogin = () => {
                                         </Link>
                                     </div>
                                     <div className="col-lg-4 mt-3">
-                                        <Link href="">
+                                        <Link href="/admin-login">
                                             <div className={userLoginStyle.loginBoxes}>
                                                 <div className="text-center">
                                                     <div className="pb-4">
