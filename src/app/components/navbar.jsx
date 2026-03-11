@@ -58,6 +58,7 @@ const Navbar = () => {
                                 </Link>
                             </div>
 
+
                             <div className='align-items-center'>
                                 <nav className="navbar navbar-expand-lg" id={navbarStyle.navbarMenu}>
                                     <div className="container-fluid">
@@ -109,7 +110,7 @@ const Navbar = () => {
                                 </nav>
                             </div>
                             <div className="d-flex justify-content-between align-items-center gap-4">
-                                <Link href="/login" className='btn' id={navbarStyle.loginBtn}>Login</Link>
+                                <Link href="/user-login" className='btn' id={navbarStyle.loginBtn}>Login</Link>
                                 <Link href="/booking" className='btn' id={navbarStyle.bookBtn}>Book Your Lesson</Link>
                             </div>
                         </div>

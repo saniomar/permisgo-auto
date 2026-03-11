@@ -1,0 +1,49 @@
+.user_login_tab {
+    padding: 50px 0;
+}
+.user_login_box {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+.user_login_inner_box {
+    background-color: var(--first-light-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+.user_login_inner_box_two {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+.user_login_inner_box_two img {
+    width: 170px !important;
+}
+.loginBoxes {
+    background-color: var(--second-light-color);
+    transition: .5s ease-in-out;
+    padding: 20px;
+    border-radius: 5px;
+}
+.loginBoxes h4 {
+    color: var(--first-color);
+}
+.loginBoxes img {
+    width: 100px !important;
+}
+.loginBoxes:hover {
+    background-color: var(--third-light-color);
+    transition: .5s ease-in-out;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .user_login_tab {
+        padding: 30px 0;
+    }
+    .user_login_box {
+        padding: 10px;
+    }
+    .user_login_inner_box {
+        padding: 15px;
+    }
+}
