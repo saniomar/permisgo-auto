@@ -32,7 +32,7 @@
     width: 100px !important;
 }
 .loginBoxes:hover {
-    background-color: var(--third-light-color);
+    background-color: var(--first-light-color);
     transition: .5s ease-in-out;
 }
 
