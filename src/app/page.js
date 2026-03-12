@@ -18,6 +18,21 @@ export default function Home() {
     <>
       
       <section>
+        <div className={homeStyle.about_second_section}>
+          <div className="row">
+            <div className="col-lg-5"></div>
+            <div className="col-lg-7">
+              <h5>Professional Training</h5>
+              <h2 className="py-3">Discover the smart way to learn driving</h2>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum dicta culpa deleniti quaerat id aspernatur exercitationem, magnam labore quidem modi nesciunt, maiores mollitia. Labore eos magni iste dolores! Tempore dolores delectus esse deserunt rerum recusandae numquam adipisci cumque hic accusamus Labore eos magni iste dolores! Tempore dolores delectus esse deserunt.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex nobis odio earum quam id dolor perspiciatis quibusdam officia voluptatibus. Labore eos magni iste dolores! Tempore dolores delectus esse deserunt</p>
+              <Link href="" className="btn btn-lg">Learn More</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div className={homeStyle.home_trust_section}>
           <div className="container-fluid">
             <div className={homeStyle.trust_main_section}>
@@ -177,6 +192,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+
       </section>
 
       {/* <section>
