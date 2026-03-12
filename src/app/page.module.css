@@ -50,15 +50,24 @@
     border-bottom: 5px solid var(--white-color);
     transition: .5s;
 }
+.listIcon {
+    color: var(--first-color);
+}
 .courses_box:hover {
+    box-shadow: 0 20px 6px -12px var(--first-light-color);
     border-bottom: 5px solid var(--first-color);
     transition: .5s;
 }
 .course_price {
-    background-color: var(--third-light-color);
+    background-color: var(--first-light-color);
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.courses_box:hover .course_price {
+    background-color: var(--second-light-color);
+    transition: .5s ease-in-out;
 }
 .course_price h2 {
     font-size: 35px;

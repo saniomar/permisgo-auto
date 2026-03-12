@@ -8,8 +8,10 @@ import homeStyle from "./page.module.css";
 // Image
 
 // Icon
-import { FaStar, FaRegUserCircle } from "react-icons/fa";
-import { FaRegCircleCheck } from "react-icons/fa6";
+import { FaStar, FaRegUserCircle, FaCrown } from "react-icons/fa";
+import { FaRegNewspaper } from "react-icons/fa6";
+import { HiMiniArrowPathRoundedSquare } from "react-icons/hi2";
+import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
 
 export default function Home() {
   return (
@@ -83,12 +85,12 @@ export default function Home() {
                       <Link href="" className="btn btn-lg">Buy Course</Link>
                       <div className={homeStyle.course_details_list}>
                         <ul className="mt-4">
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
                         </ul>
                       </div>
                     </div>
@@ -97,8 +99,8 @@ export default function Home() {
                 <div className="col-lg-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
-                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
-                      <h4 className="mt-3">Beginner Driving Course</h4>
+                      <FaCrown className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Advanced Driving Course</h4>
 
                       <h2>200 USD</h2>
                     </div>
@@ -107,12 +109,12 @@ export default function Home() {
                       <Link href="" className="btn btn-lg">Buy Course</Link>
                       <div className={homeStyle.course_details_list}>
                         <ul className="mt-4">
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
                         </ul>
                       </div>
                     </div>
@@ -121,8 +123,8 @@ export default function Home() {
                 <div className="col-lg-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
-                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
-                      <h4 className="mt-3">Beginner Driving Course</h4>
+                      <FaRegNewspaper className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Exam Preparation</h4>
 
                       <h2>200 USD</h2>
                     </div>
@@ -131,12 +133,12 @@ export default function Home() {
                       <Link href="" className="btn btn-lg">Buy Course</Link>
                       <div className={homeStyle.course_details_list}>
                         <ul className="mt-4">
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
                         </ul>
                       </div>
                     </div>
@@ -145,8 +147,8 @@ export default function Home() {
                 <div className="col-lg-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
-                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
-                      <h4 className="mt-3">Beginner Driving Course</h4>
+                      <HiMiniArrowPathRoundedSquare className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Refresher Lesson</h4>
 
                       <h2>200 USD</h2>
                     </div>
@@ -155,12 +157,12 @@ export default function Home() {
                       <Link href="" className="btn btn-lg">Buy Course</Link>
                       <div className={homeStyle.course_details_list}>
                         <ul className="mt-4">
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
-                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
+                          <li><TbSquareRoundedArrowRightFilled className={homeStyle.listIcon} />  Lorem ipsum dolor sit amet.</li>
                         </ul>
                       </div>
                     </div>
