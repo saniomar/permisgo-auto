@@ -17,7 +17,7 @@
 }
 #main_menu {
     background-color: var(--first-color);
-    padding: 8px 0;
+    padding: 8px 50px;
 }
 #navbarSelect {
     /* background-color: transparent; */
@@ -92,6 +92,9 @@
     #courseDropdown {
         padding-left: 10px;
     }
+    #main_menu {
+        padding: 8px 0px;
+    }
 }
 @media only screen and (min-width: 501px) and (max-width: 900px) {
     .mobileNavLogo {
@@ -104,9 +107,15 @@
     #courseDropdown {
         padding-left: 10px;
     }
+    #main_menu {
+        padding: 8px 0px;
+    }
 }
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
     #bookBtn {
         display: none;
+    }
+    #main_menu {
+        padding: 8px 0px;
     }
 }

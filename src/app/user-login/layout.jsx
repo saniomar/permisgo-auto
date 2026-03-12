@@ -1,5 +1,5 @@
 export const metadata = {
-    title: "Pricing",
+    title: "User Login",
     description: "Driving School",
 };
 

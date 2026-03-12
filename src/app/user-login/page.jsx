@@ -31,7 +31,7 @@ const UserLogin = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-4 mt-3">
-                                        <Link href="">
+                                        <Link href="/teacher-login">
                                             <div className={userLoginStyle.loginBoxes}>
                                                 <div className="text-center">
                                                     <div className="pb-4">
@@ -43,7 +43,7 @@ const UserLogin = () => {
                                         </Link>
                                     </div>
                                     <div className="col-lg-4 mt-3">
-                                        <Link href="">
+                                        <Link href="/student-login">
                                             <div className={userLoginStyle.loginBoxes}>
                                                 <div className="text-center">
                                                     <div className="pb-4">

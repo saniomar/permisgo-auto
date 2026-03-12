@@ -1,24 +1,133 @@
-.subscribe_home {
-    background-color: var(--forth-light-color);
-    padding: 50px 0;
-}
-.subscribe_home h2 {
-    font-size: 50px;
-}
-.subscribe_home button {
-    background-color: var(--second-color);
-    color: var(--white-color);
-}
-.subscribe_home button:hover {
+.home_trust_section {
+    padding: 50px 50px;
     background-color: var(--first-color);
+}
+.home_trust_section h2 {
     color: var(--white-color);
+    font-size: 40px;
+}
+#trust_box {
+    background-color: var(--second-color);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+#trust_box h4 {
+    color: var(--white-color);
+}
+.trustCount h3 {
+    background-color: var(--white-color);
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.trust_star {
+    color: var(--review-color);
+}
+.trustCount h3 span {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--first-color);
+}
+
+.courses_section {
+    padding: 50px 50px;
+}
+.courses_section h5 {
+    color: var(--third-color);
+    background-color: var(--white-color);
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.courses_section h2 {
+    color: var(--first-color);
+    font-size: 40px;
+    margin-top: 15px;
+}
+.courses_box {
+    background-color: var(--white-color);
+    padding: 25px;
+    border-radius: 20px;
+    border-bottom: 5px solid var(--white-color);
+    transition: .5s;
+}
+.courses_box:hover {
+    border-bottom: 5px solid var(--first-color);
+    transition: .5s;
+}
+.course_price {
+    background-color: var(--third-light-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.course_price h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 35px;
+}
+.course_priceIcon {
+    font-size: 30px;
+    color: var(--second-color);
+}
+.courses_box h4 {
+    font-size: 20px;
+}
+.course_details a {
+    width: 100%;
+    margin-top: 25px;
+    outline: 2px solid var(--first-color);
+    color: var(--first-color);
+    font-weight: 500;
+}
+.course_details a:hover {
+    color: var(--white-color);
+    background-color: var(--second-color);
+    outline: none;
+}
+.course_details_list {
+    height: 200px;
+    overflow-y: scroll;
+}
+.course_details_list ul li {
+    padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
-    .subscribe_home {
+    .home_trust_section {
         padding: 30px 0;
     }
-    .subscribe_home h2 {
-        font-size: 35px;
+    .home_trust_section h2 {
+        font-size: 30px;
+    }
+    .trustCount h3 span {
+        font-size: 30px;
+    }
+    .courses_section h2 {
+        font-size: 30px;
+    }
+    .courses_section {
+        padding: 30px 0px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .home_trust_section {
+        padding: 30px 0;
+    }
+    .trustCount h3 span {
+        font-size: 30px;
+    }
+    .courses_section {
+        padding: 30px 0px;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
+    .home_trust_section {
+        padding: 30px 0;
+    }
+    .trustCount h3 span {
+        font-size: 30px;
+    }
+    .courses_section {
+        padding: 30px 0px;
     }
 }

@@ -1,13 +1,176 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Style
 import homeStyle from "./page.module.css";
+
+// Image
+
+// Icon
+import { FaStar, FaRegUserCircle } from "react-icons/fa";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 export default function Home() {
   return (
     <>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore ex repudiandae ipsum qui commodi eius quis possimus voluptas hic nam? Excepturi ullam eligendi magnam deserunt, at saepe? Harum, optio. Asperiores voluptatem non, necessitatibus nesciunt nam dolore, molestias optio iusto quidem mollitia quaerat, architecto beatae! Deleniti corporis nobis quas cum debitis. Molestiae assumenda quaerat, numquam officia, nesciunt deserunt vero qui ducimus veritatis corporis adipisci nulla laborum consequuntur consectetur pariatur placeat nisi non amet rerum maiores deleniti aliquid porro ex accusamus. Expedita dolores nobis quibusdam, vitae suscipit architecto libero voluptatum eius veniam possimus at pariatur ullam fuga eligendi ipsa excepturi officiis nemo voluptatibus nostrum nihil delectus. Corporis deserunt molestias cupiditate autem, explicabo debitis quasi. Possimus alias, dolorum ex quo aspernatur tempora deserunt. Beatae voluptatem, tempore laudantium sapiente soluta deleniti reiciendis necessitatibus quod doloremque aspernatur iure cum incidunt quas! Ipsam in corporis laudantium soluta officiis, iure fugiat fuga magni quam nobis necessitatibus, perferendis suscipit. Animi ducimus voluptas hic nemo, repellendus veritatis aut facere aperiam, ipsum molestias laboriosam magnam totam laborum sed eius, saepe reiciendis asperiores. Blanditiis repellendus nisi, nemo saepe sint accusantium consequuntur itaque incidunt earum sit hic perferendis impedit obcaecati, adipisci ad provident ut. Ex sunt quasi pariatur mollitia. Provident illo, sed beatae, eveniet fuga quaerat similique inventore dolorem blanditiis facilis, quam quo voluptate quos praesentium quasi perspiciatis totam veniam cum fugiat repudiandae ipsum? Ab quia tempora, aliquam ea fugit nisi, iure ut corporis voluptas aperiam quos assumenda fugiat numquam aliquid dignissimos ipsum repudiandae doloremque quibusdam deleniti mollitia quam dolore. Harum natus illum beatae sed voluptatibus commodi. Sequi sed, accusamus, omnis quos delectus facere expedita quibusdam, temporibus rerum atque a? Corrupti reprehenderit expedita voluptatibus nam ad pariatur veniam rerum quas nobis? Ipsa, nesciunt. Culpa similique, autem officia dignissimos asperiores dolorum architecto, tempora voluptatum aspernatur distinctio quaerat deserunt. Magnam quidem, rem quis voluptatibus laboriosam doloremque inventore libero eos corporis maiores. Ducimus sint vero, aspernatur facere voluptatibus natus omnis alias placeat iusto! Illo neque saepe quaerat iure, veniam accusamus fugiat sunt nemo cum, soluta praesentium repudiandae delectus ipsam quidem hic placeat iste ad dignissimos et beatae rem temporibus enim necessitatibus? Voluptates autem dolore aliquam doloribus doloremque. Unde culpa sed, debitis, laborum numquam nobis, quia odio sunt animi maxime repellat earum neque cum a dolorem eaque nihil expedita cupiditate nostrum magni aperiam vitae incidunt natus. Provident eos asperiores temporibus reprehenderit nihil dignissimos amet voluptate praesentium ea laboriosam voluptatem corrupti molestias deserunt modi, vel laudantium error perspiciatis adipisci dolorum incidunt. Fugit neque harum nobis saepe voluptatibus et assumenda nulla cumque culpa natus alias laudantium sint, deleniti perferendis iste nostrum nemo eius optio adipisci qui? Reiciendis quibusdam quo nulla tenetur aut. Nemo quasi doloremque odit inventore voluptatibus dolores consequatur quis quibusdam ab? Facere impedit numquam consequatur nobis a distinctio debitis repellendus repudiandae quia harum excepturi, modi rerum tempore cumque molestias in nemo placeat. Modi vel quod nostrum ab soluta quam ea maxime excepturi! Cum cumque eligendi labore dolores iure doloremque quas beatae temporibus vitae assumenda laudantium, ullam excepturi error nam numquam. Labore ut modi harum maxime dolore.</h3>
+      
+      <section>
+        <div className={homeStyle.home_trust_section}>
+          <div className="container-fluid">
+            <div className={homeStyle.trust_main_section}>
+              <div className="text-center">
+                <h2>Trust Indicators</h2>
+              </div>
+              <div className="row mt-4">
+                <div className="col-lg-3 col-md-6 mt-3">
+                  <div className="text-center" id={homeStyle.trust_box}>
+                    <h4>Positive Rating</h4>
+                    <div className={homeStyle.trustCount}>
+                      <h3><span>5.0</span> <FaStar className={homeStyle.trust_star} /></h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mt-3">
+                  <div className="text-center" id={homeStyle.trust_box}>
+                    <h4>Student Trained</h4>
+                    <div className={homeStyle.trustCount}>
+                      <h3><span>2000</span> +</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mt-3">
+                  <div className="text-center" id={homeStyle.trust_box}>
+                    <h4>Pass Rate</h4>
+                    <div className={homeStyle.trustCount}>
+                      <h3><span>95</span> %</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3 col-md-6 mt-3">
+                  <div className="text-center" id={homeStyle.trust_box}>
+                    <h4>Instructor</h4>
+                    <div className={homeStyle.trustCount}>
+                      <h3><span>Fully Certified</span></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <div className={homeStyle.courses_section}>
+          <div className="container-fluid">
+            <div className="text-center pb-4">
+              <h5>Courses</h5>
+              <h2>Our Popular Driving Courses</h2>
+            </div>
+            <div className={homeStyle.courses_div}>
+              <div className="row">
+                <div className="col-lg-3">
+                  <div className={homeStyle.courses_box}>
+                    <div className={homeStyle.course_price}>
+                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Beginner Driving Course</h4>
 
+                      <h2>200 USD</h2>
+                    </div>
+                    <div className={homeStyle.course_details}>
+                      <h4 className="mb-0">Course Duration: 20 Hours</h4>
+                      <Link href="" className="btn btn-lg">Buy Course</Link>
+                      <div className={homeStyle.course_details_list}>
+                        <ul className="mt-4">
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={homeStyle.courses_box}>
+                    <div className={homeStyle.course_price}>
+                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Beginner Driving Course</h4>
+
+                      <h2>200 USD</h2>
+                    </div>
+                    <div className={homeStyle.course_details}>
+                      <h4 className="mb-0">Course Duration: 20 Hours</h4>
+                      <Link href="" className="btn btn-lg">Buy Course</Link>
+                      <div className={homeStyle.course_details_list}>
+                        <ul className="mt-4">
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={homeStyle.courses_box}>
+                    <div className={homeStyle.course_price}>
+                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Beginner Driving Course</h4>
+
+                      <h2>200 USD</h2>
+                    </div>
+                    <div className={homeStyle.course_details}>
+                      <h4 className="mb-0">Course Duration: 20 Hours</h4>
+                      <Link href="" className="btn btn-lg">Buy Course</Link>
+                      <div className={homeStyle.course_details_list}>
+                        <ul className="mt-4">
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={homeStyle.courses_box}>
+                    <div className={homeStyle.course_price}>
+                      <FaRegUserCircle className={homeStyle.course_priceIcon} />
+                      <h4 className="mt-3">Beginner Driving Course</h4>
+
+                      <h2>200 USD</h2>
+                    </div>
+                    <div className={homeStyle.course_details}>
+                      <h4 className="mb-0">Course Duration: 20 Hours</h4>
+                      <Link href="" className="btn btn-lg">Buy Course</Link>
+                      <div className={homeStyle.course_details_list}>
+                        <ul className="mt-4">
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                          <li><FaRegCircleCheck />  Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* <section>
         <div className={homeStyle.subscribe_home}>
