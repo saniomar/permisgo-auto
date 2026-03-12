@@ -64,10 +64,28 @@
     margin-bottom: 15px;
     border-radius: 10px;
     transition: .5s ease-in-out;
+    position: relative;
+}
+.course_deal {
+    position: absolute;
+    right: 15px;
+    border-radius: 5px;
+    background-color: var(--third-color);
+    padding: 5px 15px;
+    top: -8px;
+    color: var(--white-color);
 }
 .courses_box:hover .course_price {
     background-color: var(--second-light-color);
     transition: .5s ease-in-out;
+}
+#course_learn_more_btn {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#course_learn_more_btn:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
 }
 .course_price h2 {
     font-size: 35px;

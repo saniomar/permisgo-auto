@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className={homeStyle.courses_div}>
               <div className="row">
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6 mt-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
                       <FaRegUserCircle className={homeStyle.course_priceIcon} />
@@ -96,9 +96,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6 mt-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
+                      <h6 className={homeStyle.course_deal}>Popular Deal</h6>
                       <FaCrown className={homeStyle.course_priceIcon} />
                       <h4 className="mt-3">Advanced Driving Course</h4>
 
@@ -120,7 +121,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6 mt-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
                       <FaRegNewspaper className={homeStyle.course_priceIcon} />
@@ -144,7 +145,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6 mt-3">
                   <div className={homeStyle.courses_box}>
                     <div className={homeStyle.course_price}>
                       <HiMiniArrowPathRoundedSquare className={homeStyle.course_priceIcon} />
@@ -168,6 +169,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="text-center mt-4">
+                <Link href="" className="btn btn-lg" id={homeStyle.course_learn_more_btn}>Learn More</Link>
               </div>
             </div>
           </div>
