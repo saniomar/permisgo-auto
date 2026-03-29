@@ -1,8 +1,8 @@
 #main_footer {
     background-color: var(--first-color);
     padding: 30px;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 #main_footer #column {
     width: 20%;
@@ -37,22 +37,44 @@
     color: var(--white-color);
 }
 .footer_contact ul li {
-    background-color: #97979785;
     color: var(--white-color);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    margin-bottom: 15px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0px;
+}
+.footerSubscribe {
+    margin-top: 15px;
+}
+.footerSubscribe h5 {
+    color: var(--white-color);
 }
 #main_footer .footer_social ul li a {
-    font-size: 20px;
+    font-size: 23px;
     color: var(--white-color);
 }
 #main_footer button {
-    background-color: var(--second-color) !important;
+    background-color: var(--second-color);
     color: var(--white-color);
+}
+.footer_social {
+    margin-top: 25px;
+}
+#footerTimeDropDown {
+    background-color: #97979785 !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    font-size: 16px;
+}
+#footerTimeDropDownItems {
+    background-color: #2b2b2bf1 !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(204, 204, 204, 0.835);
+    width: 100%;
 }
 #main_footer h4 {
     margin-bottom: 20px;
@@ -77,7 +99,10 @@
 }
 #copywrite ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 35px;
+}
+#copywrite ul li:first-child {
+    margin-left: 0;
 }
 #copywrite ul li a {
     color: var(--white-color);

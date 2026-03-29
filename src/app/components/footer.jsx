@@ -24,13 +24,13 @@ const Footer = () => {
     return (
         <>
             <BottomMenu />
-            {/* <footer>
+            <footer>
                 <div id={footerStyle.main_footer}>
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                                 <Image src={Logo} className={footerStyle.footerLogo} layout='responsive' alt=''></Image>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam quae officia.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Quidem.</p>
                                 <div className={footerStyle.footer_contact}>
                                     <ul>
                                         <li><FaPhoneSquareAlt /> | +61 4584 5887</li>
@@ -38,28 +38,19 @@ const Footer = () => {
                                         <li><GrLocation /> | Road no-2, Sector-6, Uttara, Dhaka, Bangladesh</li>
                                     </ul>
                                 </div>
-                                <div className={footerStyle.footer_social}>
-                                    <ul>
-                                        <li><Link href=""><FaFacebook /></Link></li>
-                                        <li><Link href=""><FaInstagram /></Link></li>
-                                        <li><Link href=""><FaLinkedin /></Link></li>
-                                        <li><Link href=""><FaPinterestSquare /></Link></li>
-                                        <li><Link href=""><FaYoutube /></Link></li>
-                                    </ul>
-                                </div>
                             </div>
                             <div className="col-lg-2 col-md-6" id={footerStyle.column}>
-                                <h4>Quick Link</h4>
+                                <h4>About</h4>
                                 <div className={footerStyle.footer_menu}>
                                     <ul>
-                                        <li><Link href="/">Home</Link></li>
-                                        <li><Link href="/helps">Helps</Link></li>
-                                        <li><Link href="/courses">Courses</Link></li>
-                                        <li><Link href="/pricing">Pricing</Link></li>
-                                        <li><Link href="/booking">Booking</Link></li>
-                                        <li><Link href="/locations">Locations</Link></li>
-                                        <li><Link href="/about-us">About Us</Link></li>
-                                        <li><Link href="/contact-us">Contact Us</Link></li>
+                                        <li><Link href="/who-are-we">Who are we?</Link></li>
+                                        <li><Link href="/where-are-we">Where are we?</Link></li>
+                                        <li><Link href="/monitor-privacy-policy">Monitor Privacy Policy</Link></li>
+                                        <li><Link href="/student-privacy-policy">Student Privacy Policy</Link></li>
+                                        <li><Link href="/manage-my-cookies">Manage my cookies</Link></li>
+                                        <li><Link href="/legal-notice">Legal Notice</Link></li>
+                                        <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                        <li><Link href="/general-terms-and-conditions">General terms & conditions</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -84,21 +75,42 @@ const Footer = () => {
                                         <li><Link href="">Highway Code Glossary</Link></li>
                                         <li><Link href="">Driving licence glossary</Link></li>
                                         <li><Link href="">Person with a disability</Link></li>
-                                        <li><Link href="">Sponsorship</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-md-6" id={footerStyle.column}>
-                                <h4>Opening Hours</h4>
+                                <h4>Service Hours</h4>
                                 <div className={footerStyle.footer_openign_time}>
+                                    <div className="dropdown">
+                                        <button className="btn btn-lg dropdown-toggle" id={footerStyle.footerTimeDropDown} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Monday 10am - 1pm and 3pm - 7pm
+                                        </button>
+                                        <ul className="dropdown-menu dropdown-menu-dark" id={footerStyle.footerTimeDropDownItems}>
+                                            <li className="dropdown-item">Monday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Tuesday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Wednesday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Thursday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Friday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Saturday 10am - 1pm and 3pm - 7pm</li>
+                                            <li className="dropdown-item">Sunday By Appointment</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div className={footerStyle.footerSubscribe}>
+                                    <h5>Subscribe to get the latest updates and offers</h5>
+                                    <div className="input-group mt-4">
+                                        <input type="text" className="form-control form-control-lg" placeholder="Enter your Email" aria-label="email" aria-describedby="button-addon2" name='' />
+                                        <button className="btn btn-lg" type="button" id="button-addon2">Submit</button>
+                                    </div>
+                                </div>
+                                <div className={footerStyle.footer_social}>
                                     <ul>
-                                        <li>Monday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Tuesday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Wednesday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Thursday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Friday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Saturday 10am - 1pm and 3pm - 7pm</li>
-                                        <li>Sunday By Appointment</li>
+                                        <li><Link href=""><FaFacebook /></Link></li>
+                                        <li><Link href=""><FaInstagram /></Link></li>
+                                        <li><Link href=""><FaLinkedin /></Link></li>
+                                        <li><Link href=""><FaPinterestSquare /></Link></li>
+                                        <li><Link href=""><FaYoutube /></Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -109,27 +121,22 @@ const Footer = () => {
                 <div id={footerStyle.copywrite}>
                     <div className="container">
                         <hr />
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <p className='mb-0'>&copy; {date} Permisgo Auto Ecole | All Right Reserved. | Design & Development By :- <Link href="https://www.digitalmarketingbd.com/">Digital Marketing Solution (Pvt.) Ltd. </Link></p>
+                        <div className="text-center">
+                            <div className={footerStyle.footer_support_menu}>
+                                <ul className='mb-3'>
+                                    <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
+                                    <li><Link href="/privacy-and-cookies">Privacy & Cookies</Link></li>
+                                    <li><Link href="/refund-policy">Refund Policy</Link></li>
+                                    <li><Link href="/disclaimer">Disclaimer</Link></li>
+                                </ul>
                             </div>
-                            <div className="col-lg-6">
-                                <div className="text-end">
-                                    <div className={footerStyle.footer_support_menu}>
-                                        <ul>
-                                            <li><Link href="/helps">Helps</Link></li>
-                                            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                                            <li><Link href="/terms-and-conditions">Terms & Conditions</Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <p className='mb-0'>&copy; {date} Permisgo Auto Ecole | All Right Reserved. | Design & Development By :- <Link href="https://www.digitalmarketingbd.com/">Digital Marketing Solution (Pvt.) Ltd. </Link></p>
                         </div>
                     </div>
                 </div>
-            </footer> */}
+            </footer>
 
-            <footer>
+            {/* <footer>
                 <div id={footerStyle.main_footer}>
                     <div className="container">
                         <div className="row">
@@ -209,7 +216,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </>
     )
 }

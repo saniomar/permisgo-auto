@@ -29,6 +29,12 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <div className="d-flex justify-content-between align-items-center gap-3">
+                                <div>
+                                    <select name="" className='form-select' id="">
+                                        <option value="">EN</option>
+                                        <option value="">FR</option>
+                                    </select>
+                                </div>
                                 <div id={navbarStyle.topbarSocial}>
                                     <ul>
                                         <li><Link href=""><FaFacebook /></Link></li>
@@ -37,12 +43,6 @@ const Navbar = () => {
                                         <li><Link href=""><FaPinterestSquare /></Link></li>
                                         <li><Link href=""><FaYoutube /></Link></li>
                                     </ul>
-                                </div>
-                                <div>
-                                    <select name="" className='form-select' id="">
-                                        <option value="">EN</option>
-                                        <option value="">FR</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
