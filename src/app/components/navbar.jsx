@@ -12,6 +12,9 @@ import { FaInstagram, FaLinkedin, FaPinterestSquare, FaYoutube, FaPhoneSquareAlt
 
 // Image
 import Logo from "../../../public/image/logo.png"
+import engFlag from "../../../public/image/eng-flag.png"
+import banFlag from "../../../public/image/ban-flag.png"
+import fraFlag from "../../../public/image/fra-flag.png"
 import Logo2 from "../../../public/image/logo2.png"
 
 const Navbar = () => {
@@ -32,6 +35,7 @@ const Navbar = () => {
                                 <div>
                                     <select name="" className='form-select' id="">
                                         <option value="">EN</option>
+                                        <option value="">BN</option>
                                         <option value="">FR</option>
                                     </select>
                                 </div>
@@ -90,19 +94,22 @@ const Navbar = () => {
                                                     </ul>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link className="nav-link active" aria-current="page" href="/pricing">Pricing</Link>
+                                                    <Link className="nav-link active" aria-current="page" href="/pricing">Offers</Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <Link href="/locations" className="nav-link">Locations</Link>
+                                                    <Link href="/traffic-laws" className="nav-link">Traffic Laws</Link>
                                                 </li>
                                                 <li className="nav-item dropdown">
-                                                    <Link href="/reviews" className="nav-link">Reviews</Link>
+                                                    <Link href="/driving-license" className="nav-link">Driving License</Link>
                                                 </li>
                                                 <li className="nav-item dropdown">
-                                                    <Link href="/about-us" className="nav-link">About Us</Link>
-                                                </li>
-                                                <li className="nav-item">
                                                     <Link href="/contact-us" className="nav-link">Contact Us</Link>
+                                                </li>
+                                                <li className="nav-item">
+                                                    <Link href="/appointment" className="nav-link">Appointment</Link>
+                                                </li>
+                                                <li className="nav-item">
+                                                    <Link href="/help" className="nav-link">Help</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -111,7 +118,7 @@ const Navbar = () => {
                             </div>
                             <div className="d-flex justify-content-between align-items-center gap-4">
                                 <Link href="/user-login" className='btn' id={navbarStyle.loginBtn}>Login</Link>
-                                <Link href="/booking" className='btn' id={navbarStyle.bookBtn}>Book Your Lesson</Link>
+                                <Link href="/booking" className='btn' id={navbarStyle.bookBtn}>Inscription</Link>
                             </div>
                         </div>
                     </div>

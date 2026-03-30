@@ -6,6 +6,10 @@ import Link from "next/link";
 import homeStyle from "./page.module.css";
 
 // Image
+import broomLogo from "../../public/image/broomLogo.png"
+import googleLogo from "../../public/image/googleLogo.png"
+import trustLogo from "../../public/image/trustLogo.png"
+import blogImg from "../../public/image/blog.jpg"
 
 // Icon
 import { FaStar, FaRegUserCircle, FaCrown } from "react-icons/fa";
@@ -195,33 +199,112 @@ export default function Home() {
       </section>
 
       <section>
-        
-      </section>
-      
-      <section>
-
-      </section>
-
-      {/* <section>
-        <div className={homeStyle.subscribe_home}>
-          <div className="container">
-            <h2>Subscribe to Our Newsletter</h2>
+        <div className={homeStyle.reviewLogo}>
+          <div className="container-fluid">
             <div className="row">
-              <div className="col-lg-5">
-                <p>Get weekly update about our product on your email, no spam guaranteed we promise ✌️</p>
-              </div>
-              <div className="col-lg-7">
-                <form action="">
-                  <div className="input-group mb-3">
-                    <input type="text" className="form-control form-control-lg" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                    <button className="btn btn-lg" type="button" id="button-addon2">Subscribe</button>
+              <div className="col-lg-4 col-md-6">
+                <div className={homeStyle.review_logo_box}>
+                  <div className="text-center">
+                    <Image src={broomLogo} layout="responsive" alt=""></Image>
+                    <h4>VroomVroom</h4>
+                    <ul>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                    </ul>
+                    <p className="mb-0">04 out of 05</p>
                   </div>
-                </form>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className={homeStyle.review_logo_box}>
+                  <div className="text-center">
+                    <Image src={googleLogo} layout="responsive" alt=""></Image>
+                    <h4>Google Ratings</h4>
+                    <ul>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                      <li><FaStar /></li>
+                    </ul>
+                    <p className="mb-0">04 out of 05</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className={homeStyle.review_logo_box}>
+                  <div className="text-center">
+                      <Image src={trustLogo} layout="responsive" alt=""></Image>
+                      <h4>Trustpilot Ratings</h4>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                      <p className="mb-0">04 out of 05</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
+      
+      <section>
+        <div className={homeStyle.home_blog_section}>
+          <div className="container-fluid">
+            <div className="text-center pb-4">
+              <h5>Blog</h5>
+              <h2>News and Insights</h2>
+            </div>
+
+            <div className="row">
+              <div className="col-lg-3 col-md-6">
+                <div className={homeStyle.homeBlogBox}>
+                  <Image src={blogImg} layout="responsive" alt=""></Image>
+                  <h4><Link href="">10 Tips to Pass Your Driving Test on the First Try</Link></h4>
+                  <p>Nervous about your road test? Discover practical tips, common...</p>
+                  <Link href="" className="btn" id={homeStyle.blogReadMoreBtn}>Read More</Link>
+                </div>
+              </div>
+              <div className="col-lg-3 col-md-6">
+                <div className={homeStyle.homeBlogBox}>
+                  <Image src={blogImg} layout="responsive" alt=""></Image>
+                  <h4><Link href="">10 Tips to Pass Your Driving Test on the First Try</Link></h4>
+                  <p>Nervous about your road test? Discover practical tips, common...</p>
+                  <Link href="" className="btn" id={homeStyle.blogReadMoreBtn}>Read More</Link>
+                </div>
+              </div>
+              <div className="col-lg-3 col-md-6">
+                <div className={homeStyle.homeBlogBox}>
+                  <Image src={blogImg} layout="responsive" alt=""></Image>
+                  <h4><Link href="">10 Tips to Pass Your Driving Test on the First Try</Link></h4>
+                  <p>Nervous about your road test? Discover practical tips, common...</p>
+                  <Link href="" className="btn" id={homeStyle.blogReadMoreBtn}>Read More</Link>
+                </div>
+              </div>
+              <div className="col-lg-3 col-md-6">
+                <div className={homeStyle.homeBlogBox}>
+                  <Image src={blogImg} layout="responsive" alt=""></Image>
+                  <h4><Link href="">10 Tips to Pass Your Driving Test on the First Try</Link></h4>
+                  <p>Nervous about your road test? Discover practical tips, common...</p>
+                  <Link href="" className="btn" id={homeStyle.blogReadMoreBtn}>Read More</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-4">
+              <Link href="/blog" className="btn btn-lg" id={homeStyle.course_learn_more_btn}>Learn More</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
