@@ -61,6 +61,7 @@ ul {
 
 input::placeholder {
     font-family: var(--second-font);
+    font-size: 17px;
 }
 
 .swiper {
@@ -168,4 +169,11 @@ button:focus:not(:focus-visible) {
 }
 .nav-pills .nav-link.active {
   background-color: var(--second-color) !important;
+}
+
+#home_faq_second button {
+  background-color: var(--second-light-color) !important;
+  color: var(--first-color) !important;
+  padding: 20px 15px;
+  font-weight: 500  ;
 }
