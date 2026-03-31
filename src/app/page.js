@@ -41,6 +41,15 @@ import instruc1 from "../../public/image/instrac1.png"
 import instruc2 from "../../public/image/instrac2.png"
 import instruc3 from "../../public/image/instrac3.png"
 import instruc4 from "../../public/image/instrac4.png"
+import hser1 from "../../public/image/hser1.png"
+import hser2 from "../../public/image/hser2.png"
+import hser3 from "../../public/image/hser3.png"
+import hser4 from "../../public/image/hser4.png"
+import hser5 from "../../public/image/hser5.png"
+import hser6 from "../../public/image/hser6.png"
+import hser7 from "../../public/image/hser7.png"
+import hser8 from "../../public/image/hser8.png"
+import hser9 from "../../public/image/hser9.png"
 
 // Icon
 import { FaStar, FaRegUserCircle, FaCrown } from "react-icons/fa";
@@ -57,7 +66,7 @@ export default function Home() {
   return (
     <>
 
-      <section>
+      {/* <section>
         <div className={homeStyle.about_second_section}>
           <div className="row">
             <div className="col-lg-5"></div>
@@ -232,6 +241,127 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section>
+        <div className={homeStyle.home_services}>
+          <div className="container-fluid">
+            <div className="text-center pb-4">
+              <h5>Services</h5>
+              <h2>Your driving licence with Permisgo</h2>
+            </div>
+            <div className="row">
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser1} layout="responsive" alt=""></Image>
+                    <h4>Permis B Conduite Manuelle</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser2} layout="responsive" alt=""></Image>
+                    <h4>Permis B Conduite Automatique</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser3} layout="responsive" alt=""></Image>
+                    <h4>Conduite Accompagnee</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser4} layout="responsive" alt=""></Image>
+                    <h4>Supervised driving (AAC)</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser5} layout="responsive" alt=""></Image>
+                    <h4>Code en salle</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser6} layout="responsive" alt=""></Image>
+                    <h4>Code en ligne</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser7} layout="responsive" alt=""></Image>
+                    <h4>Conduite Supervisee</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser8} layout="responsive" alt=""></Image>
+                    <h4>Permis Accelere</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 mt-3">
+                <div className={homeStyle.home_service_box}>
+                  <div className="text-center">
+                    <Image src={hser9} layout="responsive" alt=""></Image>
+                    <h4>Code Accelere</h4>
+                    <h3>20hr - 990£</h3>
+                    <div className="mt-3">
+                      <Link href="" className="btn">Learn more</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -247,19 +377,19 @@ export default function Home() {
               spaceBetween={20}
               breakpoints={{
                 300: {
-                  slidesPerView: 3,
+                  slidesPerView: 1,
                   spaceBetween: 10,
                 },
                 640: {
-                  slidesPerView: 3,
+                  slidesPerView: 2,
                   spaceBetween: 10,
                 },
                 768: {
-                  slidesPerView: 4,
+                  slidesPerView: 2,
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 5,
+                  slidesPerView: 4,
                   spaceBetween: 20,
                 },
                 1440: {

@@ -519,6 +519,52 @@
     color: var(--white-color);
 }
 
+.home_services {
+    padding: 50px 50px;
+}
+
+.home_services h5 {
+    color: var(--third-color);
+    background-color: var(--white-color);
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.home_services h2 {
+    color: var(--first-color);
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.home_services img {
+    width: 100px !important;
+}
+
+.home_services a {
+    outline: 1px solid var(--second-color);
+    font-weight: 600;
+}
+.home_services a:hover {
+    background-color: var(--second-color);
+    outline: none;
+    color: var(--white-color);
+}
+
+.home_service_box {
+    background-color: var(--first-light-color);
+    border-radius: 15px;
+    padding: 30px 0;
+    border-bottom: 4px solid var(--first-light-color);
+}
+
+.home_service_box:hover {
+    border-bottom: 4px solid var(--first-color);
+}
+
+.home_services h3 {
+    color: var(--third-color);
+}
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .about_second_section {
@@ -613,6 +659,21 @@
     .home_testimonials h2 {
         font-size: 30px;
     }
+
+    .home_services {
+        padding: 30px 10px;
+    }
+
+    .home_services h2 {
+        font-size: 30px;
+    }
+
+    .our_instructor {
+        padding: 30px 10px;
+    }
+    .our_instructor h2 {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 900px) {
@@ -665,6 +726,14 @@
     .home_testimonials {
         padding: 30px 10px;
     }
+
+    .home_services {
+        padding: 30px 10px;
+    }
+
+    .our_instructor {
+        padding: 30px 10px;
+    }
 }
 
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
@@ -701,6 +770,10 @@
     }
 
     .home_testimonials {
+        padding: 30px 10px;
+    }
+
+    .home_services {
         padding: 30px 10px;
     }
 }
