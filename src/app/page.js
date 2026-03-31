@@ -34,13 +34,19 @@ import payment7 from "../../public/image/payoneer.png"
 import payment8 from "../../public/image/skrill.png"
 import payment9 from "../../public/image/stripe.png"
 import payment10 from "../../public/image/discover.png"
+import tes1 from "../../public/image/tes1.png"
+import tes2 from "../../public/image/tes2.png"
+import tes3 from "../../public/image/tes3.png"
+import instruc1 from "../../public/image/instrac1.png"
+import instruc2 from "../../public/image/instrac2.png"
+import instruc3 from "../../public/image/instrac3.png"
+import instruc4 from "../../public/image/instrac4.png"
 
 // Icon
 import { FaStar, FaRegUserCircle, FaCrown } from "react-icons/fa";
-import { FaRegNewspaper } from "react-icons/fa6";
+import { FaRegNewspaper, FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { HiMiniArrowPathRoundedSquare } from "react-icons/hi2";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
-import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 
 export default function Home() {
 
@@ -227,6 +233,325 @@ export default function Home() {
       </section>
 
       <section>
+        <div className={homeStyle.our_instructor}>
+          <div className="text-center pb-4">
+            <h5>Instructors</h5>
+            <h2>You'll love our instructors</h2>
+          </div>
+
+          <div className="mt-3">
+            <Swiper
+              slidesPerView="auto"
+              spaceBetween={20}
+              breakpoints={{
+                300: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                640: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 20,
+                },
+                1440: {
+                  slidesPerView: 6,
+                  spaceBetween: 20,
+                }
+              }}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              freeMode={true}
+              loop={true}
+              modules={[FreeMode, Autoplay, Navigation]}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              className="instructorSwiper"
+            >
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc1} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc2} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc3} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc1} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc2} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc3} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc1} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc2} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc3} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.instructorBox}>
+                  <div className="text-center">
+                    <Image src={instruc1} layout="responsive" alt=""></Image>
+                    <h4>Robert Fox</h4>
+                    <div className={homeStyle.instructor_inner_box}>
+                      <p className="mb-0">Experience <span>05 Years+</span></p>
+                      <ul>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                        <li><FaStar /></li>
+                      </ul>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center gap-3 mt-3">
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.bookBtn}>Book Now</Link>
+                      </div>
+                      <div className={homeStyle.instructor_both_btn}>
+                        <Link href="" className="btn" id={homeStyle.messageBtn}>Message</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            {/* Outside Navigation */}
+            <div id={homeStyle.instructorNavigationIcon} className="d-flex justify-content-center gap-3">
+              <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
+                <FaArrowLeftLong />
+              </button>
+              <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+                <FaArrowRightLong />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div className={homeStyle.reviewLogo}>
           <div className="container-fluid">
             <div className="row">
@@ -284,6 +609,297 @@ export default function Home() {
       </section>
 
       <section>
+        <div className={homeStyle.home_testimonials}>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <div className="text-start pb-4">
+                <h5>Testimonials</h5>
+                <h2>What Our Students Say</h2>
+              </div>
+            </div>
+            <div>
+              {/* Outside Navigation */}
+              <div id={homeStyle.navigationIcon} className="d-flex gap-3">
+                <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
+                  <FaArrowLeftLong />
+                </button>
+                <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+                  <FaArrowRightLong />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <Swiper
+              slidesPerView="auto"
+              spaceBetween={20}
+              breakpoints={{
+                300: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+                1440: {
+                  slidesPerView: 5,
+                  spaceBetween: 20,
+                }
+              }}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              freeMode={true}
+              loop={true}
+              modules={[FreeMode, Autoplay, Navigation]}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              className="testimonialSwiper"
+            >
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes1} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes2} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes3} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes1} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes2} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes3} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes1} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes2} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes3} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={homeStyle.testimonialBox}>
+                  <p className={homeStyle.testiSay}>Thanks to the instructors, I passed my driving test on the first try. The lessons were clear and very helpful! I passed my driving test on the first try.</p>
+                  <ul>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                    <li><FaStar /></li>
+                  </ul>
+                  <div className="d-flex justify-content-start align-items-center gap-3 mt-3">
+                    <div>
+                      <Image src={tes1} layout="responsive" alt=""></Image>
+                    </div>
+                    <div>
+                      <h4 className="mb-0">Esther Howard</h4>
+                      <p className="mb-0">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <div className="text-start mt-4">
+              <Link href="" className="btn btn-lg">View All</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={homeStyle.home_instructor_bg}>
+          <div>
+            <div className="text-center">
+              <h3>Are you a driving instructor? And super friendly?</h3>
+              <p>Become a freelance driving instructor.</p>
+              <div className="mt-4">
+                <Link href="" className="btn btn-lg">Join us a driving instructor</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div className={homeStyle.home_faq}>
           <div className="container-fluid">
             <div className="text-center pb-4">
@@ -311,11 +927,11 @@ export default function Home() {
                         </div>
                         <div className="col-lg-6 mt-3">
                           <label htmlFor="email">Email</label>
-                          <input type="text" id="email" className="form-control form-control-lg" placeholder="Write email address" />
+                          <input type="email" id="email" className="form-control form-control-lg" placeholder="Write email address" />
                         </div>
                         <div className="col-lg-6 mt-3">
                           <label htmlFor="phone-number">Phone Number</label>
-                          <input type="text" id="phone-number" className="form-control form-control-lg" placeholder="Write phone number" />
+                          <input type="tel" id="phone-number" className="form-control form-control-lg" placeholder="Write phone number" />
                         </div>
                         <div className="col-lg-12 mt-3">
                           <label htmlFor="question">Ask your questions</label>
@@ -433,6 +1049,18 @@ export default function Home() {
                               </div>
                             </div>
                           </div>
+                          <div className="accordion-item">
+                            <h3 className="accordion-header" id="headingFaqNine">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqNine" aria-expanded="false" aria-controls="collapseFaqNine">
+                                Accordion Item #9
+                              </button>
+                            </h3>
+                            <div id="collapseFaqNine" className="accordion-collapse collapse" aria-labelledby="headingFaqNine" data-bs-parent="#accordionExample">
+                              <div className="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -524,11 +1152,11 @@ export default function Home() {
 
                     {/* Outside Navigation */}
                     <div id={homeStyle.navigationIcon} className="d-flex gap-3">
-                      <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
-                        <MdOutlineArrowBackIosNew />
-                      </button>
                       <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
-                        <MdOutlineArrowForwardIos />
+                        <FaArrowLeftLong />
+                      </button>
+                      <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+                        <FaArrowRightLong />
                       </button>
                     </div>
 

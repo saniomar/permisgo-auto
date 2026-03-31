@@ -144,6 +144,12 @@
     }
 }
 @media only screen and (min-width: 501px) and (max-width: 900px) {
+    #main_footer {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     #main_footer #column {
         width: 50%;
     }
@@ -152,10 +158,22 @@
     }
 }
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
+    #main_footer {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     #main_footer #column {
         width: 50%;
     }
     #main_footer h4 {
         margin-top: 20px;   
+    }
+}
+
+@media only screen and (min-width: 1101px) and (max-width: 1500px) {
+    #main_footer #column {
+        width: 30%;
     }
 }

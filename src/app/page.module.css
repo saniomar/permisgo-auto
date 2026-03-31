@@ -1,6 +1,7 @@
 .about_second_section {
     padding: 50px 50px;
 }
+
 .about_second_section h5 {
     color: var(--third-color);
     background-color: var(--white-color);
@@ -8,16 +9,19 @@
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 .about_second_section h2 {
     font-size: 40px;
     margin-top: 20px;
 }
+
 .about_second_section a {
     background-color: var(--first-color);
-    
+
     color: var(--white-color);
     margin-top: 20px;
 }
+
 .about_second_section a:hover {
     background-color: var(--second-color);
     color: var(--white-color);
@@ -27,26 +31,32 @@
     padding: 50px 50px;
     background-color: var(--first-color);
 }
+
 .home_trust_section h2 {
     color: var(--white-color);
     font-size: 40px;
 }
+
 #trust_box {
     background-color: var(--second-color);
     padding-top: 10px;
     border-radius: 10px;
 }
+
 #trust_box h4 {
     color: var(--white-color);
 }
+
 .trustCount h3 {
     background-color: var(--white-color);
     padding: 10px 0;
     border-radius: 10px;
 }
+
 .trust_star {
     color: var(--review-color);
 }
+
 .trustCount h3 span {
     font-size: 35px;
     font-weight: 600;
@@ -56,6 +66,7 @@
 .courses_section {
     padding: 50px 50px;
 }
+
 .courses_section h5 {
     color: var(--third-color);
     background-color: var(--white-color);
@@ -63,11 +74,13 @@
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 .courses_section h2 {
     color: var(--first-color);
     font-size: 40px;
     margin-top: 15px;
 }
+
 .courses_box {
     background-color: var(--white-color);
     padding: 25px;
@@ -75,14 +88,17 @@
     border-bottom: 5px solid var(--white-color);
     transition: .5s;
 }
+
 .listIcon {
     color: var(--first-color);
 }
+
 .courses_box:hover {
     box-shadow: 0 20px 6px -12px var(--first-light-color);
     border-bottom: 5px solid var(--first-color);
     transition: .5s;
 }
+
 .course_price {
     background-color: var(--first-light-color);
     padding: 15px;
@@ -91,6 +107,7 @@
     transition: .5s ease-in-out;
     position: relative;
 }
+
 .course_deal {
     position: absolute;
     right: 15px;
@@ -100,30 +117,37 @@
     top: -8px;
     color: var(--white-color);
 }
+
 .courses_box:hover .course_price {
     background-color: var(--second-light-color);
     transition: .5s ease-in-out;
 }
+
 #course_learn_more_btn {
     background-color: var(--first-color);
     color: var(--white-color);
 }
+
 #course_learn_more_btn:hover {
     background-color: var(--second-color);
     color: var(--white-color);
 }
+
 .course_price h2 {
     font-size: 35px;
     font-weight: 600;
     margin-top: 35px;
 }
+
 .course_priceIcon {
     font-size: 30px;
     color: var(--second-color);
 }
+
 .courses_box h4 {
     font-size: 20px;
 }
+
 .course_details a {
     width: 100%;
     margin-top: 25px;
@@ -131,15 +155,18 @@
     color: var(--first-color);
     font-weight: 500;
 }
+
 .course_details a:hover {
     color: var(--white-color);
     background-color: var(--second-color);
     outline: none;
 }
+
 .course_details_list {
     height: 200px;
     overflow-y: scroll;
 }
+
 .course_details_list ul li {
     padding-bottom: 10px;
 }
@@ -148,21 +175,25 @@
     background-color: var(--first-color);
     padding: 50px 50px;
 }
+
 .review_logo_box {
     background-color: var(--white-color);
     padding: 20px;
     border-radius: 15px;
     border: 3px solid var(--line-color);
 }
+
 .review_logo_box h4 {
     font-size: 30px;
     font-weight: 600;
     color: var(--first-color);
 }
+
 .review_logo_box img {
     width: 70px !important;
     margin-bottom: 20px;
 }
+
 .review_logo_box ul li {
     display: inline-block;
     font-size: 20px;
@@ -173,6 +204,7 @@
 .home_blog_section {
     padding: 50px 50px;
 }
+
 .home_blog_section h5 {
     color: var(--third-color);
     background-color: var(--white-color);
@@ -180,29 +212,35 @@
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 .home_blog_section h2 {
     color: var(--first-color);
     font-size: 40px;
     margin-top: 15px;
 }
+
 .homeBlogBox {
     background-color: var(--first-light-color);
     padding: 20px;
     border-radius: 20px;
 }
+
 .homeBlogBox img {
     border-radius: 10px;
     margin-bottom: 15px;
 }
+
 .homeBlogBox h4 a {
     color: var(--first-color);
 }
+
 .homeBlogBox #blogReadMoreBtn {
     background-color: var(--white-color);
     color: var(--first-color);
     outline: 1px solid var(--first-color);
     font-weight: 500;
 }
+
 .homeBlogBox #blogReadMoreBtn:hover {
     outline: none;
     background-color: var(--second-color);
@@ -212,6 +250,7 @@
 .home_faq {
     padding: 50px 50px;
 }
+
 .home_faq h5 {
     color: var(--third-color);
     background-color: var(--white-color);
@@ -219,24 +258,37 @@
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 .home_faq h2 {
     color: var(--first-color);
     font-size: 40px;
     margin-top: 15px;
 }
+
+.home_faq h3 {
+    font-size: 35px;
+}
+
+.home_faq h4 {
+    font-size: 30px;
+}
+
 .homeFaqForm {
     padding: 20px 15px;
     background-color: var(--first-light-color);
     border-radius: 10px;
 }
+
 .home_faq button {
     background-color: var(--second-color);
     color: var(--white-color);
 }
+
 .home_faq button:hover {
     background-color: var(--first-color);
     color: var(--white-color);
 }
+
 .home_faq .faq_second {
     padding-bottom: 50px;
 }
@@ -245,6 +297,7 @@
     padding: 50px 50px;
     background-color: var(--offwhite-color);
 }
+
 .home_payment h5 {
     color: var(--third-color);
     background-color: var(--white-color);
@@ -252,128 +305,402 @@
     padding: 5px 15px;
     border-radius: 5px;
 }
+
 .home_payment h2 {
     color: var(--first-color);
     font-size: 40px;
     margin-top: 15px;
 }
+
 .home_payment #paymentRightImage {
     border-radius: 15px;
 }
+
 #navigationIcon {
     margin-top: 30px;
 }
+
 #navigationIcon button {
+    background-color: var(--first-light-color);
+    color: var(--first-color);
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+#navigationIcon button:hover {
     background-color: var(--second-color);
     color: var(--white-color);
 }
-#navigationIcon button:hover {
+
+.home_instructor_bg {
+    background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.7)),url("../../public/image/driving-instructor.webp");
+    padding-top: 700px;
+    padding-bottom: 80px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_instructor_bg h3 {
+    font-size: 40px;
+    color: var(--white-color);
+}
+
+.home_instructor_bg p {
+    color: var(--white-color);
+}
+
+.home_instructor_bg a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+.home_instructor_bg a:hover {
     background-color: var(--first-color);
     color: var(--white-color);
 }
+
+.home_testimonials {
+    padding: 50px 50px;
+    background-color: var(--offwhite-color);
+}
+
+.home_testimonials a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+.home_testimonials a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+.home_testimonials h5 {
+    color: var(--third-color);
+    background-color: var(--white-color);
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.testimonialBox {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(146, 146, 146, 0.3);
+}
+
+.testimonialBox:hover {
+    box-shadow: 5px 8px 10px var(--first-light-color);
+}
+
+.testimonialBox .testiSay {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.testimonialBox img {
+    width: 50px !important;
+    border-radius: 50%;
+}
+
+.testimonialBox h4 {
+    font-size: 20px;
+}
+
+.home_testimonials ul li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 20px;
+    color: var(--review-color);
+}
+
+.home_testimonials h2 {
+    color: var(--first-color);
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.our_instructor {
+    padding: 50px 50px;
+    background-color: var(--offwhite-color);
+}
+
+.our_instructor h5 {
+    color: var(--third-color);
+    background-color: var(--white-color);
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.our_instructor h2 {
+    color: var(--first-color);
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+.instructorBox {
+    background-color: var(--first-light-color);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.instructorBox:hover {
+    outline: 1px solid var(--first-color);
+}
+
+.instructorBox h4 {
+    margin-bottom: 15px;
+}
+
+.instructor_both_btn {
+    width: 100%;
+}
+
+.instructorBox #bookBtn {
+    background-color: var(--second-color);
+    width: 100% !important;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.instructorBox #bookBtn:hover {
+    background-color: var(--first-color);
+}
+
+.instructorBox #messageBtn {
+    outline: 1px solid var(--second-color);
+    width: 100% !important;
+    font-weight: 600;
+}
+.instructorBox #messageBtn:hover {
+    outline: none;
+    background-color: var(--second-color);
+    width: 100% !important;
+    color: var(--white-color);
+}
+
+.instructor_inner_box {
+    background-color: var(--white-color);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.instructor_inner_box p span {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.instructorBox ul li {
+    display: inline-block;
+    margin: 0 5px;
+    color: var(--first-color);
+}
+
+.instructorBox img {
+    width: 70px !important;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#instructorNavigationIcon button {
+    background-color: var(--second-light-color);
+    color: var(--first-color);
+    padding-bottom: 10px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+#instructorNavigationIcon button:hover {
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .about_second_section {
         padding: 50px 0px;
     }
+
     .home_trust_section {
         padding: 30px 0;
     }
+
     .home_trust_section h2 {
         font-size: 30px;
     }
+
     .trustCount h3 span {
         font-size: 30px;
     }
+
     .courses_section h2 {
         font-size: 30px;
     }
+
     .courses_section {
         padding: 30px 0px;
     }
+
     .reviewLogo {
         padding: 30px 10px;
     }
+
     .review_logo_box {
         margin-bottom: 10px;
         margin-top: 10px;
     }
+
     .home_blog_section {
         padding: 30px 10px;
     }
+
     .home_blog_section h2 {
         font-size: 30px;
     }
+
     .homeBlogBox {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
     .home_faq {
         padding: 30px 10px;
     }
+
     .home_faq h2 {
         font-size: 30px;
     }
+
+    .home_faq h3 {
+        font-size: 25px;
+    }
+
+    .home_faq h4 {
+        font-size: 25px;
+    }
+
     .home_faq_second {
         margin-top: 20px;
         padding-left: 0;
         padding-right: 0;
     }
+
+    .home_instructor_bg {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .home_instructor_bg h3 {
+        font-size: 35px;
+    }
+
     .home_payment {
         padding: 30px 10px;
     }
+
     .home_payment h2 {
         font-size: 30px;
     }
+
+    .home_testimonials {
+        padding: 30px 10px;
+    }
+
+    .home_testimonials h2 {
+        font-size: 30px;
+    }
 }
+
 @media only screen and (min-width: 501px) and (max-width: 900px) {
     .about_second_section {
         padding: 50px 0px;
     }
+
     .home_trust_section {
         padding: 30px 0;
     }
+
     .trustCount h3 span {
         font-size: 30px;
     }
+
     .courses_section {
         padding: 30px 0px;
     }
+
     .reviewLogo {
         padding: 30px 10px;
     }
+
     .review_logo_box {
         margin-bottom: 10px;
         margin-top: 10px;
     }
+
     .home_blog_section {
         padding: 30px 10px;
     }
+
     .homeBlogBox {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
     .home_faq {
         padding: 30px 10px;
     }
+
     .home_faq_second {
         margin-top: 20px;
     }
+
     .home_payment {
         padding: 30px 10px;
     }
+
+    .home_testimonials {
+        padding: 30px 10px;
+    }
 }
+
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
     .about_second_section {
         padding: 50px 0px;
     }
+
     .home_trust_section {
         padding: 30px 0;
     }
+
     .trustCount h3 span {
         font-size: 30px;
     }
+
     .courses_section {
         padding: 30px 0px;
+    }
+
+    .reviewLogo {
+        padding: 30px 10px;
+    }
+
+    .home_faq {
+        padding: 30px 10px;
+    }
+
+    .home_payment {
+        padding: 30px 10px;
+    }
+
+    .home_blog_section {
+        padding: 30px 10px;
+    }
+
+    .home_testimonials {
+        padding: 30px 10px;
     }
 }

@@ -177,3 +177,7 @@ button:focus:not(:focus-visible) {
   padding: 20px 15px;
   font-weight: 500  ;
 }
+
+.swiper-wrapper {
+  padding: 5px !important;
+}
