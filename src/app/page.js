@@ -50,7 +50,9 @@ import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
 
 export default function Home() {
 
-  const swiperRef = useRef(null);
+  const swiperRefOne = useRef(null);
+  const swiperRefTwo = useRef(null);
+  const swiperRefThree = useRef(null);
 
   return (
     <>
@@ -272,7 +274,7 @@ export default function Home() {
               freeMode={true}
               loop={true}
               modules={[FreeMode, Autoplay, Navigation]}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSwiper={(swiper) => (swiperRefOne.current = swiper)}
               className="instructorSwiper"
             >
               <SwiperSlide>
@@ -356,7 +358,7 @@ export default function Home() {
               <SwiperSlide>
                 <div className={homeStyle.instructorBox}>
                   <div className="text-center">
-                    <Image src={instruc1} layout="responsive" alt=""></Image>
+                    <Image src={instruc4} layout="responsive" alt=""></Image>
                     <h4>Robert Fox</h4>
                     <div className={homeStyle.instructor_inner_box}>
                       <p className="mb-0">Experience <span>05 Years+</span></p>
@@ -539,10 +541,10 @@ export default function Home() {
 
             {/* Outside Navigation */}
             <div id={homeStyle.instructorNavigationIcon} className="d-flex justify-content-center gap-3">
-              <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
+              <button className="btn" onClick={() => swiperRefOne.current?.slideNext()}>
                 <FaArrowLeftLong />
               </button>
-              <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+              <button className="btn" onClick={() => swiperRefOne.current?.slidePrev()}>
                 <FaArrowRightLong />
               </button>
             </div>
@@ -620,10 +622,10 @@ export default function Home() {
             <div>
               {/* Outside Navigation */}
               <div id={homeStyle.navigationIcon} className="d-flex gap-3">
-                <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
+                <button className="btn" onClick={() => swiperRefTwo.current?.slideNext()}>
                   <FaArrowLeftLong />
                 </button>
-                <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+                <button className="btn" onClick={() => swiperRefTwo.current?.slidePrev()}>
                   <FaArrowRightLong />
                 </button>
               </div>
@@ -663,7 +665,7 @@ export default function Home() {
               freeMode={true}
               loop={true}
               modules={[FreeMode, Autoplay, Navigation]}
-              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSwiper={(swiper) => (swiperRefTwo.current = swiper)}
               className="testimonialSwiper"
             >
               <SwiperSlide>
@@ -1115,7 +1117,7 @@ export default function Home() {
                       freeMode={true}
                       loop={true}
                       modules={[FreeMode, Autoplay, Navigation]}
-                      onSwiper={(swiper) => (swiperRef.current = swiper)}
+                      onSwiper={(swiper) => (swiperRefThree.current = swiper)}
                       className="paymentSwiper"
                     >
                       <SwiperSlide>
@@ -1152,10 +1154,10 @@ export default function Home() {
 
                     {/* Outside Navigation */}
                     <div id={homeStyle.navigationIcon} className="d-flex gap-3">
-                      <button className="btn" onClick={() => swiperRef.current?.slideNext()}>
+                      <button className="btn" onClick={() => swiperRefThree.current?.slideNext()}>
                         <FaArrowLeftLong />
                       </button>
-                      <button className="btn" onClick={() => swiperRef.current?.slidePrev()}>
+                      <button className="btn" onClick={() => swiperRefThree.current?.slidePrev()}>
                         <FaArrowRightLong />
                       </button>
                     </div>
