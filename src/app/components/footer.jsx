@@ -85,12 +85,12 @@ const Footer = () => {
                                 <h4>Partnership Request</h4>
                                 <div className={footerStyle.footer_partnership}>
                                     <ul>
-                                        <li><Link href="">Log in to my partner area</Link></li>
-                                        <li><Link href="">Request for school partnership</Link></li>
-                                        <li><Link href="">B2B partnership request</Link></li>
-                                        <li><Link href="">Becoming an independent instructor</Link></li>
-                                        <li><Link href="">Driving instructor salary</Link></li>
-                                        <li><Link href="">Monitor FAQs</Link></li>
+                                        <li><Link href="/user-login">Log in to my partner area</Link></li>
+                                        <li><Link href="/request-for-school-partnership">Request for school partnership</Link></li>
+                                        <li><Link href="/b2b-partnership-request">B2B partnership request</Link></li>
+                                        <li><Link href="/becoming-an-independent-instructor">Becoming an independent instructor</Link></li>
+                                        <li><Link href="/driving-instructor-salary">Driving instructor salary</Link></li>
+                                        <li><Link href="/monitor-faqs">Monitor FAQs</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -99,9 +99,9 @@ const Footer = () => {
                                 <div className={footerStyle.footer_services}>
                                     <ul>
                                         <li><Link href="/frequently-asked-questions">Frequently Asked Questions</Link></li>
-                                        <li><Link href="">Highway Code Glossary</Link></li>
-                                        <li><Link href="">Driving licence glossary</Link></li>
-                                        <li><Link href="">Person with a disability</Link></li>
+                                        <li><Link href="/highway-code-glossary">Highway Code Glossary</Link></li>
+                                        <li><Link href="/driving-licence-glossary">Driving licence glossary</Link></li>
+                                        <li><Link href="/person-with-a-disability">Person with a disability</Link></li>
                                     </ul>
                                 </div>
                             </div>
