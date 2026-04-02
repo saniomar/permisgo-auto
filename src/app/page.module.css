@@ -1,7 +1,21 @@
 .hero_section {
     padding-top: 50px;
     padding-left: 50px;
-    padding-right: 50px;
+    /* padding-right: 50px; */
+    background-color: var(--first-color);
+}
+
+.hero_section h5 {
+    background: linear-gradient(to right, #2A61EB, #9133EA);
+    padding: 5px 10px;
+    color: var(--white-color);
+    border-radius: 30px;
+    display: inline;
+}
+
+.hero_section h1 {
+    margin-top: 20px;
+    font-size: 50px;
 }
 
 .hero_section a {
@@ -10,8 +24,24 @@
     color: var(--white-color);
 }
 
+.hero_offer_box {
+  background: rgba(180, 180, 180, 0.241); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.589);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+.hero_section .batchImg {
+    width: 50px !important;
+}
+
 .hero_section a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 
@@ -623,7 +653,68 @@
     width: 60px !important;
 }
 
+.home_location_section {
+    padding: 50px 50px;
+}
+
+.home_location_section h5 {
+    color: var(--third-color);
+    background-color: var(--white-color);
+    display: inline;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.home_location_section h2 {
+    color: var(--first-color);
+    font-size: 40px;
+    margin-top: 15px;
+}
+
+#map_search_mapBtn {
+    width: 100%;
+    font-weight: 600;
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+#vehical_filter_map {
+    background-color: var(--first-light-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#vehical_filter_map button {
+    font-size: 20px;
+}
+
+#map_search_mapBtn_box {
+    background-color: var(--first-light-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+
+    .hero_section {
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero_section h1 {
+        font-size: 35px;
+    }
+
+    .hero_section h5 {
+        font-size: 16px;
+    }
+
+    #hero_anim_image {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .about_second_section {
         padding: 50px 0px;
     }

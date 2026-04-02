@@ -19,6 +19,7 @@ import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 import homeStyle from "./page.module.css";
 
 // Image
+import carAnime from "../../public/image/car-animate.gif"
 import broomLogo from "../../public/image/broomLogo.png"
 import googleLogo from "../../public/image/googleLogo.png"
 import trustLogo from "../../public/image/trustLogo.png"
@@ -54,6 +55,7 @@ import indicator1 from "../../public/image/indicate1.png"
 import indicator2 from "../../public/image/indicate2.png"
 import indicator3 from "../../public/image/indicate3.png"
 import indicator4 from "../../public/image/indicate4.png"
+import batch from "../../public/image/hero-batch.png"
 
 // Icon
 import { FaStar, FaRegUserCircle, FaCrown } from "react-icons/fa";
@@ -249,36 +251,66 @@ export default function Home() {
 
       <section>
         <div className={homeStyle.hero_section}>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-lg-4">
-                <h5>Approved by the prefecture E 25 093 0029 0</h5>
-                <h1>Conduisez vers la liberté, Per|</h1>
-                <p>Comprehensive training, guaranteed safety.</p>
-                <Link href="" className="btn">Start the courses</Link>
+          {/* <div className="container-fluid"> */}
+          <div className="row align-items-center">
+            <div className="col-lg-5">
+              <h5>Approved by the prefecture E 25 093 0029 0</h5>
+              <h1 className="text-white">Conduisez vers la liberté, Per|</h1>
+              <p className="text-white">Comprehensive training, guaranteed safety.</p>
+              <Link href="" className="btn">Start the courses</Link>
 
-                <div className="mt-4">
-                  <div>
-                    <div>
-                      <h5>Driving License 13H From </h5>
-                      <p className={homeStyle.crossPrice}>€850</p>
+              <div className="mt-5">
+                <div className={homeStyle.hero_offer_box}>
+                  <div className="mt-3">
+                    <div className="d-flex justify-content-between align-items-start">
+                      <div>
+                        <h4>Driving License 13H From </h4>
+                        <p className={homeStyle.crossPrice}>€850</p>
+                      </div>
+                      <div>
+                        <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
+                      </div>
                     </div>
-                    <div></div>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <small>of the</small>
+                        <h3 className={homeStyle.offerPrice}>€749</h3>
+                      </div>
+                      <div>
+                        <Link href="" className="btn">Permit Offer</Link>
+                      </div>
+                    </div>
                   </div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <small>of the</small>
-                      <h3 className={homeStyle.offerPrice}>€749</h3>
+                </div>
+                <div className={homeStyle.hero_offer_box}>
+                  <div className="mt-3">
+                    <div className="d-flex justify-content-between align-items-start">
+                      <div>
+                        <h4>Highway code from </h4>
+                        <p className={homeStyle.crossPrice}>€50</p>
+                      </div>
+                      <div>
+                        <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
+                      </div>
                     </div>
-                    <div>
-                      <Link href="" className="btn">Permit Offer</Link>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <div>
+                        <small>of the</small>
+                        <h3 className={homeStyle.offerPrice}>€30</h3>
+                      </div>
+                      <div>
+                        <Link href="" className="btn">Permit Offer</Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-8"></div>
+            </div>
+            <div className="col-lg-7" id={homeStyle.hero_anim_image}>
+              <Image src={carAnime} layout="responsive" alt=""></Image>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </section>
 
@@ -788,6 +820,64 @@ export default function Home() {
                 </button>
               </div>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={homeStyle.home_location_section}>
+          <div className="container-fluid">
+            <div className="text-center pb-4">
+              <h5>Location</h5>
+              <h2>Permisgo near you</h2>
+              <p>Lessons near your home, your work, your school… we're everywhere!</p>
+            </div>
+
+            <div class="d-flex align-items-start">
+              
+              
+            </div>
+
+            <div className="row">
+              <div className="col-lg-4">
+
+                <input type="text" placeholder="🔍 Search by address, city ..." className="form-control form-control-lg" />
+
+                <div className="py-4">
+                  <h4 className="mb-3">Find lessons based on your vehicle type</h4>
+                  <div id={homeStyle.vehical_filter_map}>
+                    <div className="nav flex-row nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button className="nav-link active" id="v-pills-menual-tab" data-bs-toggle="pill" data-bs-target="#v-pills-menual" type="button" role="tab" aria-controls="v-pills-menual" aria-selected="true">Manual Transmission</button>
+                      <button className="nav-link" id="v-pills-auto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-auto" type="button" role="tab" aria-controls="v-pills-auto" aria-selected="false">Automatic Transmission</button>
+                      <button className="nav-link" id="v-pills-accelerated-tab" data-bs-toggle="pill" data-bs-target="#v-pills-accelerated" type="button" role="tab" aria-controls="v-pills-accelerated" aria-selected="false">Accelerated</button>
+                      <button className="nav-link" id="v-pills-motorcycle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-motorcycle" type="button" role="tab" aria-controls="v-pills-motorcycle" aria-selected="false">Motorcycle</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="py-4">
+                  <h4 className="mb-3">Find lessons based on available teacher near you</h4>
+                  <div id={homeStyle.map_search_mapBtn_box}>
+                    <button className="btn btn-lg" id={homeStyle.map_search_mapBtn}>Start Searching</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="tab-content" id="v-pills-tabContent">
+                  <div className="tab-pane fade show active" id="v-pills-menual" role="tabpanel" aria-labelledby="v-pills-menual-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-auto" role="tabpanel" aria-labelledby="v-pills-auto-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-accelerated" role="tabpanel" aria-labelledby="v-pills-accelerated-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-motorcycle" role="tabpanel" aria-labelledby="v-pills-motorcycle-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
