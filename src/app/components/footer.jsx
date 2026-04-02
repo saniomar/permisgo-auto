@@ -38,6 +38,33 @@ const Footer = () => {
                                         <li><GrLocation /> | Road no-2, Sector-6, Uttara, Dhaka, Bangladesh</li>
                                     </ul>
                                 </div>
+                                <div className={footerStyle.footer_social}>
+                                    <ul>
+                                        <li><Link href=""><FaFacebook /></Link></li>
+                                        <li><Link href=""><FaInstagram /></Link></li>
+                                        <li><Link href=""><FaLinkedin /></Link></li>
+                                        <li><Link href=""><FaPinterestSquare /></Link></li>
+                                        <li><Link href=""><FaYoutube /></Link></li>
+                                    </ul>
+                                </div>
+                                <div className={footerStyle.footer_openign_time}>
+                                    <div className="mt-3">
+                                        <div className="dropdown">
+                                            <button className="btn btn-lg dropdown-toggle" id={footerStyle.footerTimeDropDown} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Monday 10am - 1pm and 3pm - 7pm
+                                            </button>
+                                            <ul className="dropdown-menu dropdown-menu-dark" id={footerStyle.footerTimeDropDownItems}>
+                                                <li className="dropdown-item">Monday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Tuesday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Wednesday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Thursday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Friday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Saturday 10am - 1pm and 3pm - 7pm</li>
+                                                <li className="dropdown-item">Sunday By Appointment</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-lg-2 col-md-6" id={footerStyle.column}>
                                 <h4>About</h4>
@@ -75,42 +102,6 @@ const Footer = () => {
                                         <li><Link href="">Highway Code Glossary</Link></li>
                                         <li><Link href="">Driving licence glossary</Link></li>
                                         <li><Link href="">Person with a disability</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-6" id={footerStyle.column}>
-                                <h4>Service Hours</h4>
-                                <div className={footerStyle.footer_openign_time}>
-                                    <div className="dropdown">
-                                        <button className="btn btn-lg dropdown-toggle" id={footerStyle.footerTimeDropDown} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Monday 10am - 1pm and 3pm - 7pm
-                                        </button>
-                                        <ul className="dropdown-menu dropdown-menu-dark" id={footerStyle.footerTimeDropDownItems}>
-                                            <li className="dropdown-item">Monday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Tuesday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Wednesday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Thursday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Friday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Saturday 10am - 1pm and 3pm - 7pm</li>
-                                            <li className="dropdown-item">Sunday By Appointment</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <div className={footerStyle.footerSubscribe}>
-                                    <h5>Subscribe to get the latest updates and offers</h5>
-                                    <div className="input-group mt-4">
-                                        <input type="text" className="form-control form-control-lg" placeholder="Enter your Email" aria-label="email" aria-describedby="button-addon2" name='' />
-                                        <button className="btn btn-lg" type="button" id="button-addon2">Submit</button>
-                                    </div>
-                                </div>
-                                <div className={footerStyle.footer_social}>
-                                    <ul>
-                                        <li><Link href=""><FaFacebook /></Link></li>
-                                        <li><Link href=""><FaInstagram /></Link></li>
-                                        <li><Link href=""><FaLinkedin /></Link></li>
-                                        <li><Link href=""><FaPinterestSquare /></Link></li>
-                                        <li><Link href=""><FaYoutube /></Link></li>
                                     </ul>
                                 </div>
                             </div>
