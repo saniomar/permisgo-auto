@@ -694,6 +694,7 @@
     border-radius: 10px;
 }
 
+
 @media only screen and (min-width: 300px) and (max-width: 500px) {
 
     .hero_section {
@@ -834,6 +835,14 @@
 
     .indicatorSkew {
         margin-bottom: 20px;
+    }
+
+    .home_location_section {
+        padding: 30px 10px;
+    }
+
+    .home_location_section h2 {
+        font-size: 30px;
     }
 }
 

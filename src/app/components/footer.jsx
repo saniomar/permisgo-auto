@@ -16,6 +16,7 @@ import { GrLocation } from "react-icons/gr";
 
 // Image
 import Logo from "../../../public/image/logo.png"
+import downCar from "../../../public/image/down-car.png"
 
 const Footer = () => {
 
@@ -24,6 +25,13 @@ const Footer = () => {
     return (
         <>
             <BottomMenu />
+            <section>
+                <div className={footerStyle.downCarAnime}>
+                    <div className="text-end">
+                        <Image src={downCar} layout="responsive" alt=""></Image>
+                    </div>
+                </div>
+            </section>
             <footer>
                 <div id={footerStyle.main_footer}>
                     <div className="container-fluid">

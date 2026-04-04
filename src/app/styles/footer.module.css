@@ -111,6 +111,13 @@
     color: var(--white-color);
 }
 
+.downCarAnime{
+    padding-top: 50px;
+}
+.downCarAnime img {
+    width: 300px !important;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     #main_footer {
         padding-left: 10px;
@@ -142,6 +149,9 @@
     .footer_support_menu ul {
         text-align: center !important;
     }
+    .downCarAnime{
+        padding-top: 30px;
+    }
 }
 @media only screen and (min-width: 501px) and (max-width: 900px) {
     #main_footer {
@@ -155,6 +165,9 @@
     }
     #main_footer h4 {
         margin-top: 20px;
+    }
+    .downCarAnime{
+        padding-top: 30px;
     }
 }
 @media only screen and (min-width: 901px) and (max-width: 1100px) {
@@ -174,6 +187,6 @@
 
 @media only screen and (min-width: 1101px) and (max-width: 1500px) {
     #main_footer #column {
-        width: 30%;
+        width: 25%;
     }
 }

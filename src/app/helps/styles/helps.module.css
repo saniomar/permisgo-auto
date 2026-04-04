@@ -1,9 +1,8 @@
 .help_first {
-    padding: 50px 0;
+    padding: 50px 50px;
+    background: linear-gradient(var(--first-color), #00215a);
 }
 .help_first_box {
-    background-color: var(--first-light-color);
-    padding: 30px;
     border-radius: 20px;
 }
 .help_first_box a {
@@ -15,22 +14,80 @@
     color: var(--white-color);
 }
 .help_first_box img {
-    border-radius: 10px;
+    width: 600px !important;
 }
 .help_first h1 {
     font-size: 50px;
+    color: var(--white-color);
+    margin-bottom: 25px;
+}
+.help_first h5 {
+    color: var(--white-color);
+    font-size: 30px;
 }
 .help_second {
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 .help_second h2 {
     font-size: 40px;
 }
+.help_second h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--first-color);
+}
+.help_second .helpSecondPara {
+    height: 130px;
+    overflow-y: scroll;
+}
+.helpSecondBox {
+    border: 3px solid var(--first-light-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.helpSecondBox img {
+    width: 120px !important;
+    margin-bottom: 20px;
+}
+.helpSecondBox a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+    width: 100%;
+}
+.helpSecondBox a:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+}
 #help_third {
-    padding: 50px 0;
+    padding: 50px 50px;
+}
+.help_inner_third {
+    background-color: var(--first-color);
+    border-radius: 20px;
+    padding: 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+.help_inner_third_image_one {
+    position: absolute;
+    left: -5px;
+    top: 0px;
+    width: 150px !important;
+}
+.help_inner_third_image_two {
+    position: absolute;
+    right: -15px;
+    bottom: -5px;
+    width: 150px !important;
 }
 #help_third h3 {
     font-size: 40px;
+    color: var(--white-color);
+}
+#help_third p {
+    color: var(--white-color);
 }
 #help_third img {
     border-radius: 15px;
@@ -39,27 +96,23 @@
     background-color: var(--second-color);
     color: var(--white-color);
 }
-.helpSecondBox {
-    border: 3px solid var(--first-light-color);
-    padding: 30px;
-    border-radius: 10px;
-}
+
 
 @media only screen and (min-width: 300px) and (max-width: 500) {
     .help_first {
-        padding: 30px 0;
-    }
-    .help_first_box {
-        padding: 20px;
+        padding: 30px 10px;
     }
     .help_first h1 {
         font-size: 35px;
     }
+    .help_first h5 {
+        font-size: 20px;
+    }
     .help_first_box img {
-        margin-top: 20px;
+        display: none;
     }
     .help_second {
-        padding: 30px 0;
+        padding: 30px 10px;
     }
     .helpSecondBox {
         margin-top: 15px;
@@ -68,12 +121,54 @@
         font-size: 30px;
     }
     #help_third {
-        padding: 30px 0;
+        padding: 30px 10px;
     }
     #help_third h3 {
         font-size: 30px;
     }
     #help_third img {
         margin-top: 20px;
+    }
+    .help_inner_third {
+        padding: 50px 10px;
+    }
+    .help_inner_third_image_one {
+        display: none;
+    }
+    .help_inner_third_image_two {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 900px)  {
+    .help_first {
+        padding: 30px 10px;
+    }
+    .help_second {
+        padding: 30px 10px;
+    }
+    .helpSecondBox {
+        margin-top: 15px;
+    }
+    .help_first_box img {
+        display: none;
+    }
+    #help_third {
+        padding: 30px 10px;
+    }
+    .help_inner_third {
+        padding: 50px 0;
+    }
+    .help_inner_third_image_one {
+        display: none;
+    }
+    .help_inner_third_image_two {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1100px) {
+    .help_first_box img {
+        width: 100% !important;
     }
 }

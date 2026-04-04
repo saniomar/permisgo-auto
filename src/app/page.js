@@ -834,11 +834,6 @@ export default function Home() {
               <p>Lessons near your home, your work, your school… we're everywhere!</p>
             </div>
 
-            <div class="d-flex align-items-start">
-              
-              
-            </div>
-
             <div className="row">
               <div className="col-lg-4">
 
