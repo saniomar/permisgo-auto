@@ -1,0 +1,14 @@
+.support_first {
+    padding: 50px 0;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.support_second {
+    padding: 50px 50px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .support_second {
+        padding: 30px 10px;
+    }
+}

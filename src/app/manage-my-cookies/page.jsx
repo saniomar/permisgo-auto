@@ -3,11 +3,11 @@ import React from 'react'
 // Components
 import Support from "../components/support"
 
-const privacyPolicy = () => {
+const termsAndConditions = () => {
   return (
     <>
       <Support 
-        title = "Privacy Policy"
+        title = "Manage My Cookies"
         headPara = "This policy explains how PermisGo collects, uses, and protects your personal"
         mainContent = "Your privacy is important to us. This policy explains how PermisGo collects, uses, and protects your personal information."
       />
@@ -15,4 +15,4 @@ const privacyPolicy = () => {
   )
 }
 
-export default privacyPolicy
+export default termsAndConditions
