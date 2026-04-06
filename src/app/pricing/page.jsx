@@ -46,13 +46,16 @@ const pricing = () => {
                 <button className="nav-link active" id="license-tab" data-bs-toggle="tab" data-bs-target="#license-tab-pane" type="button" role="tab" aria-controls="license-tab-pane" aria-selected="true">Driving License</button>
               </li>
               <li className="nav-item" role="presentation">
-                <button className="nav-link" id="supervised-tab" data-bs-toggle="tab" data-bs-target="#supervised-tab-pane" type="button" role="tab" aria-controls="supervised-tab-pane" aria-selected="false">Supervised Driving</button>
+                <button className="nav-link" id="supervised-tab" data-bs-toggle="tab" data-bs-target="#supervised-tab-pane" type="button" role="tab" aria-controls="supervised-tab-pane" aria-selected="false">Accompanied Driving</button>
               </li>
               <li className="nav-item" role="presentation">
-                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">A la carte</button>
+                <button className="nav-link" id="carte-tab" data-bs-toggle="tab" data-bs-target="#carte-tab-pane" type="button" role="tab" aria-controls="carte-tab-pane" aria-selected="false">A la carte</button>
               </li>
               <li className="nav-item" role="presentation">
                 <button className="nav-link" id="code-tab" data-bs-toggle="tab" data-bs-target="#code-tab-pane" type="button" role="tab" aria-controls="code-tab-pane" aria-selected="false">Code</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link" id="cpf-tab" data-bs-toggle="tab" data-bs-target="#cpf-tab-pane" type="button" role="tab" aria-controls="cpf-tab-pane" aria-selected="false">CPF Offers</button>
               </li>
             </ul>
             <hr />
@@ -181,7 +184,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -310,7 +313,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -439,7 +442,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -568,7 +571,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -718,7 +721,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -847,7 +850,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -976,7 +979,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -1105,7 +1108,7 @@ const pricing = () => {
                               <div className="col-lg-4">
                                 <div className={pricingStyle.license_menual_box}>
                                   <div className="text-center">
-                                    <h3>Accelerated Driving Licence</h3>
+                                    <h3>Accelerated Permit</h3>
                                     <p className='mb-0'>Theory test + 20 driving lessons</p>
                                     <p className='mb-0'>30-day training course</p>
                                   </div>
@@ -1255,7 +1258,7 @@ const pricing = () => {
               </div>
 
               {/* A La Cart */}
-              <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">
+              <div className="tab-pane fade" id="carte-tab-pane" role="tabpanel" aria-labelledby="carte-tab" tabIndex="0">
                 <div className="mt-4 text-center">
                   <h2>Discover our <span>à la carte</span> offers</h2>
                   <p>It is possible to choose your training program à la carte.</p>
@@ -1468,6 +1471,119 @@ const pricing = () => {
                 </div>
               </div>
 
+              {/* Code */}
+              <div className="tab-pane fade" id="cpf-tab-pane" role="tabpanel" aria-labelledby="cpf-tab" tabIndex="0">
+                <div className="mt-4 text-center">
+                  <h2>Permisgo <span>Highway Code</span> Packs</h2>
+                  <p>What is your need?</p>
+                </div>
+
+                <div className="mt-4">
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Eco Code</h3>
+                        <p>Complete review</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="text-center">
+                            <h2>Free</h2>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: Unlimited</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Zen Code</h3>
+                        <p>Complete review + Administrative procedures</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h2 className='mb-0'>€9.99</h2>
+                              <p className='mb-0'>Valentine's Day</p>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>€19.99</h5>
+                              <small>retail price</small>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: 12-month package</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Administrative procedures & Coaching</li>
+                            <li><FaTimes className={pricingStyle.checkIcon} /> A place to take the theory test</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-4">
+                      <div className={pricingStyle.forthPriceBox}>
+                        <h3>Success Code</h3>
+                        <p>Theory test slot included</p>
+                        <div className={pricingStyle.forthPriceNumberPart}>
+                          <div className="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h2 className='mb-0'>€9.99</h2>
+                              <p className='mb-0'>Valentine's Day</p>
+                            </div>
+                            <div>
+                              <h5 className='mb-0'>€19.99</h5>
+                              <small>retail price</small>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 className='my-4'>Package contents:</h4>
+                        <div className={pricingStyle.forthPricePackage}>
+                          <ul>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Duration: 12-month package</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Access to the code app</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Video lessons and online manual</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> 5000 questions and 30 practice exams</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> Administrative procedures & Coaching</li>
+                            <li><LuBadgeCheck className={pricingStyle.checkIcon} /> A place to take the theory test</li>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <Link href="" className='btn'>Sign Up</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={pricingStyle.pricing_third}>
+          <div className="container-fluid">
+            <div className={pricingStyle.pricing_third_inner}>
+              <div className="text-center">
+                <h2>Manage your entire online training at the best price</h2>
+                <Link href="" className='btn'>Discover our offers</Link>
+              </div>
             </div>
           </div>
         </div>

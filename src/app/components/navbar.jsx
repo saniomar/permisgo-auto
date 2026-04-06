@@ -79,7 +79,7 @@ const Navbar = () => {
                                                     aria-label="Close"></button>
                                             </div>
                                             <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0">
-                                                <li className="nav-item dropdown">
+                                                {/* <li className="nav-item dropdown">
                                                     <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id={navbarStyle.courseDropdown}>
                                                         Courses
                                                     </Link>
@@ -92,7 +92,7 @@ const Navbar = () => {
                                                         <li><hr className="dropdown-divider" /></li>
                                                         <li><a className="dropdown-item" href="/other-courses">Other Courses</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> */}
                                                 <li className="nav-item">
                                                     <Link className="nav-link active" aria-current="page" href="/pricing">Offers</Link>
                                                 </li>

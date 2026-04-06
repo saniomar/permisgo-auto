@@ -121,7 +121,7 @@
     color: var(--white-color);
 }
 .forthPriceBox h3 {
-    font-size: 40px;
+    font-size: 35px;
     color: var(--second-color);
 }
 .checkIcon {
@@ -159,7 +159,7 @@
     border-radius: 10px;
 }
 .license_menual_box h3 {
-    font-size: 40px;
+    font-size: 35px;
     color: var(--second-color);
 }
 .license_menual_box h4 {

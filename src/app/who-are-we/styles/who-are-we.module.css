@@ -1,5 +1,5 @@
 #about_hero_section {
-    padding-top: 50px;
+    padding: 50px 50px;
 }
 #about_hero_section h1 {
     font-size: 50px;
@@ -19,7 +19,7 @@
     background-color: var(--first-color);
 }
 #mission_section {
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 #mission_box {
     padding: 40px;
@@ -35,6 +35,9 @@
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+#expert_mentor_programme {
+    padding: 50px 50px;
 }
 .expert_box_height {
     height: 400px;
@@ -78,7 +81,7 @@
     padding-bottom: 15px;
 }
 #choose_section {
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 #choose_section h2 {
     font-size: 40px;
@@ -105,6 +108,11 @@
     padding: 30px 10px;
     border-radius: 10px;
     transition: .5s;
+    transform: skewX(-7deg);
+    border: 1px solid #9292924d;
+}
+.about_inner_box {
+    transform: skewX(7deg);
 }
 .about_choose_box_one {
     background-color: var(--first-light-color);
@@ -118,20 +126,19 @@
 .about_choose_box_four {
     background-color: var(--forth-light-color);
 }
-.about_choose_box:hover {
-    transform: translateY(-10px);
-    transition: .5s;
+.adventure_section {
+    padding: 50px 50px;
 }
-#adventure_section {
+#adventure_inner_section {
     background-color: var(--second-color);
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 50px;
 }
-#adventure_section hr {
+#adventure_inner_section hr {
     color: var(--white-color);
 }
-#adventure_section h3 {
+#adventure_inner_section h3 {
     font-size: 40px;
     color: var(--white-color);
 }
@@ -149,6 +156,7 @@
 #advanture_contact_info ul li:hover {
     transition: .5s ease-in-out;
     transform: translateX(10px);
+    background-color: var(--third-color);
 }
 #socialMedia ul li {
     display: inline-block;
@@ -168,8 +176,13 @@
 #book_btn:hover {
     transform: translateY(-5px);
     transition: .5s ease-in-out;
+    background-color: var(--third-color);
+    color: var(--white-color);
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+    #about_hero_section {
+        padding: 30px 10px;
+    }
     #about_hero_section {
         padding-top: 30px;
     }
@@ -180,8 +193,13 @@
         margin-top: 20px;
     }
     #mission_section {
-        padding-top: 30px;
-        padding-bottom: 20px;
+        padding: 30px 10px;
+    }
+    #expert_mentor_programme {
+        padding: 30px 10px;
+    }
+    #choose_section {
+        padding: 30px 10px;
     }
     #mentor_box {
         margin-bottom: 20px;
@@ -216,6 +234,9 @@
     .about_choose_box {
         margin-bottom: 15px;
     }
+    #adventure_inner_section {
+        padding: 30px 10px;
+    }
     #adventure_section {
         padding: 30px;
     }
@@ -225,12 +246,33 @@
     #book_btn {
         margin-top: 20px;
     }
+    .adventure_section {
+        padding: 30px 0px;
+    }
 }
 @media only screen and (min-width: 501px) and (max-width: 900px) {
+    #about_hero_section {
+        padding: 30px 10px;
+    }
     .about_choose_box {
         margin-bottom: 15px;
     }
+    #expert_mentor_programme {
+        padding: 30px 10px;
+    }
     #book_btn {
         margin-top: 20px;
+    }
+    #mission_section {
+        padding: 30px 10px;
+    }
+    #choose_section {
+        padding: 30px 10px;
+    }
+    #adventure_inner_section {
+        padding: 30px 10px;
+    }
+    .adventure_section {
+        padding: 30px 0px;
     }
 }
