@@ -14,7 +14,7 @@
     color: var(--white-color);
 }
 .first_pricing_section a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .firstImage {
@@ -53,7 +53,7 @@
     color: var(--white-color);
 }
 .secondRealPricingBox a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .secondRealPricingBoxAuto {
@@ -74,7 +74,7 @@
     color: var(--white-color);
 }
 .secondRealPricingBoxAuto a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .secondPricingBoxMenualList {
@@ -103,7 +103,7 @@
     color: var(--white-color);
 }
 .priceThirdBox a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .forthPriceBox {
@@ -117,7 +117,7 @@
     width: 100%;
 }
 .forthPriceBox a:hover {
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .forthPriceBox h3 {
@@ -181,7 +181,7 @@
 }
 .license_menual_box a:hover {
     width: 100%;
-    background-color: var(--first-color);
+    background-color: var(--third-color);
     color: var(--white-color);
 }
 .license_menual_box h2 {
@@ -200,6 +200,22 @@
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
+}
+.pricing_third {
+    padding: 50px 50px;
+}
+.pricing_third_inner {
+    padding: 50px 0;
+    background-color: var(--first-light-color);
+}
+.pricing_third_inner a {
+    background-color: var(--second-color);
+    font-weight: 600;
+    color: var(--white-color);
+}
+.pricing_third_inner a:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .first_pricing_section {

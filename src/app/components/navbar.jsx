@@ -1,6 +1,9 @@
-import React from 'react'
+"use client"
+
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Select from 'react-select';
 
 // Style
 import navbarStyle from "../styles/navbar.module.css"
@@ -17,7 +20,20 @@ import banFlag from "../../../public/image/ban-flag.png"
 import fraFlag from "../../../public/image/fra-flag.png"
 import Logo2 from "../../../public/image/logo2.png"
 
+// const options = [
+//     { value: "EN", label: "English", img: engFlag },
+//     { value: "BN", label: "বাংলা", img: banFlag },
+//     { value: "FR", label: "Français", img: fraFlag },
+// ];
+
 const Navbar = () => {
+
+    const options = [
+        { value: "EN", label: "English", img: engFlag },
+        { value: "BN", label: "Bangla", img: banFlag },
+        { value: "FR", label: "Français", img: fraFlag },
+    ];
+
     return (
         <>
             <nav>
@@ -33,11 +49,18 @@ const Navbar = () => {
                             </div>
                             <div className="d-flex justify-content-between align-items-center gap-3">
                                 <div>
-                                    <select name="" className='form-select' id="">
-                                        <option value="">EN</option>
-                                        <option value="">BN</option>
-                                        <option value="">FR</option>
-                                    </select>
+                                    <Select
+                                        options={options}
+                                        defaultValue={options[0]}
+                                        placeholder={null}
+                                        isSearchable={false}
+                                        formatOptionLabel={opt => (
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <Image src={opt.img} alt={opt.label} width="20" height="20" style={{ marginRight: "8px" }}></Image>
+                                                {opt.value}
+                                            </div>
+                                        )}
+                                    />
                                 </div>
                                 <div id={navbarStyle.topbarSocial}>
                                     <ul>

@@ -1582,7 +1582,30 @@ const pricing = () => {
             <div className={pricingStyle.pricing_third_inner}>
               <div className="text-center">
                 <h2>Manage your entire online training at the best price</h2>
-                <Link href="" className='btn'>Discover our offers</Link>
+                <div className="mt-4">
+                  <Link href="" className='btn'>Discover our offers</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={pricingStyle.pricing_forth}>
+          <div className="container-fluid">
+            <div className={pricingStyle.pricing_forth_inner}>
+              <div className="row">
+                <div className="col-lg-7">
+                  <h2>Get your driver's license using your CPF</h2>
+                  <p>Permisgo is Qualiopi certified and eligible for CPF funding. Finance your driving licence with your Personal Training Account (CPF).</p>
+                  <div className="mt-4">
+                    <Link href="" className='btn'>Discover our CPF offers</Link>
+                  </div>
+                </div>
+                <div className="col-lg-5">
+                  {/* <Image src="" alt=''></Image> */}
+                </div>
               </div>
             </div>
           </div>
