@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 // Image
 import firstImage from "../../../public/image/price1.webp"
+import offerThree from "../../../public/image/offer3.png"
 
 // Icons
 import { LuBadgeCheck } from "react-icons/lu";
@@ -17,8 +18,8 @@ const pricing = () => {
     <>
       <section>
         <div className={pricingStyle.first_pricing}>
-          <div className='container'>
-            <div className="row">
+          <div className='container-fluid'>
+            <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className={pricingStyle.first_pricing_section}>
                   <h1 className='mb-4'>Our prices are up to <span>30% cheaper</span> *</h1>
@@ -1604,7 +1605,7 @@ const pricing = () => {
                   </div>
                 </div>
                 <div className="col-lg-5">
-                  {/* <Image src="" alt=''></Image> */}
+                  <Image src={offerThree} layout='responsive' alt=''></Image>
                 </div>
               </div>
             </div>

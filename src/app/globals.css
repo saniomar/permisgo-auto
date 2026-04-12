@@ -63,6 +63,10 @@ input::placeholder {
     font-family: var(--second-font);
     font-size: 17px;
 }
+textarea::placeholder {
+    font-family: var(--second-font);
+    font-size: 17px;
+}
 
 .swiper {
     width: 100%;

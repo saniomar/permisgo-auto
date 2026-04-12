@@ -1544,7 +1544,7 @@ export default function Home() {
             </div>
 
             <div className="text-center mt-4">
-              <Link href="/blog" className="btn btn-lg" id={homeStyle.course_learn_more_btn}>Learn More</Link>
+              <Link href="/blogs" className="btn btn-lg" id={homeStyle.course_learn_more_btn}>Learn More</Link>
             </div>
           </div>
         </div>

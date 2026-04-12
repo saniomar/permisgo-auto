@@ -1,5 +1,6 @@
 .first_pricing {
     background-color: var(--first-light-color);
+    padding: 0px 50px;
 }
 .first_pricing_section {
     padding: 50px 0;
@@ -218,8 +219,14 @@
     color: var(--white-color);
 }
 @media only screen and (min-width: 300px) and (max-width: 500px) {
+    .first_pricing {
+        padding: 0 10px;
+    }
     .first_pricing_section {
         padding: 30px 0;
+    }
+    .firstImage {
+        width: 100% !important;
     }
     .first_pricing_section h1 span {
         font-size: 35px;

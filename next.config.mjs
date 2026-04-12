@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
   exportTrailingSlash: true,
   /* config options here */
   reactCompiler: true,
