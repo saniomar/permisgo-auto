@@ -22,7 +22,7 @@
 #loginRight {
     background-color: var(--first-color);
     padding: 50px;
-    background-image: linear-gradient(rgba(36, 46, 109, 0.8),rgba(36, 46, 109, 0.8)),url("../../../../public/image/loginbg.webp");
+    background-image: linear-gradient(rgba(36, 46, 109, 0.8),rgba(36, 46, 109, 0.8)),url("../../../../../public/image/loginbg.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

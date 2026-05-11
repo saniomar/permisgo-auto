@@ -18,6 +18,11 @@ import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 // Style
 import homeStyle from "./page.module.css";
 
+// Components
+import Navbar from "./components/navbar";
+import Footer from "./components/footer"
+
+
 // Image
 import carAnime from "../../public/image/car-animate.gif"
 import broomLogo from "../../public/image/broomLogo.png"
@@ -71,6 +76,8 @@ export default function Home() {
 
   return (
     <>
+
+      <Navbar />
 
       {/* <section>
         <div className={homeStyle.about_second_section}>
@@ -1549,6 +1556,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <Footer />
 
     </>
   );

@@ -4,8 +4,8 @@ import Image from 'next/image'
 import loginStyle from "./styles/login.module.css"
 
 // Image
-import Logo from "../../../public/image/logo2.png"
-import Logo2 from "../../../public/image/logo.png"
+import Logo from "../../../../public/image/logo2.png"
+import Logo2 from "../../../../public/image/logo.png"
 
 // Icons
 import { FaFacebook, FaGoogle, FaLinkedinIn } from "react-icons/fa";

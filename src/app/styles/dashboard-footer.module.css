@@ -1,0 +1,11 @@
+.copywriteDiv {
+    background-color: var(--first-color);
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.copywriteDiv p {
+    color: var(--white-color);
+    margin-bottom: 0;
+}

@@ -1,14 +1,14 @@
 "use client"
 
 import React from "react"
-import "./globals.css";
+import "../globals.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Head from "next/head";
 import Script from "next/script";
 
 // Components
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import Navbar from "../components/dashboard-navbar";
+import Footer from "../components/dashboard-footer";
 
 // export const metadata = {
 //   title: "Home | One of the best Driving School",
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <meta name='description' content='Driving School' />
       </Head>
       <body suppressHydrationWarning={true}>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         {/* <Footer /> */}
 
