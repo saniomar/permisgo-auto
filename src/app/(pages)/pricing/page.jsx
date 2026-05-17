@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Image
-import firstImage from "../../../public/image/price1.webp"
-import offerThree from "../../../public/image/offer3.png"
+import firstImage from "../../../../public/image/price1.webp"
+import offerThree from "../../../../public/image/offer3.png"
 
 // Icons
 import { LuBadgeCheck } from "react-icons/lu";

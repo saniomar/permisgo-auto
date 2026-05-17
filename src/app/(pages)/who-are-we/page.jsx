@@ -3,7 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 // Image
-import DriveImage from "../../../public/image/car-driver.jpg"
+import DriveImage from "../../../../public/image/car-driver.jpg"
+import indicate1 from "../../../../public/image/indicate1.png"
+import indicate2 from "../../../../public/image/indicate2.png"
+import indicate3 from "../../../../public/image/indicate3.png"
+import indicate4 from "../../../../public/image/indicate4.png"
 
 // Icons
 import { FiAward, FiUsers } from "react-icons/fi";
@@ -102,8 +106,8 @@ const aboutUs = () => {
                       <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_one}`}>
                         <div className={whoAreStyle.about_inner_box}>
                           <div className="text-center">
-                            <FiAward className={whoAreStyle.chooseIcon} />
-                            <h5>High success rate</h5>
+                            <Image src={indicate1} layout='responsive' alt=''></Image>
+                            <h5>Moniteur diplômé</h5>
                           </div>
                         </div>
                       </div>
@@ -112,8 +116,8 @@ const aboutUs = () => {
                       <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_two}`}>
                       <div className={whoAreStyle.about_inner_box}>
                         <div className="text-center">
-                          <FaCarSide className={whoAreStyle.chooseIcon} />
-                          <h5>Modern vehicles</h5>
+                          <Image src={indicate2} layout='responsive' alt=''></Image>
+                          <h5>+ 500 d’élève réussites</h5>
                         </div>
                       </div>
                       </div>
@@ -122,8 +126,8 @@ const aboutUs = () => {
                       <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_three}`}>
                         <div className={whoAreStyle.about_inner_box}>
                           <div className="text-center">
-                            <FaRegClock className={whoAreStyle.chooseIcon} />
-                            <h5>Flexible hours (6am-11pm)</h5>
+                            <Image src={indicate3} layout='responsive' alt=''></Image>
+                            <h5>Certifié Qualiopi</h5>
                           </div>
                         </div>
                       </div>
@@ -132,16 +136,14 @@ const aboutUs = () => {
                       <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_four}`}>
                         <div className={whoAreStyle.about_inner_box}>
                           <div className="text-center">
-                            <FiUsers className={whoAreStyle.chooseIcon} />
-                            <h5>Personalized tracking</h5>
+                            <Image src={indicate4} layout='responsive' alt=''></Image>
+                            <h5>Écoles de conduite labellisées</h5>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <p className={whoAreStyle.choose_para_section}>At Permis Go, we believe every student deserves quality training to drive safely. Join us and let us help you get your license under the best conditions!</p>
               </div>
             </div>
           </div>

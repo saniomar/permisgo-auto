@@ -7,7 +7,7 @@ import Head from "next/head";
 import Script from "next/script";
 
 // Components
-import Navbar from "../components/dashboard-navbar";
+import Navbar from "../components/student-auth-navbar";
 import Footer from "../components/dashboard-footer";
 
 // export const metadata = {

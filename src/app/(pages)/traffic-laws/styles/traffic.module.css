@@ -86,9 +86,10 @@
     background-color: var(--third-color);
 }
 #herosecondBtn {
-    outline: 1px solid var(--first-color);
+    outline: 2px solid var(--first-color);
     width: 100%;
     font-weight: 600;
+    color: var(--second-color);
 }
 #herosecondBtn:hover {
     background-color: var(--second-color);
@@ -103,6 +104,26 @@
     font-size: 40px;
     font-weight: 600;
     color: var(--first-color);
+}
+
+.laws_three_section {
+    padding: 50px 50px;
+    background-color: var(--white-color);
+}
+.laws_three_inner_section {
+    background-color: var(--first-color);
+    padding: 50px 0;
+    border-radius: 250px;
+}
+.laws_three_section h3 {
+    font-size: 40px;
+    color: var(--white-color);
+}
+.laws_three_section p {
+    color: var(--white-color);
+}
+.laws_three_section img {
+    width: 300px !important;
 }
 
 .reviewLogo {
@@ -214,6 +235,7 @@
 
 .traffic_three {
     padding: 50px 50px;
+    background-color: var(--white-color);
 }
 .traffic_three h2 {
     color: var(--white-color);
@@ -245,6 +267,50 @@
     background-color: var(--white-color);
     padding: 20px;
     border-radius: 10px;
+}
+
+.traffic_it_work {
+    padding: 50px 0;
+}
+.traffic_it_work h3 {
+    font-size: 40px;
+}
+.traffic_work_feature {
+    padding: 0 50px;
+}
+.feature_box {
+    background-color: var(--first-color);
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.feature_box h4 {
+    color: var(--white-color);
+    font-weight: 700;
+}
+.feature_box p {
+    color: var(--white-color);
+}
+
+.traffic_work_feature {
+    margin-top: -65px;
+}
+.traffic_work_feature_icon {
+    position: relative;
+}
+.traffic_work_feature_icon img {
+    width: 60px !important;
+}
+.traffic_work_feature_icon_number {
+    position: absolute;
+    left: 46%;
+    top: 14%;
+    background-color: var(--first-color);
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+.traffic_work_feature_icon_number h5 {
+    color: var(--white-color);
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
@@ -297,6 +363,32 @@
     }
     .three_box {
         margin-top: 20px;
+    }
+    .laws_three_section {
+        padding: 30px 0px;
+    }
+    .laws_three_inner_section {
+        border-radius: 20px;
+        padding: 30px 0;
+    }
+    .laws_three_inner_section img {
+        width: 180px !important;
+    }
+    .laws_three_section h3 {
+        font-size: 30px;
+    }
+    .traffic_it_work h3 {
+        font-size: 30px;
+    }
+    .traffic_it_work {
+        padding: 30px 0;
+    }
+    .traffic_work_feature {
+        padding: 0;
+    }
+    .feature_box {
+        margin-bottom: 20px;
+        margin-top: 10px;
     }
 }
 

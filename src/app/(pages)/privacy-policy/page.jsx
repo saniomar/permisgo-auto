@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Support from "../components/support"
+import Support from "../../components/support"
 
 const privacyPolicy = () => {
   return (

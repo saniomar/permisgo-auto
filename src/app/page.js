@@ -30,16 +30,14 @@ import googleLogo from "../../public/image/googleLogo.png"
 import trustLogo from "../../public/image/trustLogo.png"
 import blogImg from "../../public/image/blog.jpg"
 import homePay from "../../public/image/home-pay.jpg"
-import payment1 from "../../public/image/visa.png"
-import payment2 from "../../public/image/master.png"
-import payment3 from "../../public/image/maestro.png"
-import payment4 from "../../public/image/googlepay.png"
-import payment5 from "../../public/image/applepay.png"
-import payment6 from "../../public/image/paypal.png"
-import payment7 from "../../public/image/payoneer.png"
-import payment8 from "../../public/image/skrill.png"
-import payment9 from "../../public/image/stripe.png"
-import payment10 from "../../public/image/discover.png"
+import payment1 from "../../public/image/payment1.jpg"
+import payment2 from "../../public/image/payment2.jpg"
+import payment3 from "../../public/image/payment3.jpg"
+import payment4 from "../../public/image/payment4.jpg"
+import payment5 from "../../public/image/payment5.jpg"
+import payment6 from "../../public/image/payment6.jpg"
+import payment7 from "../../public/image/payment7.jpg"
+import payment8 from "../../public/image/payment8.jpg"
 import tes1 from "../../public/image/tes1.png"
 import tes2 from "../../public/image/tes2.png"
 import tes3 from "../../public/image/tes3.png"
@@ -259,54 +257,59 @@ export default function Home() {
       <section>
         <div className={homeStyle.hero_section}>
           {/* <div className="container-fluid"> */}
-          <div className="row align-items-center">
+          <div className="row align-items-end">
             <div className="col-lg-5">
-              <h5>Approved by the prefecture E 25 093 0029 0</h5>
-              <h1 className="text-white">Conduisez vers la liberté, Per|</h1>
-              <p className="text-white">Comprehensive training, guaranteed safety.</p>
-              <Link href="" className="btn">Start the courses</Link>
+              <div className={homeStyle.hero_left_inner_section}>
+                <h5>Approved by the prefecture E 25 093 0029 0</h5>
+                <h1 className="text-white">Conduisez vers la liberté, Per|</h1>
+                <p className="text-white">Comprehensive training, guaranteed safety.</p>
+                <div className="d-flex gap-3">  
+                  <Link href="" className="btn">Start the courses</Link>
+                  <Link href="" className="btn" id={homeStyle.inscriptionBtn}>Inscription</Link>
+                </div>
 
-              <div className="mt-5">
-                <div className={homeStyle.hero_offer_box}>
-                  <div className="mt-3">
-                    <div className="d-flex justify-content-between align-items-start">
-                      <div>
-                        <h4>Driving License 13H From </h4>
-                        <p className={homeStyle.crossPrice}>€850</p>
+                <div className="mt-5">
+                  <div className={homeStyle.hero_offer_box}>
+                    <div className="mt-3">
+                      <div className="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h4>Driving License 13H From </h4>
+                          <p className={homeStyle.crossPrice}>€850</p>
+                        </div>
+                        <div>
+                          <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
+                        </div>
                       </div>
-                      <div>
-                        <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <small>of the</small>
-                        <h3 className={homeStyle.offerPrice}>€749</h3>
-                      </div>
-                      <div>
-                        <Link href="" className="btn">Permit Offer</Link>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <small>of the</small>
+                          <h3 className={homeStyle.offerPrice}>€749</h3>
+                        </div>
+                        <div>
+                          <Link href="" className="btn">Permit Offer</Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className={homeStyle.hero_offer_box}>
-                  <div className="mt-3">
-                    <div className="d-flex justify-content-between align-items-start">
-                      <div>
-                        <h4>Highway code from </h4>
-                        <p className={homeStyle.crossPrice}>€50</p>
+                  <div className={homeStyle.hero_offer_box}>
+                    <div className="mt-3">
+                      <div className="d-flex justify-content-between align-items-start">
+                        <div>
+                          <h4>Highway code from </h4>
+                          <p className={homeStyle.crossPrice}>€50</p>
+                        </div>
+                        <div>
+                          <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
+                        </div>
                       </div>
-                      <div>
-                        <Image src={batch} layout="responsive" className={homeStyle.batchImg} alt=""></Image>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div>
-                        <small>of the</small>
-                        <h3 className={homeStyle.offerPrice}>€30</h3>
-                      </div>
-                      <div>
-                        <Link href="" className="btn">Permit Offer</Link>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <div>
+                          <small>of the</small>
+                          <h3 className={homeStyle.offerPrice}>€30</h3>
+                        </div>
+                        <div>
+                          <Link href="" className="btn">Permit Offer</Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -503,6 +506,59 @@ export default function Home() {
                     <div className="mt-3">
                       <Link href="" className="btn">Learn more</Link>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={homeStyle.home_location_section}>
+          <div className="container-fluid">
+            <div className="text-center pb-4">
+              <h5>Location</h5>
+              <h2>Permisgo near you</h2>
+              <p>Lessons near your home, your work, your school… we're everywhere!</p>
+            </div>
+
+            <div className="row">
+              <div className="col-lg-4">
+
+                <input type="text" placeholder="🔍 Search by address, city ..." className="form-control form-control-lg" />
+
+                <div className="py-4">
+                  <h4 className="mb-3">Find lessons based on your vehicle type</h4>
+                  <div id={homeStyle.vehical_filter_map}>
+                    <div className="nav flex-row nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button className="nav-link active" id="v-pills-menual-tab" data-bs-toggle="pill" data-bs-target="#v-pills-menual" type="button" role="tab" aria-controls="v-pills-menual" aria-selected="true">Manual Transmission</button>
+                      <button className="nav-link" id="v-pills-auto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-auto" type="button" role="tab" aria-controls="v-pills-auto" aria-selected="false">Automatic Transmission</button>
+                      <button className="nav-link" id="v-pills-accelerated-tab" data-bs-toggle="pill" data-bs-target="#v-pills-accelerated" type="button" role="tab" aria-controls="v-pills-accelerated" aria-selected="false">Accelerated</button>
+                      <button className="nav-link" id="v-pills-motorcycle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-motorcycle" type="button" role="tab" aria-controls="v-pills-motorcycle" aria-selected="false">Motorcycle</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="py-4">
+                  <h4 className="mb-3">Find lessons based on available teacher near you</h4>
+                  <div id={homeStyle.map_search_mapBtn_box}>
+                    <button className="btn btn-lg" id={homeStyle.map_search_mapBtn}>Start Searching</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-8">
+                <div className="tab-content" id="v-pills-tabContent">
+                  <div className="tab-pane fade show active" id="v-pills-menual" role="tabpanel" aria-labelledby="v-pills-menual-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-auto" role="tabpanel" aria-labelledby="v-pills-auto-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-accelerated" role="tabpanel" aria-labelledby="v-pills-accelerated-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
+                  </div>
+                  <div className="tab-pane fade" id="v-pills-motorcycle" role="tabpanel" aria-labelledby="v-pills-motorcycle-tab" tabIndex="0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
                   </div>
                 </div>
               </div>
@@ -827,59 +883,6 @@ export default function Home() {
                 </button>
               </div>
 
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={homeStyle.home_location_section}>
-          <div className="container-fluid">
-            <div className="text-center pb-4">
-              <h5>Location</h5>
-              <h2>Permisgo near you</h2>
-              <p>Lessons near your home, your work, your school… we're everywhere!</p>
-            </div>
-
-            <div className="row">
-              <div className="col-lg-4">
-
-                <input type="text" placeholder="🔍 Search by address, city ..." className="form-control form-control-lg" />
-
-                <div className="py-4">
-                  <h4 className="mb-3">Find lessons based on your vehicle type</h4>
-                  <div id={homeStyle.vehical_filter_map}>
-                    <div className="nav flex-row nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                      <button className="nav-link active" id="v-pills-menual-tab" data-bs-toggle="pill" data-bs-target="#v-pills-menual" type="button" role="tab" aria-controls="v-pills-menual" aria-selected="true">Manual Transmission</button>
-                      <button className="nav-link" id="v-pills-auto-tab" data-bs-toggle="pill" data-bs-target="#v-pills-auto" type="button" role="tab" aria-controls="v-pills-auto" aria-selected="false">Automatic Transmission</button>
-                      <button className="nav-link" id="v-pills-accelerated-tab" data-bs-toggle="pill" data-bs-target="#v-pills-accelerated" type="button" role="tab" aria-controls="v-pills-accelerated" aria-selected="false">Accelerated</button>
-                      <button className="nav-link" id="v-pills-motorcycle-tab" data-bs-toggle="pill" data-bs-target="#v-pills-motorcycle" type="button" role="tab" aria-controls="v-pills-motorcycle" aria-selected="false">Motorcycle</button>
-                    </div>
-                  </div>
-                </div>
-                <div className="py-4">
-                  <h4 className="mb-3">Find lessons based on available teacher near you</h4>
-                  <div id={homeStyle.map_search_mapBtn_box}>
-                    <button className="btn btn-lg" id={homeStyle.map_search_mapBtn}>Start Searching</button>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-8">
-                <div className="tab-content" id="v-pills-tabContent">
-                  <div className="tab-pane fade show active" id="v-pills-menual" role="tabpanel" aria-labelledby="v-pills-menual-tab" tabIndex="0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
-                  </div>
-                  <div className="tab-pane fade" id="v-pills-auto" role="tabpanel" aria-labelledby="v-pills-auto-tab" tabIndex="0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
-                  </div>
-                  <div className="tab-pane fade" id="v-pills-accelerated" role="tabpanel" aria-labelledby="v-pills-accelerated-tab" tabIndex="0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
-                  </div>
-                  <div className="tab-pane fade" id="v-pills-motorcycle" role="tabpanel" aria-labelledby="v-pills-motorcycle-tab" tabIndex="0">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9627.36559924592!2d2.3512118557895323!3d48.86432615404459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1775120702448!5m2!1sen!2sbd" width="100%" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-4"></iframe>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1424,7 +1427,7 @@ export default function Home() {
                       spaceBetween={20}
                       breakpoints={{
                         300: {
-                          slidesPerView: 3,
+                          slidesPerView: 2,
                           spaceBetween: 10,
                         },
                         640: {
@@ -1477,12 +1480,6 @@ export default function Home() {
                       </SwiperSlide>
                       <SwiperSlide>
                         <Image src={payment8} alt=""></Image>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <Image src={payment9} alt=""></Image>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <Image src={payment10} alt=""></Image>
                       </SwiperSlide>
                     </Swiper>
 

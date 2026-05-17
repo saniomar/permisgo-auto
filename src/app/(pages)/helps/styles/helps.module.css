@@ -93,8 +93,9 @@
     border-radius: 15px;
 }
 #help_third a {
-    background-color: var(--second-color);
-    color: var(--white-color);
+    background-color: var(--white-color);
+    color: var(--second-color);
+    font-weight: 600;
 }
 
 

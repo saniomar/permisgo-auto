@@ -16,6 +16,7 @@
     background-color: var(--white-color);
     padding: 50px;
     margin-right: 50px;
+    border-radius: 20px;
 }
 .contact_info ul li {
     font-size: 18px;

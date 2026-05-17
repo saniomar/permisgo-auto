@@ -1,11 +1,15 @@
 .copywriteDiv {
     background-color: var(--first-color);
     padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    
 }
 .copywriteDiv p {
     color: var(--white-color);
     margin-bottom: 0;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .copywriteDiv {
+        padding-bottom: 50px;
+    }
 }

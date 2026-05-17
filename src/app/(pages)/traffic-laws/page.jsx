@@ -1,4 +1,4 @@
-"use client"
+ "use client"
 
 import React, { useRef } from 'react'
 import Link from 'next/link'
@@ -17,14 +17,17 @@ import 'swiper/css/navigation';
 import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
 
 // Image
-import trafficHero from "../../../public/image/traffic-hero.png"
-import tes1 from "../../../public/image/tes1.png"
-import tes2 from "../../../public/image/tes2.png"
-import tes3 from "../../../public/image/tes3.png"
-import broomLogo from "../../../public/image/broomLogo.png"
-import googleLogo from "../../../public/image/googleLogo.png"
-import trustLogo from "../../../public/image/trustLogo.png"
-import priceBatch from "../../../public/image/traffic-two-price-batch.png"
+import trafficHero from "../../../../public/image/traffic-hero.png"
+import tes1 from "../../../../public/image/tes1.png"
+import tes2 from "../../../../public/image/tes2.png"
+import tes3 from "../../../../public/image/tes3.png"
+import broomLogo from "../../../../public/image/broomLogo.png"
+import googleLogo from "../../../../public/image/googleLogo.png"
+import trustLogo from "../../../../public/image/trustLogo.png"
+import priceBatch from "../../../../public/image/traffic-two-price-batch.png"
+import laws3 from "../../../../public/image/laws3.png"
+import road from "../../../../public/image/road.png"
+import map from "../../../../public/image/map.png"
 
 // Icon
 import { FaStar, FaRegUserCircle, FaCrown, FaTimesCircle } from "react-icons/fa";
@@ -153,6 +156,106 @@ const trafficLaws = () => {
                     </div>
                   </div>
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={trafficCss.laws_three_section}>
+          <div className="container-fluid">
+            <div className={trafficCss.laws_three_inner_section}>
+              <div className="container">
+                <div className="row align-items-center">
+                  <div className="col-lg-8">
+                    <h3>écoles de conduite labellisées</h3>
+                    <p>Des centres de formation agréés, respectant des standards de qualité élevés.</p>
+                  </div>
+                  <div className="col-lg-4">
+                    <Image src={laws3} layout='responsive' alt=''></Image>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={trafficCss.traffic_it_work}>
+          <div className="text-center mb-5">
+            <h3>How It Works</h3>
+            <p>Driving licence learning transformed by permisgo</p>
+          </div>
+          <Image src={road} layout='responsive' alt=''></Image>
+          <div className="container-fluid">
+            <div className={trafficCss.traffic_work_feature}>
+              <div className="row">
+                <div className="col-lg-3">
+                    <div className={trafficCss.traffic_work_feature_icon}>
+                      <div className="text-center">
+                        <div className={trafficCss.traffic_work_feature_icon_number}>
+                          <h5 className='mb-0'>01</h5>
+                        </div>
+                        <Image src={map} layout='responsive' alt=''></Image>
+                      </div>
+                    </div>
+                  <div className={trafficCss.feature_box}>
+                    <div className="text-center">
+                      <h4>Traffic Laws</h4>
+                      <p>Suitable for all profiles, our E-learning application accompanies you at every step towards success in coding.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={trafficCss.traffic_work_feature_icon}>
+                      <div className="text-center">
+                        <div className={trafficCss.traffic_work_feature_icon_number}>
+                          <h5 className='mb-0'>02</h5>
+                        </div>
+                        <Image src={map} layout='responsive' alt=''></Image>
+                      </div>
+                    </div>
+                  <div className={trafficCss.feature_box}>
+                    <div className="text-center">
+                        <h4>Driving Lessons</h4>
+                        <p>Book online and take advantage of a dedicated e-learning program on our app to optimize every driving lesson</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={trafficCss.traffic_work_feature_icon}>
+                      <div className="text-center">
+                        <div className={trafficCss.traffic_work_feature_icon_number}>
+                          <h5 className='mb-0'>03</h5>
+                        </div>
+                        <Image src={map} layout='responsive' alt=''></Image>
+                      </div>
+                    </div>
+                  <div className={trafficCss.feature_box}>
+                    <div className="text-center">
+                        <h4>Personalized follow-up</h4>
+                        <p>Book online and take advantage of a dedicated e-learning program on our app to optimize every driving lesson</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className={trafficCss.traffic_work_feature_icon}>
+                      <div className="text-center">
+                        <div className={trafficCss.traffic_work_feature_icon_number}>
+                          <h5 className='mb-0'>04</h5>
+                        </div>
+                        <Image src={map} layout='responsive' alt=''></Image>
+                      </div>
+                    </div>
+                  <div className={trafficCss.feature_box}>
+                    <div className="text-center">
+                        <h4>Procedures and review</h4>
+                        <p>Suitable for all profiles, our E-learning application accompanies you at every step towards success in coding.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

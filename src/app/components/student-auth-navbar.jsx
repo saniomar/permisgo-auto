@@ -10,11 +10,9 @@ import dashboardNavCss from "../styles/dashboard-navbar.module.css"
 import { FaBell } from "react-icons/fa";
 import { MdOutlineMessage } from "react-icons/md";
 import { BsFillQuestionOctagonFill } from "react-icons/bs";
-import { FaCartShopping } from "react-icons/fa6";
 
 // Images
 import Logo from "../../../public/image/logo.png"
-import profile from "../../../public/image/tes1.png"
 
 const DashboardNavbar = () => {
   return (
@@ -26,17 +24,11 @@ const DashboardNavbar = () => {
               <Image src={Logo} layout='responsive' className={dashboardNavCss.navbarLogo} alt=''></Image>
             </Link>
           </div>
-          <div className='text-end'>
+          <div>
             <ul>
-              <li><Link href=""><FaBell className={dashboardNavCss.navIcon} /></Link></li>
-              <li><Link href=""><MdOutlineMessage className={dashboardNavCss.navIcon} /></Link></li>
-              <li><Link href=""><FaCartShopping className={dashboardNavCss.navIcon} /></Link></li>
-              <li><Link href=""><BsFillQuestionOctagonFill className={dashboardNavCss.navIcon} /></Link></li>
-              <li>
-                <Link href="">
-                    <span>Robert Fox</span> <Image src={profile} layout='responsive' alt='' className={dashboardNavCss.profileImg}></Image>
-                </Link>
-              </li>
+              <li><Link href=""><FaBell /></Link></li>
+              <li><Link href=""><MdOutlineMessage /></Link></li>
+              <li><Link href=""><BsFillQuestionOctagonFill /></Link></li>
             </ul>
           </div>
         </div>

@@ -16,14 +16,14 @@
     width: 180px !important;
 }
 #main_menu {
-    background-color: var(--first-color);
+    background-color: #103677;
     padding: 8px 50px;
 }
 #navbarSelect {
     /* background-color: transparent; */
     border: none;
     /* color: var(--white-color); */
-}
+}   
 #navbarSelect:focus-visible {
     border: none !important;
     outline: none !important;
@@ -99,6 +99,9 @@
 @media only screen and (min-width: 501px) and (max-width: 900px) {
     .mobileNavLogo {
         width: 150px !important;
+    }
+    .topEmail {
+        display: none !important;
     }
     #courseSelector {
         padding: 0 15px;

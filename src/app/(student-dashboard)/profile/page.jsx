@@ -1,0 +1,21 @@
+import React from 'react'
+
+// Styles
+import studentProfileCss from "./styles/student-profile.module.css"
+
+// Components
+import StudentDashboardSidebar from "../../components/student-dashboard-sidebar"
+
+
+const Profile = () => {
+  return (
+    <>
+      <StudentDashboardSidebar />
+      <div className={studentProfileCss.profilePage}>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quisquam voluptatem eveniet commodi placeat, reiciendis temporibus vero nobis repellat similique ad nihil debitis dolore aut blanditiis esse alias, aperiam maiores nostrum eligendi delectus eos hic? Natus ex doloremque ipsam magnam, totam iusto, itaque repellat tempora est, maiores laborum quam. A enim explicabo et. Asperiores distinctio, iste magnam illo alias maiores rerum, ad provident quos culpa quasi quam accusantium ducimus mollitia id quia? Eveniet nobis excepturi iste totam temporibus exercitationem assumenda consequuntur reiciendis, itaque harum consequatur nemo similique quis voluptatem alias ducimus ea, dolorum error delectus quod odit atque est. Nisi impedit magnam a pariatur natus harum quo omnis ducimus, dolorum expedita totam corrupti eius modi quis mollitia nostrum excepturi deserunt iste voluptatibus commodi quas sed inventore soluta saepe. Nobis animi expedita odit voluptatem beatae quae architecto soluta magnam temporibus repudiandae eos praesentium consequuntur deleniti, reprehenderit dolorem sapiente perspiciatis facere dolorum tenetur sequi vitae error atque distinctio. Necessitatibus saepe eaque exercitationem quis minus sapiente ab possimus sunt est, facere a molestiae, corporis ea minima. Maiores officia porro beatae similique perferendis illum molestiae excepturi, quia cum. Ab, modi est. Sapiente cum quis optio dignissimos dolore magni et sint earum odit? Expedita obcaecati tenetur nulla unde non inventore repellendus totam blanditiis, cupiditate ipsum corrupti, ut esse, possimus quae accusantium excepturi necessitatibus mollitia. Laboriosam earum odit fuga beatae ipsum fugiat, neque magnam porro? Neque temporibus explicabo odit, eos voluptatibus animi expedita delectus, libero cum molestiae repellat ullam dolor recusandae voluptatum ea similique, incidunt quis quibusdam! Eveniet ullam saepe, aliquid labore reiciendis laborum iusto suscipit ex modi ad est inventore eum vitae, voluptatem temporibus sed pariatur hic quidem quia vel excepturi facere adipisci, minus nobis? Voluptatibus nisi illum ea qui possimus ex inventore error voluptate eveniet deleniti minima, repudiandae voluptates eum facilis corporis tempore ipsa quis vitae. Quia veniam aliquam, deleniti provident ut cumque ipsum, necessitatibus incidunt quisquam eum earum saepe. Dolore aliquid sint asperiores pariatur maiores dolorem ipsam veritatis, ut eveniet! Eum atque quam eligendi? Praesentium ea tenetur molestias voluptas commodi, ullam soluta eos quod. Pariatur odio omnis atque necessitatibus reiciendis a totam ipsum molestiae harum id maiores dolor, perspiciatis eos numquam magni quis asperiores cumque eius blanditiis consequuntur laudantium sapiente! Libero vero aliquam asperiores quia, labore eius laboriosam soluta impedit iure expedita, assumenda sed aspernatur. Vel dignissimos blanditiis consequuntur tempore iure sapiente amet voluptas officia, deleniti rem dolores velit sequi explicabo id commodi quam fugiat enim, pariatur cumque. Sint optio blanditiis, repellat obcaecati doloribus excepturi perferendis? Repellendus tenetur facere atque vitae, sunt odit magnam nemo rem temporibus commodi quaerat mollitia veritatis hic quam dolores quisquam quod deleniti pariatur quae natus, quis officia praesentium vel! Sint ipsa veritatis velit, incidunt nisi molestias doloremque maiores aperiam exercitationem voluptates consequatur tempora nemo perferendis quisquam, dolores impedit minima ratione! Perspiciatis deserunt at fugiat, repellendus reprehenderit magni. Eos officiis molestias voluptatum est, pariatur aliquid consequuntur nisi deserunt et, quaerat totam libero iure eaque natus temporibus magni dignissimos quos voluptate aperiam? Debitis vero iusto quae! Laudantium quas tempora eius.</h2>
+      </div>
+    </>
+  )
+}
+
+export default Profile

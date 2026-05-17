@@ -4,7 +4,7 @@ import Image from 'next/image'
 import singleBlogCss from "./styles/single-blog.module.css"
 
 // Image
-import blogPage from "../../../../public/image/blog-page.jpg"
+import blogPage from "../../../../../public/image/blog-page.jpg"
 
 // Icon
 import { FaUser } from "react-icons/fa";

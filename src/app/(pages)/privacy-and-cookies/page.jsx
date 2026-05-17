@@ -1,7 +1,7 @@
 import React from 'react'
 import privacyCss from "./styles/privacy.module.css"
 
-import Support from "../components/support"
+import Support from "../../components/support"
 
 const PrivacyPolicy = () => {
   return (

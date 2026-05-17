@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Image
-import helpFirst from "../../../public/image/help-first.png"
-import helpThree from "../../../public/image/help.jpg"
-import helpSecond1 from "../../../public/image/help-second1.png"
-import helpSecond2 from "../../../public/image/help-second2.png"
-import helpSecond3 from "../../../public/image/help-second3.png"
-import helpThird1 from "../../../public/image/help-third1.png"
-import helpThird2 from "../../../public/image/help-third2.png"
+import helpFirst from "../../../../public/image/help-first.png"
+import helpThree from "../../../../public/image/help.jpg"
+import helpSecond1 from "../../../../public/image/help-second1.png"
+import helpSecond2 from "../../../../public/image/help-second2.png"
+import helpSecond3 from "../../../../public/image/help-second3.png"
+import helpThird1 from "../../../../public/image/help-third1.png"
+import helpThird2 from "../../../../public/image/help-third2.png"
 
 // Icon
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";

@@ -1,0 +1,17 @@
+.bottomMenuBox {
+    padding: 10px 20px;
+    background-color: var(--first-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+.bottomMenuBox a {
+    color: var(--white-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .bottomMenuBox {
+        display: block;
+    }
+}

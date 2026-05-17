@@ -2,7 +2,7 @@
     background-color: var(--first-color);
     padding: 8px 50px;
 }
-.navbar img {
+.navbar .navbarLogo {
     width: 180px !important;
 }
 .navbar ul li {
@@ -15,13 +15,20 @@
 .navbar ul li a {
     color: var(--white-color);
 }
+.profileImg {
+    width: 40px !important;
+    border-radius: 40px;
+}
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
     .navbar {
         padding: 8px 10px;
     } 
-    .navbar img {
+    .navbar .navbarLogo {
         width: 170px !important;
+    }
+    .navIcon {
+        display: none;
     }
 }
 
