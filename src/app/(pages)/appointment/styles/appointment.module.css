@@ -1,0 +1,64 @@
+.appointment_hero {
+    padding: 50px 50px;
+}
+.appointment_hero a {
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+.appointment_hero a:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+}
+
+#booking_btn_section {
+    padding: 50px 50px;
+}
+#booking_btn_inner_section {
+    background-color: var(--first-color);
+    padding: 50px 0;
+    border-radius: 15px;
+}
+#booking_btn_inner_section h3 {
+    color: var(--white-color);
+    font-size: 40px;
+}
+#booking_btn_inner_section a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .appointment_hero {
+        padding: 30px 10px;
+    }
+    .appointment_hero img {
+        margin-top: 20px;
+    }
+    #booking_btn_section {
+        padding: 30px 10px;
+    }   
+    #booking_btn_inner_section h3 {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .appointment_hero {
+        padding: 30px 10px;
+    }
+    .appointment_hero img {
+        margin-top: 20px;
+    }
+    #booking_btn_section {
+        padding: 30px 10px;
+    }   
+    #booking_btn_inner_section h3 {
+        font-size: 30px;
+    }
+}

@@ -192,3 +192,34 @@ button:focus:not(:focus-visible) {
   }
 }
 
+
+/*  */
+
+.ab_cal_day.active {
+  background: var(--first-color);
+  color: var(--white-color);
+  border-color: var(--first-color);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.ab_slot {
+  background: var(--white-color);
+  border: 1px solid var(--line-color);
+  color: var(--first-color);
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+.ab_slot:hover { 
+    background: var(--first-light-color); 
+}
+.ab_slot.active { 
+    background: var(--first-color); 
+    color: var(--white-color); 
+    border-color: var(--first-color); 
+}
+
+/*  */
+

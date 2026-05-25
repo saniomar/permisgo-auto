@@ -21,6 +21,8 @@ import { IoBookOutline } from "react-icons/io5";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { LuPhoneCall } from "react-icons/lu";
 
+// Components
+import WhyChoose from '@/app/components/why-choose'
 
 // Style
 import whoAreStyle from "./styles/who-are-we.module.css"
@@ -94,60 +96,7 @@ const aboutUs = () => {
           </div>
         </section>
 
-        <section>
-          <div id={whoAreStyle.choose_section}>
-            <div className="container-fluid">
-              <div className="text-center">
-                <h2>Why Choose <span>PermisGo?</span></h2>
-
-                <div id={whoAreStyle.choose_box} className='py-4'>
-                  <div className="row">
-                    <div className="col-lg-3 col-md-6">
-                      <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_one}`}>
-                        <div className={whoAreStyle.about_inner_box}>
-                          <div className="text-center">
-                            <Image src={indicate1} layout='responsive' alt=''></Image>
-                            <h5>Moniteur diplômé</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_two}`}>
-                      <div className={whoAreStyle.about_inner_box}>
-                        <div className="text-center">
-                          <Image src={indicate2} layout='responsive' alt=''></Image>
-                          <h5>+ 500 d’élève réussites</h5>
-                        </div>
-                      </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_three}`}>
-                        <div className={whoAreStyle.about_inner_box}>
-                          <div className="text-center">
-                            <Image src={indicate3} layout='responsive' alt=''></Image>
-                            <h5>Certifié Qualiopi</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <div className={`${whoAreStyle.about_choose_box} ${whoAreStyle.about_choose_box_four}`}>
-                        <div className={whoAreStyle.about_inner_box}>
-                          <div className="text-center">
-                            <Image src={indicate4} layout='responsive' alt=''></Image>
-                            <h5>Écoles de conduite labellisées</h5>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <WhyChoose />
 
         <section>
           <div className={whoAreStyle.adventure_section}>

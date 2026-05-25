@@ -80,6 +80,7 @@
 #programme_box ul li {
     padding-bottom: 15px;
 }
+
 #choose_section {
     padding: 50px 50px;
 }
@@ -123,6 +124,7 @@
 .about_choose_box_four {
     background-color: var(--forth-light-color);
 }
+
 .adventure_section {
     padding: 50px 50px;
 }
