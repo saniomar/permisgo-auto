@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // Image
-import Logo from "../../../public/image/logo2.png"
+import Logo from "../../../../public/image/logo2.png"
 
 // Styles
 import forgetStyle from "./styles/forget-password.module.css"
