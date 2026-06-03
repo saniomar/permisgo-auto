@@ -93,7 +93,7 @@ const Footer = () => {
                                 <h4>Partnership Request</h4>
                                 <div className={footerStyle.footer_partnership}>
                                     <ul>
-                                        <li><Link href="/user-login">Log in to my partner area</Link></li>
+                                        <li><Link href="/login-to-my-partner-area">Log in to my partner area</Link></li>
                                         <li><Link href="/request-for-school-partnership">Request for school partnership</Link></li>
                                         <li><Link href="/b2b-partnership-request">B2B partnership request</Link></li>
                                         <li><Link href="/becoming-an-independent-instructor">Becoming an independent instructor</Link></li>

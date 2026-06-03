@@ -1,0 +1,13 @@
+.cpf_hero {
+    padding: 50px 50px;
+}
+.cpf_hero a {
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+.cpf_hero a:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+}

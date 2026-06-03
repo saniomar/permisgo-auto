@@ -1,0 +1,51 @@
+.login_partner_first {
+    padding: 50px 0;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+.login_partner_form {
+    padding: 50px 0;
+}
+.outer_box {
+    background-color: var(--offwhite-color);
+    padding: 80px;
+    border-radius: 20px;
+}
+.inner_box {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+#loginBtn {
+    background-color: var(--second-color);
+    width: 100%;
+    color: var(--white-color);
+    font-weight: 600;
+}
+#loginBtn:hover {
+    background-color: var(--third-color);
+}
+#createAccBtn {
+    font-weight: 600;
+}
+#createAccBtn:hover {
+    background-color: var(--third-color);
+}
+.forgetBtn {
+    color: var(--first-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .login_partner_first {
+        padding: 30px 0;
+    }
+    .login_partner_form {
+        padding: 30px 0;
+    }
+    .outer_box {
+        padding: 10px;
+    }
+    .inner_box {
+        padding: 20px;
+    }
+}
