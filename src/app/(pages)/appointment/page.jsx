@@ -7,20 +7,7 @@ import Link from 'next/link'
 // styles
 import appointmentStyles from "../appointment/styles/appointment.module.css"
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-
-// import required modules
-import { Autoplay, FreeMode, Navigation } from 'swiper/modules';
-
 // Icon
-import { FaStar } from "react-icons/fa";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 // Image
 import appoinHero from "../../../../public/image/appoin-hero.png"

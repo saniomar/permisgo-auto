@@ -1,0 +1,194 @@
+.request_hero {
+    padding: 50px 50px;
+}
+.request_hero h1 {
+    font-weight: 600;
+}
+.request_hero a {
+    margin-top: 20px;
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+.request_hero a:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+}
+
+.partnership_second {
+    padding: 50px 50px;
+    background-color: var(--white-color);
+}
+.partnership_second h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.partnership_second h4 {
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+.benifit_box {
+    border-radius: 15px;
+    background-color: var(--first-color);
+    padding: 30px;
+}
+.benifit_box ul li {
+    transform: skewX(-8deg);
+    background-color: var(--white-color);
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+.benifit_box ul li div {
+    transform: skewX(8deg);
+}
+.partnership_second_first_img {
+    width: 120px !important;
+}
+.partnership_second_sec_img {
+    width: 150px !important;
+}
+
+.partnership_form {
+    background-color: var(--offwhite-color);
+    padding: 50px 50px;
+}
+.partnership_form h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+.partnership_form_box {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+}
+.partnership_form_box button {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 500;
+}
+.partnership_form_box button:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+.request_section_four {
+    padding: 50px 50px;
+}
+.request_section_four h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.school_partner_trastpilot {
+    background-color: var(--offwhite-color);
+    padding: 20px;
+    outline: 4px solid var(--first-light-color);
+    border-radius: 20px;
+}
+.school_partner_trastpilot ul li {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--review-color);
+}
+.school_partner_trastpilot img {
+    width: 170px !important;
+}
+
+.request_section_five {
+    background-color: var(--first-color);
+    padding: 50px 50px;
+}
+#request_section_five_inner {
+    background-color: var(--first-color);
+    padding: 50px 0;
+    border-radius: 15px;
+}
+#request_section_five_inner h3 {
+    color: var(--white-color);
+    font-size: 40px;
+}
+#request_section_five_inner a {
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .request_hero {
+        padding: 30px 10px;
+    }
+    .request_hero img {
+        margin-top: 15px;
+    }
+    .partnership_second {
+        padding: 30px 0;
+    }
+    .partnership_second h2 {
+        font-size: 30px;
+    }
+    .benifit_box {
+        padding: 10px;
+    }
+    .benifit_box ul li {
+        padding: 10px;
+    }
+    .partnership_second_first_img {
+        display: none;
+    }
+    .partnership_second_sec_img {
+        display: none;
+    }
+    .partnership_form {
+        padding: 30px 0;
+    }
+    .partnership_form h2 {
+        font-size: 30px;
+    }
+    .request_section_four {
+        padding: 30px 0px;
+    }
+    .request_section_four h2 {
+        font-size: 30px;
+    }
+    .request_section_four h4 {
+        margin-top: 15px;
+    }
+    .request_section_five {
+        padding: 30px 10px;
+    }   
+    #request_section_five_inner h3 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 900px)  {
+    .request_hero {
+        padding: 30px 10px;
+    }
+    .partnership_second {
+        padding: 30px 0;
+    }
+    .partnership_form {
+        padding: 30px 0;
+    }
+    .request_section_four {
+        padding: 30px 0px;
+    }
+    .request_section_five {
+        padding: 30px 10px;
+    }   
+    #request_section_five_inner h3 {
+        font-size: 30px;
+    }
+    .partnership_second_first_img {
+        display: none;
+    }
+    .partnership_second_sec_img {
+        display: none;
+    }
+}
