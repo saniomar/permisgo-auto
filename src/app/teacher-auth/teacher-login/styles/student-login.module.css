@@ -1,0 +1,57 @@
+.studentLogin {
+    padding: 50px 0;
+}
+.studentLogin img {
+    width: 180px !important;
+    margin-bottom: 20px;
+}
+.studentLogin #loginBtn {
+    background-color: var(--second-color);
+    width: 100%;
+    color: var(--white-color);
+}
+.student_login_outter {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+.student_login_inner {
+    background-color: var(--first-light-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+.student_login_main {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+#student_forget_link {
+    text-decoration: underline;
+}
+#student_forget_link a {
+    color: var(--first-color);
+}
+
+#login_register_link a {
+    text-decoration: underline !important;
+    color: var(--first-color);
+}
+.login_social_icon {
+    background-color: var(--first-light-color);
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--first-color);
+}
+.login_social_icon:hover {
+    color: var(--second-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    .student_login_outter {
+        padding: 10px;
+    }
+    .student_login_inner {
+        padding: 15px;
+    }
+}

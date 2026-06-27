@@ -1669,3 +1669,353 @@ const pricing = () => {
 }
 
 export default pricing
+
+
+
+
+// "use client";
+
+// import React, { useState } from "react";
+// import Image from "next/image";
+// import Link from "next/link";
+
+// import firstImage from "../../../../public/image/price1.webp";
+
+// import { LuBadgeCheck } from "react-icons/lu";
+// import { FaArrowRight } from "react-icons/fa6";
+
+// import pricingStyle from "./styles/pricing.module.css";
+
+// const categories = [
+//   "Driving License",
+//   "Accompanied Driving",
+//   "A la carte",
+//   "Code",
+//   "CPF Offers",
+// ];
+
+// const transmissions = ["Manual", "Automatic"];
+// const courses = ["5 Course", "10 Course", "20 Course", "30 Course"];
+
+// const plans = [
+//   {
+//     name: "Zen Permit",
+//     tag: "Most economical",
+//     description: "Theory test + 20 driving lessons",
+//     oldPrice: "€849",
+//     price: "€599",
+//     highlight: false,
+//     features: [
+//       "20 driving lessons",
+//       "Initial assessment",
+//       "Code training",
+//       "30-day training course",
+//       "Exam date within 30 days",
+//     ],
+//   },
+//   {
+//     name: "Premium Permit",
+//     tag: "Popular choice",
+//     description: "Practical exam date within 30 days",
+//     oldPrice: "€849",
+//     price: "€699",
+//     highlight: true,
+//     features: [
+//       "20 driving lessons",
+//       "Initial assessment",
+//       "Code training",
+//       "Priority booking",
+//       "Training follow-up by coach",
+//     ],
+//   },
+//   {
+//     name: "Accelerated Permit",
+//     tag: "Fast track",
+//     description: "Complete training in a shorter period",
+//     oldPrice: "€999",
+//     price: "€799",
+//     highlight: false,
+//     features: [
+//       "20 driving lessons",
+//       "Initial assessment",
+//       "Code training",
+//       "Intensive practice",
+//       "Fast exam preparation",
+//       "Exam date support",
+//     ],
+//   },
+// ];
+
+// const alaCarteOffers = [
+//   { title: "Driving lessons", price: "€487" },
+//   { title: "Automatic transmission driving course", price: "€587" },
+//   { title: "Preliminary appointment", price: "€387" },
+//   { title: "Educational meeting", price: "€487" },
+//   { title: "Support during the practical exam", price: "€487" },
+// ];
+
+// export default function Pricing() {
+//   const [activeCategory, setActiveCategory] = useState("Driving License");
+//   const [activeTransmission, setActiveTransmission] = useState("Manual");
+//   const [activeCourse, setActiveCourse] = useState("5 Course");
+
+//   return (
+//     <main className={pricingStyle.pricing_page}>
+//       <section className={pricingStyle.hero_section}>
+//         <div className="container">
+//           <div className="row align-items-center g-5">
+//             <div className="col-lg-6">
+//               <div className={pricingStyle.hero_content}>
+//                 <span className={pricingStyle.eyebrow}>Transparent pricing</span>
+
+//                 <h1>
+//                   Our prices are up to <span>30% cheaper</span>
+//                 </h1>
+
+//                 <p>
+//                   Choose a flexible driving package designed for your learning
+//                   style, schedule, and budget. Clean pricing, no hidden
+//                   surprises.
+//                 </p>
+
+//                 <div className={pricingStyle.hero_actions}>
+//                   <Link href="/register" className={pricingStyle.primary_btn}>
+//                     To Be Accompanied by an Advisor
+//                     <FaArrowRight />
+//                   </Link>
+
+//                   <Link href="#pricing-plans" className={pricingStyle.secondary_btn}>
+//                     View plans
+//                   </Link>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div className="col-lg-6">
+//               <div className={pricingStyle.hero_image_card}>
+//                 <Image
+//                   src={firstImage}
+//                   alt="Driving lesson pricing"
+//                   className={pricingStyle.hero_image}
+//                   priority
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section id="pricing-plans" className={pricingStyle.pricing_section}>
+//         <div className="container">
+//           <div className={pricingStyle.section_header}>
+//             <span className={pricingStyle.eyebrow}>Pricing plans</span>
+//             <h2>Choose the right package</h2>
+//             <p>
+//               Simple, modern and flexible offers for every stage of your driving
+//               journey.
+//             </p>
+//           </div>
+
+//           <div className={pricingStyle.category_tabs}>
+//             {categories.map((category) => (
+//               <button
+//                 key={category}
+//                 type="button"
+//                 onClick={() => setActiveCategory(category)}
+//                 className={
+//                   activeCategory === category ? pricingStyle.active_tab : ""
+//                 }
+//               >
+//                 {category}
+//               </button>
+//             ))}
+//           </div>
+
+//           {activeCategory === "Driving License" && (
+//             <>
+//               <div className={pricingStyle.controls_row}>
+//                 <div className={pricingStyle.segmented_control}>
+//                   {transmissions.map((item) => (
+//                     <button
+//                       key={item}
+//                       type="button"
+//                       onClick={() => setActiveTransmission(item)}
+//                       className={
+//                         activeTransmission === item ? pricingStyle.active_segment : ""
+//                       }
+//                     >
+//                       {item}
+//                     </button>
+//                   ))}
+//                 </div>
+
+//                 <div className={pricingStyle.course_pills}>
+//                   {courses.map((course) => (
+//                     <button
+//                       key={course}
+//                       type="button"
+//                       onClick={() => setActiveCourse(course)}
+//                       className={
+//                         activeCourse === course ? pricingStyle.active_course : ""
+//                       }
+//                     >
+//                       {course}
+//                     </button>
+//                   ))}
+//                 </div>
+//               </div>
+
+//               <div className="row g-4 mt-2">
+//                 {plans.map((plan) => (
+//                   <div className="col-md-6 col-xl-4" key={plan.name}>
+//                     <PricingCard plan={plan} />
+//                   </div>
+//                 ))}
+//               </div>
+//             </>
+//           )}
+
+//           {activeCategory === "Accompanied Driving" && (
+//             <div className={pricingStyle.feature_plan}>
+//               <div>
+//                 <span className={pricingStyle.eyebrow}>Supervised driving</span>
+//                 <h3>Learn with confidence and guided support</h3>
+//                 <p>
+//                   Includes theory preparation, driving lessons, learning booklet,
+//                   and coach follow-up.
+//                 </p>
+//               </div>
+
+//               <div className={pricingStyle.feature_price_box}>
+//                 <small>from</small>
+//                 <h2>€655</h2>
+//                 <Link href="/register" className={pricingStyle.primary_btn}>
+//                   Sign Up <FaArrowRight />
+//                 </Link>
+//               </div>
+//             </div>
+//           )}
+
+//           {activeCategory === "A la carte" && (
+//             <div className={pricingStyle.offer_list}>
+//               {alaCarteOffers.map((offer) => (
+//                 <div className={pricingStyle.offer_item} key={offer.title}>
+//                   <h5>{offer.title}</h5>
+
+//                   <div>
+//                     <strong>{offer.price}</strong>
+//                     <Link href="/register">Add</Link>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           )}
+
+//           {activeCategory === "Code" && (
+//             <div className="row g-4">
+//               <div className="col-md-6 col-xl-4">
+//                 <MiniPlan title="Eco Code" price="Free" />
+//               </div>
+//               <div className="col-md-6 col-xl-4">
+//                 <MiniPlan title="Zen Code" price="€9.99" />
+//               </div>
+//               <div className="col-md-6 col-xl-4">
+//                 <MiniPlan title="Premium Code" price="€19.99" />
+//               </div>
+//             </div>
+//           )}
+
+//           {activeCategory === "CPF Offers" && (
+//             <div className={pricingStyle.empty_state}>
+//               <h3>CPF offers are coming soon</h3>
+//               <p>We are preparing flexible CPF-supported packages for you.</p>
+//             </div>
+//           )}
+//         </div>
+//       </section>
+//     </main>
+//   );
+// }
+
+// function PricingCard({ plan }) {
+//   return (
+//     <article
+//       className={`${pricingStyle.pricing_card} ${
+//         plan.highlight ? pricingStyle.highlight_card : ""
+//       }`}
+//     >
+//       {plan.highlight && <span className={pricingStyle.popular_badge}>Popular</span>}
+
+//       <div className={pricingStyle.card_top}>
+//         <span>{plan.tag}</span>
+//         <h3>{plan.name}</h3>
+//         <p>{plan.description}</p>
+//       </div>
+
+//       <div className={pricingStyle.price_box}>
+//         <div>
+//           <small>Retail price</small>
+//           <del>{plan.oldPrice}</del>
+//         </div>
+
+//         <h2>
+//           {plan.price}
+//           <span>*</span>
+//         </h2>
+
+//         <p>Enter your postal code to view your agency’s rates.</p>
+//       </div>
+
+//       <div className={pricingStyle.feature_list}>
+//         <h4>Package contents</h4>
+
+//         <ul>
+//           {plan.features.map((feature) => (
+//             <li key={feature}>
+//               <LuBadgeCheck />
+//               {feature}
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+
+//       <Link href="/register" className={pricingStyle.card_btn}>
+//         Sign Up
+//       </Link>
+//     </article>
+//   );
+// }
+
+// function MiniPlan({ title, price }) {
+//   return (
+//     <article className={pricingStyle.pricing_card}>
+//       <div className={pricingStyle.card_top}>
+//         <span>Highway Code</span>
+//         <h3>{title}</h3>
+//         <p>Complete review with digital learning support.</p>
+//       </div>
+
+//       <div className={pricingStyle.price_box}>
+//         <h2>{price}</h2>
+//       </div>
+
+//       <div className={pricingStyle.feature_list}>
+//         <ul>
+//           <li>
+//             <LuBadgeCheck /> Unlimited access
+//           </li>
+//           <li>
+//             <LuBadgeCheck /> Video lessons
+//           </li>
+//           <li>
+//             <LuBadgeCheck /> Practice exams
+//           </li>
+//         </ul>
+//       </div>
+
+//       <Link href="/register" className={pricingStyle.card_btn}>
+//         Sign Up
+//       </Link>
+//     </article>
+//   );
+// }
