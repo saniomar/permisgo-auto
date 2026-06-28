@@ -1,55 +1,32 @@
-// export default function Lessons() {
-//   return (
-//     <section className="dashboard-panel">
-//       <h2 className="panel-title mb-4">Lessons</h2>
-
-//       <div className="row g-3">
-//         <div className="col-md-6 col-xl-4">
-//           <div className="lesson-card">
-//             <h6>Road Test Preparation Course</h6>
-//             <p>Focused training on test routes and examiner expectations.</p>
-//             <strong>Duration: 3–5 Intensive Lessons</strong>
-
-//             <div className="progress lesson-progress mt-3">
-//               <div className="progress-bar" style={{ width: "40%" }}></div>
-//             </div>
-
-//             <h6 className="lesson-progress-text mt-2">40% Progress</h6>
-//           </div>
-//         </div>
-
-//         <div className="col-md-6 col-xl-4">
-//           <div className="lesson-card">
-//             <h6>Beginner Driving Course</h6>
-//             <p>Basic driving lessons for beginner level students.</p>
-//             <strong>Duration: 5–7 Lessons</strong>
-
-//             <div className="progress lesson-progress mt-3">
-//               <div className="progress-bar" style={{ width: "65%" }}></div>
-//             </div>
-
-//             <h6 className="lesson-progress-text mt-2">65% Progress</h6>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
-
 "use client";
 
 import { useState } from "react";
 import {
+  FaCalendarAlt,
+  FaCheck,
   FaChevronLeft,
+  FaQuestionCircle,
   FaSearch,
   FaTimes,
-  FaCalendarAlt,
-  FaQuestionCircle,
-  FaCheck,
 } from "react-icons/fa";
+
+const filterGroups = [
+  {
+    title: "Income-generating lessons",
+    items: [
+      { key: "futureLessons", label: "Future lessons" },
+      { key: "lessonsLearned", label: "Lessons learned" },
+    ],
+  },
+  {
+    title: "Other lessons",
+    items: [
+      { key: "awaitingConfirmation", label: "Awaiting confirmation" },
+      { key: "canceledByYou", label: "Canceled by you" },
+      { key: "canceledByStudent", label: "Canceled by the student" },
+    ],
+  },
+];
 
 export default function Lessons() {
   const [search, setSearch] = useState("");
@@ -69,131 +46,161 @@ export default function Lessons() {
   };
 
   return (
-    <section className="lessons-page">
-      <div className="lessons-topbar">
-        <div className="d-flex align-items-center gap-3">
-          <button type="button" className="lesson-back-btn">
-            <FaChevronLeft />
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-5 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl">
+        {/* Header */}
+        <header className="mb-5 flex items-center gap-3">
+          <button
+            type="button"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#16458f] shadow-sm transition hover:bg-blue-50"
+          >
+            <FaChevronLeft size={14} />
           </button>
 
-          <h2 className="lessons-title mb-0">List of Lessons</h2>
-        </div>
-      </div>
-
-      <div className="lesson-action-row">
-        <div className="lesson-search-box">
-          <FaSearch className="search-icon" />
-
-          <input
-            type="text"
-            placeholder="Search students"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          {search && (
-            <button type="button" onClick={() => setSearch("")}>
-              <FaTimes />
-            </button>
-          )}
-        </div>
-
-        <div className="lesson-buttons">
-          <button type="button" className="arrange-review-btn">
-            Arrange Review
-          </button>
-
-          <button type="button" className="submit-lesson-btn">
-            Submit Lesson
-          </button>
-        </div>
-      </div>
-
-      <div className="lesson-content-wrapper">
-        <div className="row g-4">
-          <div className="col-12 col-lg-4 col-xl-4">
-            <aside className="lesson-filter-card">
-              <div className="lesson-date-group">
-                <label>Start date</label>
-
-                <div className="lesson-date-input">
-                  <input type="text" value="10/12/2025" readOnly />
-                  <FaCalendarAlt />
-                </div>
-              </div>
-
-              <div className="lesson-date-group">
-                <label>End date</label>
-
-                <div className="lesson-date-input">
-                  <input type="text" value="10/12/2025" readOnly />
-                  <FaCalendarAlt />
-                </div>
-              </div>
-
-              <div className="lesson-filter-section">
-                <h6>Income-generating lessons</h6>
-
-                <CustomCheckbox
-                  label="Future lessons"
-                  checked={filters.futureLessons}
-                  onChange={() => handleCheckbox("futureLessons")}
-                />
-
-                <CustomCheckbox
-                  label="Lessons Learned"
-                  checked={filters.lessonsLearned}
-                  onChange={() => handleCheckbox("lessonsLearned")}
-                />
-              </div>
-
-              <div className="lesson-filter-section">
-                <h6>Others lessons</h6>
-
-                <CustomCheckbox
-                  label="Awaiting confirmation"
-                  checked={filters.awaitingConfirmation}
-                  onChange={() => handleCheckbox("awaitingConfirmation")}
-                />
-
-                <CustomCheckbox
-                  label="Canceled by you"
-                  checked={filters.canceledByYou}
-                  onChange={() => handleCheckbox("canceledByYou")}
-                />
-
-                <CustomCheckbox
-                  label="Canceled by the student"
-                  checked={filters.canceledByStudent}
-                  onChange={() => handleCheckbox("canceledByStudent")}
-                />
-              </div>
-            </aside>
+          <div>
+            <h1 className="text-2xl font-bold text-[#16458f]">
+              List of Lessons
+            </h1>
+            <p className="mt-1 text-sm text-slate-500">
+              Search, filter and manage your lesson schedule.
+            </p>
           </div>
+        </header>
 
-          <div className="col-12 col-lg-8 col-xl-8">
-            <div className="lesson-result-card">
-              <div className="empty-lessons-box">
-                <div className="empty-lesson-icon">
-                  <FaQuestionCircle />
+        {/* Action Bar */}
+        <div className="mb-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex h-11 w-full items-center gap-3 rounded-xl border border-slate-200 bg-[#f8fafc] px-4 transition focus-within:border-[#16458f] focus-within:ring-4 focus-within:ring-blue-50 lg:max-w-md">
+              <FaSearch size={14} className="text-slate-400" />
+
+              <input
+                type="text"
+                placeholder="Search students"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full bg-transparent text-sm font-medium text-slate-700 outline-none placeholder:text-slate-400"
+              />
+
+              {search && (
+                <button
+                  type="button"
+                  onClick={() => setSearch("")}
+                  className="text-slate-400 transition hover:text-slate-700"
+                >
+                  <FaTimes size={14} />
+                </button>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <button
+                type="button"
+                className="h-11 rounded-xl border border-[#e2233d] bg-white px-5 text-sm font-bold text-slate-900 transition hover:bg-red-50"
+              >
+                Arrange Review
+              </button>
+
+              <button
+                type="button"
+                className="h-11 rounded-xl bg-[#e2233d] px-5 text-sm font-bold text-white transition hover:bg-[#c91f35]"
+              >
+                Submit Lesson
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="grid gap-4 lg:grid-cols-[320px_1fr]">
+          {/* Filter Card */}
+          <aside className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <DateInput label="Start date" value="10/12/2025" />
+              <DateInput label="End date" value="10/12/2025" />
+            </div>
+
+            <div className="mt-5 space-y-5">
+              {filterGroups.map((group) => (
+                <div key={group.title}>
+                  <h3 className="mb-3 text-sm font-extrabold text-slate-900">
+                    {group.title}
+                  </h3>
+
+                  <div className="space-y-2.5">
+                    {group.items.map((item) => (
+                      <CustomCheckbox
+                        key={item.key}
+                        label={item.label}
+                        checked={filters[item.key]}
+                        onChange={() => handleCheckbox(item.key)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          {/* Result Card */}
+          <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+            <div className="flex min-h-[360px] items-center justify-center rounded-2xl bg-[#eef4fb] p-6 text-center">
+              <div>
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#16458f] shadow-sm">
+                  <FaQuestionCircle size={24} />
                 </div>
 
-                <h3>No Lessons Found</h3>
-                <p>You have no lessons in this filter range</p>
+                <h3 className="text-lg font-extrabold text-slate-900">
+                  No Lessons Found
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-500">
+                  You have no lessons in this filter range.
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+  );
+}
+
+function DateInput({ label, value }) {
+  return (
+    <div>
+      <label className="mb-2 block text-sm font-bold text-slate-700">
+        {label}
+      </label>
+
+      <div className="flex h-11 items-center gap-3 rounded-xl border border-slate-200 bg-[#f8fafc] px-4">
+        <input
+          type="text"
+          value={value}
+          readOnly
+          className="w-full bg-transparent text-sm font-medium text-slate-600 outline-none"
+        />
+
+        <FaCalendarAlt size={15} className="text-[#16458f]" />
       </div>
-    </section>
+    </div>
   );
 }
 
 function CustomCheckbox({ label, checked, onChange }) {
   return (
-    <button type="button" className="custom-check-row" onClick={onChange}>
-      <span className={`custom-check ${checked ? "checked" : ""}`}>
-        {checked && <FaCheck />}
+    <button
+      type="button"
+      onClick={onChange}
+      className="flex w-full items-center gap-3 rounded-xl px-2 py-1.5 text-left text-sm font-medium text-slate-700 transition hover:bg-slate-50"
+    >
+      <span
+        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border text-[10px] transition ${
+          checked
+            ? "border-emerald-500 bg-emerald-500 text-white"
+            : "border-[#16458f] bg-white text-transparent"
+        }`}
+      >
+        <FaCheck />
       </span>
 
       <span>{label}</span>
