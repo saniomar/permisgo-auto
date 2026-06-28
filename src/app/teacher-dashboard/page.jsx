@@ -2,22 +2,22 @@
 
 import { useState } from "react";
 
-import Sidebar from "../components/teacher-dashboard/sidebar";
-import Dashboard from "../components/teacher-dashboard/Dashboard";
-import PersonalInfo from "../components/teacher-dashboard/PersonalInfo";
-import Vehicles from "../components/teacher-dashboard/Vehicles";
-import Location from "../components/teacher-dashboard/Location";
+import Dashboard from "@/components/teacher-dashboard/Dashboard";
+import Location from "@/components/teacher-dashboard/Location";
+import PersonalInfo from "@/components/teacher-dashboard/PersonalInfo";
+import Vehicles from "@/components/teacher-dashboard/Vehicles";
+import Sidebar from "@/components/teacher-dashboard/sidebar";
 
-import Lessons from "../components/teacher-dashboard/Lessons";
-import Calendar from "../components/teacher-dashboard/Calendar";
-import Students from "../components/teacher-dashboard/Students";
-import Exams from "../components/teacher-dashboard/Exams";
-import Account from "../components/teacher-dashboard/Account";
-import MyReferences from "../components/teacher-dashboard/MyReferences";
-import Offers from "../components/teacher-dashboard/Offers";
-import MyDocument from "../components/teacher-dashboard/MyDocument"
-import ResetPassword from "../components/teacher-dashboard/ResetPassword"
-import Profile from "../components/teacher-dashboard/profile";
+import Account from "@/components/teacher-dashboard/Account";
+import Calendar from "@/components/teacher-dashboard/Calendar";
+import Exams from "@/components/teacher-dashboard/Exams";
+import Lessons from "@/components/teacher-dashboard/Lessons";
+import MyDocument from "@/components/teacher-dashboard/MyDocument";
+import MyReferences from "@/components/teacher-dashboard/MyReferences";
+import Offers from "@/components/teacher-dashboard/Offers";
+import ResetPassword from "@/components/teacher-dashboard/ResetPassword";
+import Students from "@/components/teacher-dashboard/Students";
+import Profile from "@/components/teacher-dashboard/profile";
 
 export default function TeacherDashboardPage() {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -35,10 +35,10 @@ export default function TeacherDashboardPage() {
     references: <MyReferences />,
     offers: <Offers />,
 
-  // SUB MENU
-    "profile":<Profile/>,
+    // SUB MENU
+    profile: <Profile />,
     "my-document": <MyDocument />,
-    'reset-password': <ResetPassword />,
+    "reset-password": <ResetPassword />,
   };
 
   return (
