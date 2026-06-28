@@ -1,7 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { FaSearch, FaUserGraduate, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaSearch,
+  FaTimes,
+  FaUserGraduate,
+} from "react-icons/fa";
 
 const students = [
   {
@@ -38,6 +44,27 @@ const students = [
   },
 ];
 
+const filterFields = [
+  {
+    label: "Name",
+    name: "name",
+    placeholder: "Search name",
+    icon: FaSearch,
+  },
+  {
+    label: "Email",
+    name: "email",
+    placeholder: "Search email",
+    icon: FaEnvelope,
+  },
+  {
+    label: "Phone",
+    name: "phone",
+    placeholder: "Search phone",
+    icon: FaPhoneAlt,
+  },
+];
+
 export default function Students() {
   const [filters, setFilters] = useState({
     name: "",
@@ -54,24 +81,6 @@ export default function Students() {
     }));
   };
 
-  const filteredStudents = useMemo(() => {
-    return students.filter((student) => {
-      const matchName = student.name
-        .toLowerCase()
-        .includes(filters.name.toLowerCase());
-
-      const matchEmail = student.email
-        .toLowerCase()
-        .includes(filters.email.toLowerCase());
-
-      const matchPhone = student.phone
-        .toLowerCase()
-        .includes(filters.phone.toLowerCase());
-
-      return matchName && matchEmail && matchPhone;
-    });
-  }, [filters]);
-
   const resetFilters = () => {
     setFilters({
       name: "",
@@ -80,152 +89,194 @@ export default function Students() {
     });
   };
 
+  const filteredStudents = useMemo(() => {
+    return students.filter((student) => {
+      const name = student.name.toLowerCase();
+      const email = student.email.toLowerCase();
+      const phone = student.phone.toLowerCase();
+
+      return (
+        name.includes(filters.name.toLowerCase()) &&
+        email.includes(filters.email.toLowerCase()) &&
+        phone.includes(filters.phone.toLowerCase())
+      );
+    });
+  }, [filters]);
+
   return (
-    <section className="students-page">
-      <div className="students-header">
-        <div>
-          <h2 className="panel-title mb-1">Students</h2>
-          <p className="students-subtitle">
-            Manage your enrolled students and track their course progress.
-          </p>
-        </div>
-
-        <div className="students-count-card">
-          <FaUserGraduate />
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-5 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl">
+        {/* Header */}
+        <header className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <span>Total Students</span>
-            <strong>{filteredStudents.length}</strong>
+            <h1 className="text-2xl font-bold text-[#16458f]">Students</h1>
+            <p className="mt-1 text-sm text-slate-500">
+              Manage enrolled students and track their course progress.
+            </p>
           </div>
-        </div>
-      </div>
 
-      <div className="students-filter-card mb-4">
-        <div className="row g-3 align-items-end">
-          <div className="col-12 col-md-4">
-            <label className="filter-label">Search by Name</label>
-            <div className="filter-input-wrap">
-              <FaSearch />
-              <input
-                type="text"
-                name="name"
-                value={filters.name}
-                onChange={handleChange}
-                className="form-control filter-input"
-                placeholder="Enter student name"
-              />
+          <div className="flex w-full items-center gap-3 rounded-2xl bg-white p-3 shadow-sm ring-1 ring-slate-100 sm:w-auto">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eef4fb] text-[#16458f]">
+              <FaUserGraduate size={19} />
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold text-slate-500">
+                Total Students
+              </p>
+              <h3 className="text-xl font-black leading-none text-[#16458f]">
+                {filteredStudents.length}
+              </h3>
             </div>
           </div>
+        </header>
 
-          <div className="col-12 col-md-4">
-            <label className="filter-label">Search by Email</label>
-            <div className="filter-input-wrap">
-              <FaEnvelope />
-              <input
-                type="text"
-                name="email"
-                value={filters.email}
-                onChange={handleChange}
-                className="form-control filter-input"
-                placeholder="Enter email address"
-              />
-            </div>
+        {/* Filter Card */}
+        <div className="mb-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+          <div className="grid gap-3 md:grid-cols-3">
+            {filterFields.map((field) => {
+              const Icon = field.icon;
+
+              return (
+                <div key={field.name}>
+                  <label className="mb-1.5 block text-xs font-bold text-slate-600">
+                    {field.label}
+                  </label>
+
+                  <div className="flex h-10 items-center gap-2.5 rounded-xl border border-slate-200 bg-[#f8fafc] px-3 transition focus-within:border-[#16458f] focus-within:ring-4 focus-within:ring-blue-50">
+                    <Icon size={13} className="text-[#16458f]" />
+
+                    <input
+                      type="text"
+                      name={field.name}
+                      value={filters[field.name]}
+                      onChange={handleChange}
+                      placeholder={field.placeholder}
+                      className="w-full bg-transparent text-sm font-medium text-slate-700 outline-none placeholder:text-slate-400"
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="col-12 col-md-4">
-            <label className="filter-label">Search by Phone</label>
-            <div className="filter-input-wrap">
-              <FaPhoneAlt />
-              <input
-                type="text"
-                name="phone"
-                value={filters.phone}
-                onChange={handleChange}
-                className="form-control filter-input"
-                placeholder="Enter phone number"
-              />
-            </div>
-          </div>
-
-          <div className="col-12 d-flex justify-content-end">
-            <button type="button" className="reset-filter-btn" onClick={resetFilters}>
+          <div className="mt-3 flex justify-end">
+            <button
+              type="button"
+              onClick={resetFilters}
+              className="inline-flex h-9 items-center justify-center gap-2 rounded-lg bg-[#e2233d] px-4 text-xs font-bold text-white transition hover:bg-[#c91f35]"
+            >
+              <FaTimes size={11} />
               Reset Filter
             </button>
           </div>
         </div>
-      </div>
 
-      <div className="students-table-card">
-        <div className="table-responsive">
-          <table className="table align-middle mb-0 students-table">
-            <thead>
-              <tr>
-                <th>Student</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Course</th>
-                <th>Progress</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+        {/* Table */}
+        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[880px] text-left">
+              <thead>
+                <tr className="bg-[#16458f] text-white">
+                  <TableHead>Student</TableHead>
+                  <TableHead>Email</TableHead>
+                  <TableHead>Phone</TableHead>
+                  <TableHead>Course</TableHead>
+                  <TableHead>Progress</TableHead>
+                  <TableHead>Status</TableHead>
+                </tr>
+              </thead>
 
-            <tbody>
-              {filteredStudents.length > 0 ? (
-                filteredStudents.map((student, index) => (
-                  <tr key={index}>
-                    <td>
-                      <div className="student-name-box">
-                        <div className="student-avatar">
-                          {student.name.charAt(0)}
+              <tbody className="divide-y divide-slate-100">
+                {filteredStudents.length > 0 ? (
+                  filteredStudents.map((student, index) => (
+                    <tr key={index} className="transition hover:bg-[#f8fafc]">
+                      <TableData>
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#16458f] text-xs font-black text-white">
+                            {student.name.charAt(0)}
+                          </div>
+
+                          <span className="font-bold text-slate-800">
+                            {student.name}
+                          </span>
                         </div>
-                        <span>{student.name}</span>
-                      </div>
-                    </td>
+                      </TableData>
 
-                    <td>{student.email}</td>
-                    <td>{student.phone}</td>
-                    <td>{student.course}</td>
+                      <TableData>{student.email}</TableData>
+                      <TableData>{student.phone}</TableData>
+                      <TableData>{student.course}</TableData>
 
-                    <td>
-                      <div className="student-progress-box">
-                        <div className="progress student-progress">
-                          <div
-                            className="progress-bar"
-                            style={{ width: `${student.progress}%` }}
-                          ></div>
+                      <TableData>
+                        <div className="flex min-w-[135px] items-center gap-3">
+                          <div className="h-2 w-24 overflow-hidden rounded-full bg-slate-200">
+                            <div
+                              className="h-full rounded-full bg-[#16458f]"
+                              style={{ width: `${student.progress}%` }}
+                            />
+                          </div>
+
+                          <span className="text-xs font-black text-[#16458f]">
+                            {student.progress}%
+                          </span>
                         </div>
-                        <span>{student.progress}%</span>
-                      </div>
-                    </td>
+                      </TableData>
 
-                    <td>
-                      <span
-                        className={`student-status ${
-                          student.status === "Active"
-                            ? "active"
-                            : student.status === "Completed"
-                            ? "completed"
-                            : "pending"
-                        }`}
-                      >
-                        {student.status}
-                      </span>
+                      <TableData>
+                        <StatusBadge status={student.status} />
+                      </TableData>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6" className="px-4 py-10 text-center">
+                      <h3 className="text-base font-bold text-slate-800">
+                        No students found
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-500">
+                        Try changing your search filters.
+                      </p>
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="6" className="text-center py-5">
-                    <h6 className="mb-1">No students found</h6>
-                    <p className="mb-0 text-muted">
-                      Try changing your name, email or phone filter.
-                    </p>
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+  );
+}
+
+function TableHead({ children }) {
+  return (
+    <th className="whitespace-nowrap px-4 py-3 text-xs font-extrabold uppercase tracking-wide">
+      {children}
+    </th>
+  );
+}
+
+function TableData({ children }) {
+  return (
+    <td className="whitespace-nowrap px-4 py-3 text-sm font-medium text-slate-600">
+      {children}
+    </td>
+  );
+}
+
+function StatusBadge({ status }) {
+  const statusClass =
+    status === "Active"
+      ? "bg-emerald-50 text-emerald-700 ring-emerald-100"
+      : status === "Completed"
+        ? "bg-blue-50 text-[#16458f] ring-blue-100"
+        : "bg-amber-50 text-amber-700 ring-amber-100";
+
+  return (
+    <span
+      className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ring-1 ${statusClass}`}
+    >
+      {status}
+    </span>
   );
 }

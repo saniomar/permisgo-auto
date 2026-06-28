@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { FaSearch, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaSearch,
+  FaTimes,
+} from "react-icons/fa";
 
 const examsData = [
   {
@@ -54,122 +59,202 @@ const examsData = [
   },
 ];
 
+const filters = [
+  { key: "all", label: "All" },
+  { key: "upcoming", label: "Upcoming exams" },
+  { key: "passed", label: "Exam passed" },
+  { key: "failed", label: "Failed" },
+];
+
 export default function ExaminationList() {
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredData = examsData.filter((item) => {
     const matchSearch = item.name.toLowerCase().includes(search.toLowerCase());
+    const matchFilter =
+      activeFilter === "all" || item.status.toLowerCase() === activeFilter;
 
-    if (activeFilter === "all") return matchSearch;
-    if (activeFilter === "passed")
-      return item.status === "Passed" && matchSearch;
-    if (activeFilter === "failed")
-      return item.status === "Failed" && matchSearch;
-    if (activeFilter === "upcoming")
-      return item.status === "Upcoming" && matchSearch;
-
-    return matchSearch;
+    return matchSearch && matchFilter;
   });
 
   return (
-    <section className="exam-page">
-      {/* Header */}
-      <div className="exam-header">
-        <div className="d-flex align-items-center gap-3">
-          <button className="back-btn">
-            <FaChevronLeft />
-          </button>
-          <h2>Examination List</h2>
-        </div>
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-5 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl">
+        {/* Header */}
+        <header className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#16458f] shadow-sm transition hover:bg-blue-50"
+            >
+              <FaChevronLeft size={14} />
+            </button>
 
-        <button className="revision-btn">Request for revision</button>
-      </div>
+            <div>
+              <h1 className="text-2xl font-bold text-[#16458f]">
+                Examination List
+              </h1>
+              <p className="mt-1 text-sm text-slate-500">
+                Manage student exam records and results.
+              </p>
+            </div>
+          </div>
 
-      {/* Search */}
-      <div className="exam-topbar">
-        <div className="exam-search">
-          <FaSearch />
-          <input
-            type="text"
-            placeholder="Search students"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {search && (
-            <FaTimes onClick={() => setSearch("")} className="clear-icon" />
-          )}
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div className="exam-filters">
-        {["all", "upcoming", "passed", "failed"].map((f) => (
           <button
-            key={f}
-            className={`filter-btn ${activeFilter === f ? "active" : ""}`}
-            onClick={() => setActiveFilter(f)}
+            type="button"
+            className="h-10 rounded-xl bg-[#e2233d] px-4 text-sm font-bold text-white transition hover:bg-[#c91f35]"
           >
-            {f === "all"
-              ? "All"
-              : f === "upcoming"
-              ? "Upcoming exams"
-              : f === "passed"
-              ? "Exam passed"
-              : "Failed"}
+            Request for revision
           </button>
-        ))}
-      </div>
+        </header>
 
-      {/* Table */}
-      <div className="exam-table-card">
-        <div className="table-responsive">
-          <table className="table align-middle exam-table">
-            <thead>
-              <tr>
-                <th>Student Name</th>
-                <th>Exam Center</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Booklet</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+        {/* Toolbar */}
+        <div className="mb-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            {/* Search */}
+            <div className="flex h-11 w-full items-center gap-3 rounded-xl bg-[#eef2f7] px-4 lg:max-w-md">
+              <FaSearch className="text-slate-400" size={14} />
 
-            <tbody>
-              {filteredData.map((item, i) => (
-                <tr key={i}>
-                  <td className="fw-semibold">{item.name}</td>
-                  <td>{item.center}</td>
-                  <td>{item.date}</td>
-                  <td>{item.time}</td>
-                  <td className="booklet-link">{item.booklet}</td>
-                  <td>
-                    <span className={`status-badge ${item.status.toLowerCase()}`}>
-                      {item.status}
-                    </span>
-                  </td>
-                </tr>
+              <input
+                type="text"
+                placeholder="Search students"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full bg-transparent text-sm font-medium text-slate-700 outline-none placeholder:text-slate-400"
+              />
+
+              {search && (
+                <button
+                  type="button"
+                  onClick={() => setSearch("")}
+                  className="text-slate-400 transition hover:text-slate-700"
+                >
+                  <FaTimes size={14} />
+                </button>
+              )}
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-2">
+              {filters.map((filter) => (
+                <button
+                  key={filter.key}
+                  type="button"
+                  onClick={() => setActiveFilter(filter.key)}
+                  className={`h-10 rounded-xl border px-4 text-sm font-semibold transition ${
+                    activeFilter === filter.key
+                      ? "border-[#16458f] bg-[#d8e6ff] text-[#16458f]"
+                      : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                  }`}
+                >
+                  {filter.label}
+                </button>
               ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Pagination */}
-        <div className="exam-footer">
-          <span>Showing 1-10 of 50 students</span>
-
-          <div className="pagination-box">
-            <button>
-              <FaChevronLeft />
-            </button>
-            <span>Page 2</span>
-            <button>
-              <FaChevronRight />
-            </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Table Card */}
+        <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[850px] text-left">
+              <thead>
+                <tr className="bg-[#16458f] text-white">
+                  <Th>Student Name</Th>
+                  <Th>Exam Center</Th>
+                  <Th>Date</Th>
+                  <Th>Time</Th>
+                  <Th>Booklet</Th>
+                  <Th>Status</Th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-slate-100">
+                {filteredData.map((item, index) => (
+                  <tr
+                    key={index}
+                    className="bg-white transition hover:bg-[#f8fafc]"
+                  >
+                    <Td>
+                      <span className="font-bold text-slate-800">
+                        {item.name}
+                      </span>
+                    </Td>
+                    <Td>{item.center}</Td>
+                    <Td>{item.date}</Td>
+                    <Td>{item.time}</Td>
+                    <Td>
+                      {item.booklet === "N/A" ? (
+                        <span className="text-slate-400">N/A</span>
+                      ) : (
+                        <button className="font-semibold text-[#16458f] underline underline-offset-2">
+                          {item.booklet}
+                        </button>
+                      )}
+                    </Td>
+                    <Td>
+                      <StatusBadge status={item.status} />
+                    </Td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Footer */}
+          <div className="flex flex-col gap-3 border-t border-slate-100 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm font-medium text-slate-500">
+              Showing 1-{filteredData.length} of 50 students
+            </p>
+
+            <div className="flex items-center gap-3">
+              <button className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#eef2f7] text-slate-600 transition hover:bg-slate-200">
+                <FaChevronLeft size={12} />
+              </button>
+
+              <span className="text-sm font-bold text-slate-700">Page 2</span>
+
+              <button className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#eef2f7] text-slate-600 transition hover:bg-slate-200">
+                <FaChevronRight size={12} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function Th({ children }) {
+  return (
+    <th className="whitespace-nowrap px-4 py-3 text-sm font-bold">
+      {children}
+    </th>
+  );
+}
+
+function Td({ children }) {
+  return (
+    <td className="whitespace-nowrap px-4 py-3 text-sm font-medium text-slate-600">
+      {children}
+    </td>
+  );
+}
+
+function StatusBadge({ status }) {
+  const style =
+    status === "Passed"
+      ? "bg-emerald-50 text-emerald-700 ring-emerald-100"
+      : status === "Failed"
+        ? "bg-red-50 text-red-700 ring-red-100"
+        : "bg-amber-50 text-amber-700 ring-amber-100";
+
+  return (
+    <span
+      className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ring-1 ${style}`}
+    >
+      {status}
+    </span>
   );
 }

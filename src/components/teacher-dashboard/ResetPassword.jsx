@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { FaChevronLeft, FaEye, FaEyeSlash } from "react-icons/fa";
 
+const inputClass =
+  "h-11 w-full rounded-xl border border-slate-200 bg-white px-4 pr-11 text-sm font-medium text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#16458f] focus:ring-4 focus:ring-blue-50";
+
+const labelClass = "mb-2 block text-sm font-bold text-slate-600";
+
 export default function ResetPassword() {
   const [showPassword, setShowPassword] = useState({
     current: false,
@@ -18,96 +23,95 @@ export default function ResetPassword() {
   };
 
   return (
-    <section className="reset-password-page">
-      <div className="reset-password-header">
-        <div className="d-flex align-items-start gap-3">
-          <button type="button" className="reset-back-btn">
-            <FaChevronLeft />
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-5 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-4xl">
+        {/* Header */}
+        <header className="mb-5 flex items-start gap-3">
+          <button
+            type="button"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#16458f] shadow-sm transition hover:bg-blue-50"
+          >
+            <FaChevronLeft size={14} />
           </button>
 
           <div>
-            <h2 className="reset-title mb-1">Profile</h2>
-            <p className="reset-subtitle mb-0">
-              Update your information to ensure accurate lesson scheduling and
-              communication.
+            <h1 className="text-[24px] font-bold leading-tight text-[#16458f]">
+              Reset Password
+            </h1>
+            <p className="mt-1 max-w-xl text-sm leading-5 text-slate-500">
+              Update your password to keep your account secure.
             </p>
           </div>
-        </div>
-      </div>
+        </header>
 
-      <div className="reset-password-card">
-        <form>
-          <div className="mb-3">
-            <label className="reset-label">Current Password</label>
+        {/* Card */}
+        <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100 sm:p-5">
+          <form className="space-y-5">
+            {/* Current Password */}
+            <div>
+              <label className={labelClass}>Current Password</label>
 
-            <div className="password-input-box">
-              <input
-                type={showPassword.current ? "text" : "password"}
-                className="form-control reset-input"
-                placeholder="Write here"
+              <PasswordInput
+                show={showPassword.current}
+                onToggle={() => togglePassword("current")}
               />
 
+              <p className="mt-2 text-xs font-medium text-slate-500">
+                If you don&apos;t have a password, skip the old password field.
+              </p>
+            </div>
+
+            {/* New Password Fields */}
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <label className={labelClass}>New Password</label>
+                <PasswordInput
+                  show={showPassword.new}
+                  onToggle={() => togglePassword("new")}
+                />
+              </div>
+
+              <div>
+                <label className={labelClass}>Confirm New Password</label>
+                <PasswordInput
+                  show={showPassword.confirm}
+                  onToggle={() => togglePassword("confirm")}
+                />
+              </div>
+            </div>
+
+            {/* Button */}
+            <div className="flex justify-end pt-2">
               <button
                 type="button"
-                onClick={() => togglePassword("current")}
-                className="password-eye-btn"
+                className="h-11 w-full rounded-xl bg-[#e2233d] px-6 text-sm font-bold text-white transition hover:bg-[#c91f35] sm:w-auto"
               >
-                {showPassword.current ? <FaEye /> : <FaEyeSlash />}
+                Change Password
               </button>
             </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  );
+}
 
-            <p className="password-help-text">
-              If you don’t have a password, skip the old password field
-            </p>
-          </div>
+function PasswordInput({ show, onToggle }) {
+  return (
+    <div className="relative">
+      <input
+        type={show ? "text" : "password"}
+        placeholder="Write here"
+        className={inputClass}
+      />
 
-          <div className="row g-4 mt-2">
-            <div className="col-12 col-lg-6">
-              <label className="reset-label">New Password</label>
-
-              <div className="password-input-box">
-                <input
-                  type={showPassword.new ? "text" : "password"}
-                  className="form-control reset-input"
-                  placeholder="Write here"
-                />
-
-                <button
-                  type="button"
-                  onClick={() => togglePassword("new")}
-                  className="password-eye-btn"
-                >
-                  {showPassword.new ? <FaEye /> : <FaEyeSlash />}
-                </button>
-              </div>
-            </div>
-
-            <div className="col-12 col-lg-6">
-              <label className="reset-label">Confirm the New Password</label>
-
-              <div className="password-input-box">
-                <input
-                  type={showPassword.confirm ? "text" : "password"}
-                  className="form-control reset-input"
-                  placeholder="Write here"
-                />
-
-                <button
-                  type="button"
-                  onClick={() => togglePassword("confirm")}
-                  className="password-eye-btn"
-                >
-                  {showPassword.confirm ? <FaEye /> : <FaEyeSlash />}
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <button type="button" className="change-password-btn">
-            Change Password
-          </button>
-        </form>
-      </div>
-    </section>
+      <button
+        type="button"
+        onClick={onToggle}
+        className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center text-slate-500 transition hover:text-[#16458f]"
+      >
+        {show ? <FaEye size={17} /> : <FaEyeSlash size={17} />}
+      </button>
+    </div>
   );
 }
