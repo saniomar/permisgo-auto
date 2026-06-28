@@ -1,24 +1,28 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Select from 'react-select';
+import Image from "next/image";
+import Link from "next/link";
+import Select from "react-select";
 
 // Style
-import navbarStyle from "../styles/navbar.module.css"
+import navbarStyle from "../../../styles/navbar.module.css";
 
 // Icons
-import { MdOutlineEmail } from "react-icons/md";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneSquareAlt,
+  FaPinterestSquare,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-import { FaInstagram, FaLinkedin, FaPinterestSquare, FaYoutube, FaPhoneSquareAlt } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 // Image
-import Logo from "../../../public/image/logo.png"
-import engFlag from "../../../public/image/eng-flag.png"
-import banFlag from "../../../public/image/ban-flag.png"
-import fraFlag from "../../../public/image/fra-flag.png"
-import Logo2 from "../../../public/image/logo2.png"
+import banFlag from "../../../public/image/ban-flag.png";
+import engFlag from "../../../public/image/eng-flag.png";
+import fraFlag from "../../../public/image/fra-flag.png";
+import Logo from "../../../public/image/logo.png";
 
 // const options = [
 //     { value: "EN", label: "English", img: engFlag },
@@ -27,82 +31,139 @@ import Logo2 from "../../../public/image/logo2.png"
 // ];
 
 const Navbar = () => {
+  const options = [
+    { value: "EN", label: "English", img: engFlag },
+    { value: "BN", label: "Bangla", img: banFlag },
+    { value: "FR", label: "Français", img: fraFlag },
+  ];
 
-    const options = [
-        { value: "EN", label: "English", img: engFlag },
-        { value: "BN", label: "Bangla", img: banFlag },
-        { value: "FR", label: "Français", img: fraFlag },
-    ];
-
-    return (
-        <>
-            <nav>
-
-                <div id={navbarStyle.top_bar}>
-                    <div className="container">
-                        <div className="d-flex justify-content-between align-items-center">
-                            <div>
-                                <ul>
-                                    <li className={navbarStyle.topPhone}><a href="tel:+6145845887"><FaPhoneSquareAlt /> +61 4584 5887</a></li>
-                                    <li className={navbarStyle.topEmail}><a href="mailto:info@permisgoautoecole.com"><MdOutlineEmail /> info@permisgoautoecole.com</a></li>
-                                </ul>
-                            </div>
-                            <div className="d-flex justify-content-between align-items-center gap-3">
-                                <div>
-                                    <Select
-                                        options={options}
-                                        defaultValue={options[0]}
-                                        placeholder={null}
-                                        isSearchable={false}
-                                        formatOptionLabel={opt => (
-                                            <div style={{ display: "flex", alignItems: "center" }}>
-                                                <Image src={opt.img} alt={opt.label} width="20" height="20" style={{ marginRight: "8px" }}></Image>
-                                                {opt.value}
-                                            </div>
-                                        )}
-                                    />
-                                </div>
-                                <div id={navbarStyle.topbarSocial}>
-                                    <ul>
-                                        <li><Link href=""><FaFacebook /></Link></li>
-                                        <li><Link href=""><FaInstagram /></Link></li>
-                                        <li><Link href=""><FaLinkedin /></Link></li>
-                                        <li><Link href=""><FaPinterestSquare /></Link></li>
-                                        <li><Link href=""><FaYoutube /></Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <>
+      <nav>
+        <div id={navbarStyle.top_bar}>
+          <div className="container">
+            <div className="d-flex justify-content-between align-items-center">
+              <div>
+                <ul>
+                  <li className={navbarStyle.topPhone}>
+                    <a href="tel:+6145845887">
+                      <FaPhoneSquareAlt /> +61 4584 5887
+                    </a>
+                  </li>
+                  <li className={navbarStyle.topEmail}>
+                    <a href="mailto:info@permisgoautoecole.com">
+                      <MdOutlineEmail /> info@permisgoautoecole.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="d-flex justify-content-between align-items-center gap-3">
+                <div>
+                  <Select
+                    options={options}
+                    defaultValue={options[0]}
+                    placeholder={null}
+                    isSearchable={false}
+                    formatOptionLabel={(opt) => (
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <Image
+                          src={opt.img}
+                          alt={opt.label}
+                          width="20"
+                          height="20"
+                          style={{ marginRight: "8px" }}
+                        ></Image>
+                        {opt.value}
+                      </div>
+                    )}
+                  />
                 </div>
+                <div id={navbarStyle.topbarSocial}>
+                  <ul>
+                    <li>
+                      <Link href="">
+                        <FaFacebook />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="">
+                        <FaInstagram />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="">
+                        <FaLinkedin />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="">
+                        <FaPinterestSquare />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="">
+                        <FaYoutube />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div id={navbarStyle.main_menu}>
-                    <div className="container-fluid">
-                        <div className="d-flex justify-content-between align-items-center">
-                            <div className="d-flex justify-content-between align-items-center gap-4">
-                                <Link href="/">
-                                    <Image src={Logo} className={navbarStyle.navbarLogo} layout="responsive" alt=""></Image>
-                                </Link>
-                            </div>
+        <div id={navbarStyle.main_menu}>
+          <div className="container-fluid">
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between align-items-center gap-4">
+                <Link href="/">
+                  <Image
+                    src={Logo}
+                    className={navbarStyle.navbarLogo}
+                    layout="responsive"
+                    alt=""
+                  ></Image>
+                </Link>
+              </div>
 
-
-                            <div className='align-items-center'>
-                                <nav className="navbar navbar-expand-lg" id={navbarStyle.navbarMenu}>
-                                    <div className="container-fluid">
-                                        <button className="navbar-toggler btn-outline-light" type="button" data-bs-toggle="offcanvas"
-                                            data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg"
-                                            aria-label="Toggle navigation">
-                                            <span className="navbar-toggler-icon"></span>
-                                        </button>
-                                        <div className="offcanvas offcanvas-end" tabIndex="-1" id="navbarOffcanvasLg"
-                                            aria-labelledby="navbarOffcanvasLgLabel">
-                                            <div className="offcanvas-header">
-                                                <Image src={Logo} alt="" layout='responsive' className={navbarStyle.mobileNavLogo}></Image>
-                                                <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0">
-                                                {/* <li className="nav-item dropdown">
+              <div className="align-items-center">
+                <nav
+                  className="navbar navbar-expand-lg"
+                  id={navbarStyle.navbarMenu}
+                >
+                  <div className="container-fluid">
+                    <button
+                      className="navbar-toggler btn-outline-light"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#navbarOffcanvasLg"
+                      aria-controls="navbarOffcanvasLg"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                      className="offcanvas offcanvas-end"
+                      tabIndex="-1"
+                      id="navbarOffcanvasLg"
+                      aria-labelledby="navbarOffcanvasLgLabel"
+                    >
+                      <div className="offcanvas-header">
+                        <Image
+                          src={Logo}
+                          alt=""
+                          layout="responsive"
+                          className={navbarStyle.mobileNavLogo}
+                        ></Image>
+                        <button
+                          type="button"
+                          className="btn-close btn-close-dark"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <ul className="navbar-nav ms-lg-auto mx-0 mb-lg-0">
+                        {/* <li className="nav-item dropdown">
                                                     <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id={navbarStyle.courseDropdown}>
                                                         Courses
                                                     </Link>
@@ -116,39 +177,67 @@ const Navbar = () => {
                                                         <li><a className="dropdown-item" href="/other-courses">Other Courses</a></li>
                                                     </ul>
                                                 </li> */}
-                                                <li className="nav-item">
-                                                    <Link className="nav-link active" aria-current="page" href="/pricing">Offers</Link>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <Link href="/traffic-laws" className="nav-link">Traffic Laws</Link>
-                                                </li>
-                                                <li className="nav-item dropdown">
-                                                    <Link href="/driving-license" className="nav-link">Driving License</Link>
-                                                </li>
-                                                <li className="nav-item dropdown">
-                                                    <Link href="/contact-us" className="nav-link">Contact Us</Link>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <Link href="/appointment" className="nav-link">Appointment</Link>
-                                                </li>
-                                                <li className="nav-item">
-                                                    <Link href="/helps" className="nav-link">Help</Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div className="d-flex justify-content-between align-items-center gap-4">
-                                <Link href="/user-login" className='btn' id={navbarStyle.loginBtn}>Login</Link>
-                                <Link href="/admin-register" className='btn' id={navbarStyle.bookBtn}>Inscription</Link>
-                            </div>
-                        </div>
+                        <li className="nav-item">
+                          <Link
+                            className="nav-link active"
+                            aria-current="page"
+                            href="/pricing"
+                          >
+                            Offers
+                          </Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link href="/traffic-laws" className="nav-link">
+                            Traffic Laws
+                          </Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                          <Link href="/driving-license" className="nav-link">
+                            Driving License
+                          </Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                          <Link href="/contact-us" className="nav-link">
+                            Contact Us
+                          </Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link href="/appointment" className="nav-link">
+                            Appointment
+                          </Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link href="/helps" className="nav-link">
+                            Help
+                          </Link>
+                        </li>
+                      </ul>
                     </div>
-                </div>
-            </nav>
-        </>
-    )
-}
+                  </div>
+                </nav>
+              </div>
+              <div className="d-flex justify-content-between align-items-center gap-4">
+                <Link
+                  href="/user-login"
+                  className="btn"
+                  id={navbarStyle.loginBtn}
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/admin-register"
+                  className="btn"
+                  id={navbarStyle.bookBtn}
+                >
+                  Inscription
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

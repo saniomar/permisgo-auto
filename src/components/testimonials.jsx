@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 
 // styles
-import testimonialStyles from "../../../styles/testimonial.module.css";
+import testimonialStyles from "../../styles/testimonial.module.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,9 +23,9 @@ import { FaStar } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 // Image
-import tes1 from "../../../public/image/tes1.png";
-import tes2 from "../../../public/image/tes2.png";
-import tes3 from "../../../public/image/tes3.png";
+import tes1 from "../../public/image/tes1.png";
+import tes2 from "../../public/image/tes2.png";
+import tes3 from "../../public/image/tes3.png";
 
 const Testimonials = () => {
   const swiperRefTwo = useRef(null);

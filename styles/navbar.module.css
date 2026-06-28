@@ -1,4 +1,4 @@
-#top_bar {
+/* #top_bar {
     background-color: var(--offwhite-color);
     padding: 3px 0;
 }
@@ -20,10 +20,10 @@
     padding: 8px 50px;
 }
 #navbarSelect {
-    /* background-color: transparent; */
+
     border: none;
-    /* color: var(--white-color); */
-}   
+
+}
 #navbarSelect:focus-visible {
     border: none !important;
     outline: none !important;
@@ -36,7 +36,7 @@
     color: var(--white-color) !important;
 }
 #navbarMenu ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 #navbarMenu ul li a {
     color: var(--white-color);
@@ -121,4 +121,4 @@
     #main_menu {
         padding: 8px 0px;
     }
-}
+} */

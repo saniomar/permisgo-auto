@@ -1,8 +1,6 @@
-import React from 'react'
+import supportCss from "../../../styles/support.module.css";
 
-import supportCss from "../styles/support.module.css"
-
-const Support = ({title, headPara, mainContent}) => {
+const Support = ({ title, headPara, mainContent }) => {
   return (
     <>
       <div className={supportCss.support_first}>
@@ -16,13 +14,11 @@ const Support = ({title, headPara, mainContent}) => {
 
       <div className={supportCss.support_second}>
         <div className="container-fluid">
-            <span>
-              {mainContent}
-            </span>
+          <span>{mainContent}</span>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Support
+export default Support;

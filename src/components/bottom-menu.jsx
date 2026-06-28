@@ -6,7 +6,7 @@ import { MdLocalOffer, MdOutlineDirections } from "react-icons/md";
 import { RiProfileLine } from "react-icons/ri";
 
 // Style
-import bottomMenu from "../../../styles/bottom-menu.module.css";
+import bottomMenu from "../../styles/bottom-menu.module.css";
 
 const BottomMenu = () => {
   return (

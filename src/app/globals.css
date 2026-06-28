@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --first-color: #023389;
@@ -26,10 +30,22 @@ body {
   margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--first-font);
 }
-h4, h5, h6, p, li, a, small, label, button, td, .btn {
+h4,
+h5,
+h6,
+p,
+li,
+a,
+small,
+label,
+button,
+td,
+.btn {
   font-family: var(--second-font);
 }
 
@@ -61,62 +77,61 @@ ul {
 }
 
 input::placeholder {
-    font-family: var(--second-font);
-    font-size: 17px;
+  font-family: var(--second-font);
+  font-size: 17px;
 }
 textarea::placeholder {
-    font-family: var(--second-font);
-    font-size: 17px;
+  font-family: var(--second-font);
+  font-size: 17px;
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 3px;
+  width: 3px;
 }
-  
+
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--rating-color);
+  background: var(--rating-color);
 }
-  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--first-color);
+  background: var(--first-color);
 }
-  
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--second-color);
+  background: var(--second-color);
 }
-
 
 .form-control:focus {
-    box-shadow: none !important;
-    border: 1px solid var(--first-color) !important;
+  box-shadow: none !important;
+  border: 1px solid var(--first-color) !important;
 }
 .form-select:focus {
-    box-shadow: none !important;
-    border: 1px solid var(--first-color) !important;
-    background-color: rgb(255, 255, 255);
+  box-shadow: none !important;
+  border: 1px solid var(--first-color) !important;
+  background-color: rgb(255, 255, 255);
 }
 
 .accordion-button {
   background-color: var(--first-light-color) !important;
 }
 .accordion-button:not(.collapsed) {
-    background-color: var(--white-color) !important;
-    color: var(--first-color) !important;
+  background-color: var(--white-color) !important;
+  color: var(--first-color) !important;
 }
 
 .navbar-toggler {
@@ -149,10 +164,11 @@ button:focus:not(:focus-visible) {
 }
 .navbar-nav .dropdown-menu {
   background-color: var(--second-color);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-.dropdown-item:focus, .dropdown-item:hover{
-  transition: .5s ease-in-out;
+.dropdown-item:focus,
+.dropdown-item:hover {
+  transition: 0.5s ease-in-out;
   color: var(--black-color) !important;
 }
 .register_form .nav-link {
@@ -180,7 +196,7 @@ button:focus:not(:focus-visible) {
   background-color: var(--second-light-color) !important;
   color: var(--first-color) !important;
   padding: 20px 15px;
-  font-weight: 500  ;
+  font-weight: 500;
 }
 
 .swiper-wrapper {
@@ -192,7 +208,6 @@ button:focus:not(:focus-visible) {
     padding: 0px !important;
   }
 }
-
 
 /*  */
 
@@ -213,18 +228,16 @@ button:focus:not(:focus-visible) {
   font-size: 0.85rem;
   transition: all 0.15s ease;
 }
-.ab_slot:hover { 
-    background: var(--first-light-color); 
+.ab_slot:hover {
+  background: var(--first-light-color);
 }
-.ab_slot.active { 
-    background: var(--first-color); 
-    color: var(--white-color); 
-    border-color: var(--first-color); 
+.ab_slot.active {
+  background: var(--first-color);
+  color: var(--white-color);
+  border-color: var(--first-color);
 }
 
 /*  */
-
-
 
 /* =======================================side bar======================== */
 /* Sidebar */
@@ -236,8 +249,6 @@ button:focus:not(:focus-visible) {
   align-items: stretch;
   background: #ffffff;
 }
-
-
 
 .submenu {
   margin-left: 20px;
@@ -571,7 +582,6 @@ button:focus:not(:focus-visible) {
 }
 /* ====================end sidebar================= */
 
-
 /* ==================DashBoard=============== */
 .welcome-section h2 {
   color: #16458f;
@@ -858,8 +868,6 @@ button:focus:not(:focus-visible) {
   }
 }
 /* =====================end Dashboard============ */
-
-
 
 /* ===================Exam dashboard================= */
 .exam-page {
@@ -1289,9 +1297,6 @@ button:focus:not(:focus-visible) {
 
 /* ================my refarence=========== */
 
-
-
-
 /* ===================student list teacher dashboard===================== */
 .students-page {
   width: 100%;
@@ -1516,8 +1521,6 @@ button:focus:not(:focus-visible) {
 }
 
 /* ===================end student list teacher dashboard===================== */
-
-
 
 /* ======================lesson teacher dashboard============================= */
 
@@ -1831,8 +1834,6 @@ button:focus:not(:focus-visible) {
 
 /* ====================== End lesson teacher dashboard============================= */
 
-
-
 /* ===============================thacher Dashboard vehicle dashboard ===============================*/
 
 .vehicles-page {
@@ -1916,14 +1917,9 @@ button:focus:not(:focus-visible) {
   }
 }
 
-
 /* ===============================thacher Dashboard vehicle dashboard ===============================*/
 
-
-
-
 /* ========================== theacher dashboard my document==================================== */
-
 
 .profile-page {
   width: 100%;
@@ -2256,14 +2252,11 @@ button:focus:not(:focus-visible) {
   }
 }
 
+/* ========================== end theacher dashboard my document==================================== */
 
- /* ========================== end theacher dashboard my document==================================== */
-
-  
 /* ===================password reset theacher dash board========================== */
 
-
-  .reset-password-page {
+.reset-password-page {
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
@@ -2403,8 +2396,6 @@ button:focus:not(:focus-visible) {
 }
 
 /* =================== End password reset theacher dash board========================== */
-
-
 
 /* =================== Teacher Dashboard Document Page =================== */
 
