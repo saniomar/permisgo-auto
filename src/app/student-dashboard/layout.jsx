@@ -1,15 +1,12 @@
-"use client"
+"use client";
 
-import React from "react"
-import "../globals.css";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 import Script from "next/script";
-
 // Components
-import Navbar from "../components/dashboard-navbar";
-import Footer from "../components/dashboard-footer";
-import BottomMenu from "../components/student-dashboard-bottom-menu"
+import Footer from "../../components/student-dashboard/dashboard-footer";
+import Navbar from "../../components/student-dashboard/dashboard-navbar";
+import BottomMenu from "../../components/student-dashboard/student-dashboard-bottom-menu";
 
 // export const metadata = {
 //   title: "Home | One of the best Driving School",
@@ -21,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning={true}>
       <Head>
         <title>Home | One of the best Driving School</title>
-        <meta name='description' content='Driving School' />
+        <meta name="description" content="Driving School" />
       </Head>
       <body suppressHydrationWarning={true}>
         <Navbar />
@@ -29,8 +26,16 @@ export default function RootLayout({ children }) {
         <BottomMenu />
         <Footer />
 
-         <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></Script>
-        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></Script>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+          crossorigin="anonymous"
+        ></Script>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+          integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+          crossorigin="anonymous"
+        ></Script>
       </body>
     </html>
   );

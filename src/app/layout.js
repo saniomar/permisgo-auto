@@ -1,9 +1,8 @@
 "use client";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 import Script from "next/script";
-import "./globals.css";
+import "../globals.css";
 
 // export const metadata = {
 //   title: "Home | One of the best Driving School",
