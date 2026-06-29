@@ -1,7 +1,0 @@
-.sidebar {
-    width: calc(100% - 80%);
-    background-color: var(--white-color);
-    padding: 20px;
-    margin-left: 20px;
-    height: 100%;
-}

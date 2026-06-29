@@ -7,9 +7,9 @@ import Link from "next/link";
 import appoinHero from "../../../../public/image/appoin-hero.png";
 
 // Components
-import WhyChoose from "@/app/components/why-choose";
 import AppointmentBooking from "@/components/appointment-booking-calander";
 import Testimonials from "@/components/testimonials";
+import WhyChoose from "@/components/why-choose";
 
 const Appointment = () => {
   return (
