@@ -860,9 +860,9 @@ import "swiper/css/navigation";
 
 import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import Footer from "./components/footer";
-import Testimonials from "./components/testimonials";
+import Testimonials from "@/components/testimonials";
 
 import blogImg from "../../public/image/blog.jpg";
 import broomLogo from "../../public/image/broomLogo.png";
@@ -907,26 +907,25 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
-const container = "mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8";
-const section = "py-14 sm:py-16 lg:py-20";
+const container = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8";
+const section = "py-12 md:py-16 lg:py-20";
 
 const badge =
-  "inline-flex rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-[var(--third-color)] shadow-sm";
+  "inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-orange-500 shadow";
 
 const primaryBtn =
-  "inline-flex items-center justify-center rounded-full bg-[var(--second-color)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--first-color)] hover:shadow-lg";
+  "inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-900";
 
 const outlineBtn =
-  "inline-flex items-center justify-center rounded-full border border-[var(--second-color)] px-6 py-3 text-sm font-semibold text-[var(--first-color)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--second-color)] hover:text-white";
+  "inline-flex items-center justify-center rounded-full border border-blue-600 px-6 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-600 hover:text-white";
 
 const inputClass =
-  "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[15px] text-slate-700 outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[var(--second-color)] focus:ring-4 focus:ring-[var(--second-color)]/10";
-
-const sectionTitleClass =
-  "mx-auto mb-10 max-w-3xl text-center sm:mb-12 [&_h5]:mb-3 [&_h5]:inline-flex [&_h5]:rounded-full [&_h5]:bg-white [&_h5]:px-4 [&_h5]:py-1.5 [&_h5]:text-sm [&_h5]:font-semibold [&_h5]:text-[var(--third-color)] [&_h2]:mt-4 [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:leading-tight [&_h2]:text-[var(--first-color)] sm:[&_h2]:text-4xl lg:[&_h2]:text-[42px] [&_p]:mt-3 [&_p]:text-[16px] [&_p]:leading-7 [&_p]:text-slate-600";
+  "w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:border-blue-600 focus:ring-2 focus:ring-blue-100";
 
 const navBtn =
-  "flex h-11 w-11 items-center justify-center rounded-full bg-white text-[var(--first-color)] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--second-color)] hover:text-white hover:shadow-md";
+  "flex h-11 w-11 items-center justify-center rounded-full bg-white text-blue-900 shadow transition hover:bg-blue-600 hover:text-white";
+
+const cardHover = "transition hover:border-blue-200 hover:shadow-lg";
 
 const indicators = [
   { img: indicator1, title: "Moniteur diplômé" },
@@ -1012,10 +1011,16 @@ const mapSrc =
 
 function SectionHeading({ small, title, desc }) {
   return (
-    <div className={sectionTitleClass}>
-      <h5>{small}</h5>
-      <h2>{title}</h2>
-      {desc && <p>{desc}</p>}
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      <h5 className={badge}>{small}</h5>
+
+      <h2 className="mt-4 text-3xl font-bold leading-tight text-blue-900 sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
+
+      {desc && (
+        <p className="mt-3 text-base leading-7 text-slate-600">{desc}</p>
+      )}
     </div>
   );
 }
@@ -1023,10 +1028,7 @@ function SectionHeading({ small, title, desc }) {
 function Stars({ center = true }) {
   return (
     <ul
-      className={cn(
-        "flex gap-1 text-[var(--review-color)]",
-        center && "justify-center",
-      )}
+      className={cn("flex gap-1 text-yellow-400", center && "justify-center")}
     >
       {[1, 2, 3, 4, 5].map((item) => (
         <li key={item}>
@@ -1049,34 +1051,35 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#103677] bg-[url('/image/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#061b45]/95 via-[#103677]/80 to-[#103677]/40" />
-        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-[var(--second-color)]/20 blur-3xl" />
+      <section className="relative overflow-hidden bg-blue-950 bg-[url('/image/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-blue-800/60" />
+        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
         <div className="absolute -right-24 bottom-10 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
 
         <div className={cn(container, "relative")}>
           <div className="grid min-h-[620px] grid-cols-1 items-center gap-10 py-14 lg:grid-cols-12 lg:py-16">
             <div className="lg:col-span-5">
               <div className="max-w-xl">
-                <h5 className="inline-flex rounded-full bg-white/12 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur-md">
+                <h5 className="inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/20">
                   Approved by the prefecture E 25 093 0029 0
                 </h5>
 
-                <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-[56px]">
+                <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
                   Conduisez vers la liberté, Per|
                 </h1>
 
-                <p className="mt-5 max-w-lg text-[17px] leading-8 text-white/80">
+                <p className="mt-5 max-w-lg text-lg leading-8 text-white/80">
                   Comprehensive training, guaranteed safety.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link href="" className={primaryBtn}>
+                  <Link href="#" className={primaryBtn}>
                     Start the courses
                   </Link>
+
                   <Link
-                    href=""
-                    className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[var(--first-color)]"
+                    href="#"
+                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white hover:text-blue-900"
                   >
                     Inscription
                   </Link>
@@ -1097,14 +1100,15 @@ export default function Home() {
                   ].map((offer, index) => (
                     <div
                       key={index}
-                      className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/15"
+                      className="rounded-2xl border border-white/20 bg-white/10 p-5 text-white shadow-lg transition hover:bg-white/15"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div>
-                          <h4 className="text-[15px] font-semibold leading-6 text-white/90">
+                          <h4 className="text-sm font-semibold leading-6 text-white/90">
                             {offer.title}
                           </h4>
-                          <p className="mt-1 text-[18px] font-semibold text-[var(--third-color)] line-through">
+
+                          <p className="mt-1 text-lg font-semibold text-orange-400 line-through">
                             {offer.oldPrice}
                           </p>
                         </div>
@@ -1112,21 +1116,21 @@ export default function Home() {
                         <Image
                           src={batch}
                           alt="Offer badge"
-                          className="h-auto w-[48px] shrink-0"
+                          className="h-auto w-12"
                         />
                       </div>
 
                       <div className="mt-5 flex items-end justify-between gap-3">
                         <div>
                           <small className="text-white/70">of the</small>
-                          <h3 className="text-[34px] font-bold leading-none text-white">
+                          <h3 className="text-4xl font-bold leading-none text-white">
                             {offer.price}
                           </h3>
                         </div>
 
                         <Link
-                          href=""
-                          className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-[var(--first-color)] transition-all duration-300 hover:bg-[var(--second-color)] hover:text-white"
+                          href="#"
+                          className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-blue-900 transition hover:bg-blue-600 hover:text-white"
                         >
                           Permit Offer
                         </Link>
@@ -1142,7 +1146,7 @@ export default function Home() {
                 src={carAnime}
                 alt="Driving car animation"
                 priority
-                className="ml-auto h-auto w-full max-w-[780px] object-contain"
+                className="ml-auto h-auto w-full max-w-3xl object-contain"
               />
             </div>
           </div>
@@ -1161,13 +1165,17 @@ export default function Home() {
             {indicators.map((item, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--second-color)]/30 hover:shadow-xl"
+                className={cn(
+                  "rounded-2xl border border-slate-100 bg-white p-6 shadow-sm",
+                  cardHover,
+                )}
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[var(--first-light-color)]">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50">
                     <Image src={item.img} alt="" className="h-auto w-10" />
                   </div>
-                  <h4 className="text-[18px] font-semibold leading-6 text-[var(--first-color)]">
+
+                  <h4 className="text-lg font-semibold leading-6 text-blue-900">
                     {item.title}
                   </h4>
                 </div>
@@ -1190,22 +1198,25 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group rounded-3xl border border-slate-100 bg-white p-7 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--second-color)]/30 hover:shadow-xl"
+                className={cn(
+                  "rounded-3xl border border-slate-100 bg-white p-7 text-center shadow-sm",
+                  cardHover,
+                )}
               >
-                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-[var(--first-light-color)]">
+                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-blue-50">
                   <Image src={service.img} alt="" className="h-auto w-16" />
                 </div>
 
-                <h4 className="mt-5 min-h-[52px] text-[20px] font-semibold leading-7 text-[var(--first-color)]">
+                <h4 className="mt-5 min-h-14 text-xl font-semibold leading-7 text-blue-900">
                   {service.title}
                 </h4>
 
-                <h3 className="mt-2 text-[22px] font-bold text-[var(--third-color)]">
+                <h3 className="mt-2 text-2xl font-bold text-orange-500">
                   {service.price}
                 </h3>
 
                 <div className="mt-6">
-                  <Link href="" className={outlineBtn}>
+                  <Link href="#" className={outlineBtn}>
                     Learn more
                   </Link>
                 </div>
@@ -1234,7 +1245,7 @@ export default function Home() {
                 />
 
                 <div className="mt-7">
-                  <h4 className="mb-4 text-[20px] font-semibold leading-7 text-[var(--first-color)]">
+                  <h4 className="mb-4 text-xl font-semibold leading-7 text-blue-900">
                     Find lessons based on your vehicle type
                   </h4>
 
@@ -1245,10 +1256,10 @@ export default function Home() {
                         type="button"
                         onClick={() => setActiveTab(tab.key)}
                         className={cn(
-                          "rounded-xl px-4 py-3 text-left text-[15px] font-semibold transition-all duration-300",
+                          "rounded-xl px-4 py-3 text-left text-sm font-semibold transition",
                           activeTab === tab.key
-                            ? "bg-[var(--second-color)] text-white shadow-md"
-                            : "bg-slate-50 text-[var(--first-color)] hover:bg-[var(--first-light-color)]",
+                            ? "bg-blue-600 text-white shadow"
+                            : "bg-slate-50 text-blue-900 hover:bg-blue-50",
                         )}
                       >
                         {tab.title}
@@ -1258,11 +1269,11 @@ export default function Home() {
                 </div>
 
                 <div className="mt-7">
-                  <h4 className="mb-4 text-[20px] font-semibold leading-7 text-[var(--first-color)]">
+                  <h4 className="mb-4 text-xl font-semibold leading-7 text-blue-900">
                     Find available teacher near you
                   </h4>
 
-                  <button className={cn(primaryBtn, "w-full")}>
+                  <button type="button" className={cn(primaryBtn, "w-full")}>
                     Start Searching
                   </button>
                 </div>
@@ -1275,7 +1286,7 @@ export default function Home() {
                   src={mapSrc}
                   width="100%"
                   height="520"
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-2xl"
@@ -1288,7 +1299,7 @@ export default function Home() {
       </section>
 
       {/* Instructors */}
-      <section className={cn(section, "bg-[var(--offwhite-color)]")}>
+      <section className={cn(section, "bg-slate-50")}>
         <div className={container}>
           <SectionHeading
             small="Instructors"
@@ -1307,40 +1318,51 @@ export default function Home() {
               delay: 2200,
               disableOnInteraction: false,
             }}
-            freeMode={true}
-            loop={true}
+            freeMode
+            loop
             modules={[FreeMode, Autoplay, Navigation]}
             onSwiper={(swiper) => (swiperRefOne.current = swiper)}
             className="w-full"
           >
             {instructors.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className="rounded-3xl border border-slate-100 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div
+                  className={cn(
+                    "rounded-3xl border border-slate-100 bg-white p-6 text-center shadow-sm",
+                    cardHover,
+                  )}
+                >
                   <Image
                     src={img}
                     alt="Instructor"
-                    className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-[var(--first-light-color)]"
+                    className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-blue-50"
                   />
 
-                  <h4 className="mt-4 text-[20px] font-semibold text-[var(--first-color)]">
+                  <h4 className="mt-4 text-xl font-semibold text-blue-900">
                     Robert Fox
                   </h4>
 
                   <div className="mt-4 rounded-2xl bg-slate-50 p-4">
                     <p className="mb-2 text-sm text-slate-600">
                       Experience{" "}
-                      <span className="font-bold text-[var(--first-color)]">
-                        05 Years+
-                      </span>
+                      <span className="font-bold text-blue-900">05 Years+</span>
                     </p>
+
                     <Stars />
                   </div>
 
                   <div className="mt-5 grid grid-cols-2 gap-3">
-                    <Link href="" className={cn(primaryBtn, "px-4 py-2.5")}>
+                    <Link
+                      href="#"
+                      className="rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-900"
+                    >
                       Book
                     </Link>
-                    <Link href="" className={cn(outlineBtn, "px-4 py-2.5")}>
+
+                    <Link
+                      href="#"
+                      className="rounded-full border border-blue-600 px-4 py-3 text-sm font-semibold text-blue-900 transition hover:bg-blue-600 hover:text-white"
+                    >
                       Message
                     </Link>
                   </div>
@@ -1351,12 +1373,15 @@ export default function Home() {
 
           <div className="mt-8 flex justify-center gap-3">
             <button
+              type="button"
               className={navBtn}
               onClick={() => swiperRefOne.current?.slidePrev()}
             >
               <FaArrowLeftLong />
             </button>
+
             <button
+              type="button"
               className={navBtn}
               onClick={() => swiperRefOne.current?.slideNext()}
             >
@@ -1367,25 +1392,28 @@ export default function Home() {
       </section>
 
       {/* Reviews */}
-      <section className={cn(section, "bg-[#103677]")}>
+      <section className={cn(section, "bg-blue-900")}>
         <div className={container}>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="rounded-3xl border border-white/10 bg-white p-7 text-center shadow-xl"
+                className="rounded-3xl border border-white/10 bg-white p-7 text-center shadow-lg"
               >
                 <Image
                   src={review.img}
                   alt=""
-                  className="mx-auto h-auto w-[70px]"
+                  className="mx-auto h-auto w-20"
                 />
-                <h4 className="mt-5 text-[24px] font-bold text-[var(--first-color)]">
+
+                <h4 className="mt-5 text-2xl font-bold text-blue-900">
                   {review.title}
                 </h4>
+
                 <div className="mt-3">
                   <Stars />
                 </div>
+
                 <p className="mt-3 text-sm font-medium text-slate-600">
                   04 out of 05
                 </p>
@@ -1398,22 +1426,26 @@ export default function Home() {
       <Testimonials />
 
       {/* Instructor CTA */}
-      <section className="relative overflow-hidden bg-[linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.78)),url('/image/driving-instructor.webp')] bg-cover bg-top bg-no-repeat">
+      <section className="relative overflow-hidden bg-slate-900 bg-[url('/image/driving-instructor.webp')] bg-cover bg-top bg-no-repeat">
+        <div className="absolute inset-0 bg-black/70" />
+
         <div
           className={cn(
             container,
-            "flex min-h-[520px] items-end justify-center py-14 lg:min-h-[680px]",
+            "relative flex min-h-[520px] items-end justify-center py-14 lg:min-h-[680px]",
           )}
         >
           <div className="max-w-3xl text-center">
-            <h3 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[44px]">
+            <h3 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Are you a driving instructor? And super friendly?
             </h3>
-            <p className="mt-4 text-[17px] text-white/85">
+
+            <p className="mt-4 text-lg text-white/85">
               Become a freelance driving instructor.
             </p>
+
             <div className="mt-7">
-              <Link href="" className={primaryBtn}>
+              <Link href="#" className={primaryBtn}>
                 Join us a driving instructor
               </Link>
             </div>
@@ -1429,10 +1461,11 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <div className="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-sm">
-                <h3 className="text-2xl font-bold leading-tight text-[var(--first-color)]">
+                <h3 className="text-2xl font-bold leading-tight text-blue-900">
                   Got a question about lessons, courses, or documents?
                 </h3>
-                <p className="mt-3 text-[15px] leading-7 text-slate-600">
+
+                <p className="mt-3 text-sm leading-7 text-slate-600">
                   Fill out the form below and we’ll respond as soon as possible.
                 </p>
 
@@ -1445,6 +1478,7 @@ export default function Home() {
                       >
                         First Name
                       </label>
+
                       <input
                         type="text"
                         id="first-name"
@@ -1460,6 +1494,7 @@ export default function Home() {
                       >
                         Last Name
                       </label>
+
                       <input
                         type="text"
                         id="last-name"
@@ -1475,6 +1510,7 @@ export default function Home() {
                       >
                         Email
                       </label>
+
                       <input
                         type="email"
                         id="email"
@@ -1490,6 +1526,7 @@ export default function Home() {
                       >
                         Phone Number
                       </label>
+
                       <input
                         type="tel"
                         id="phone-number"
@@ -1505,6 +1542,7 @@ export default function Home() {
                       >
                         Ask your questions
                       </label>
+
                       <textarea
                         rows={5}
                         id="question"
@@ -1538,7 +1576,7 @@ export default function Home() {
                       onClick={() =>
                         setOpenFaq(openFaq === index ? null : index)
                       }
-                      className="flex w-full items-center justify-between px-5 py-4 text-left text-[16px] font-semibold text-[var(--first-color)] transition-all duration-300 hover:bg-slate-50"
+                      className="flex w-full items-center justify-between px-5 py-4 text-left text-base font-semibold text-blue-900 transition hover:bg-slate-50"
                     >
                       <span>{faq.q}</span>
                       <span className="text-xl">
@@ -1547,7 +1585,7 @@ export default function Home() {
                     </button>
 
                     {openFaq === index && (
-                      <div className="border-t border-slate-100 px-5 py-4 text-[15px] leading-7 text-slate-600">
+                      <div className="border-t border-slate-100 px-5 py-4 text-sm leading-7 text-slate-600">
                         {faq.a}
                       </div>
                     )}
@@ -1560,13 +1598,14 @@ export default function Home() {
       </section>
 
       {/* Payment */}
-      <section className={cn(section, "bg-[var(--offwhite-color)]")}>
+      <section className={cn(section, "bg-slate-50")}>
         <div className={container}>
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-8">
               <div className="mb-8 max-w-2xl">
                 <h5 className={badge}>Payment System</h5>
-                <h2 className="mt-4 text-3xl font-bold leading-tight text-[var(--first-color)] sm:text-4xl lg:text-[42px]">
+
+                <h2 className="mt-4 text-3xl font-bold leading-tight text-blue-900 sm:text-4xl lg:text-5xl">
                   Secure & Flexible Payment System
                 </h2>
               </div>
@@ -1584,19 +1623,19 @@ export default function Home() {
                   delay: 2000,
                   disableOnInteraction: false,
                 }}
-                freeMode={true}
-                loop={true}
+                freeMode
+                loop
                 modules={[FreeMode, Autoplay, Navigation]}
                 onSwiper={(swiper) => (swiperRefThree.current = swiper)}
                 className="w-full"
               >
                 {payments.map((payment, index) => (
                   <SwiperSlide key={index}>
-                    <div className="flex h-[86px] items-center justify-center rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+                    <div className="flex h-24 items-center justify-center rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
                       <Image
                         src={payment}
                         alt=""
-                        className="max-h-[46px] w-auto object-contain"
+                        className="max-h-12 w-auto object-contain"
                       />
                     </div>
                   </SwiperSlide>
@@ -1605,12 +1644,15 @@ export default function Home() {
 
               <div className="mt-8 flex gap-3">
                 <button
+                  type="button"
                   className={navBtn}
                   onClick={() => swiperRefThree.current?.slidePrev()}
                 >
                   <FaArrowLeftLong />
                 </button>
+
                 <button
+                  type="button"
                   className={navBtn}
                   onClick={() => swiperRefThree.current?.slideNext()}
                 >
@@ -1623,7 +1665,7 @@ export default function Home() {
               <Image
                 src={homePay}
                 alt=""
-                className="h-auto w-full rounded-3xl object-cover shadow-xl"
+                className="h-auto w-full rounded-3xl object-cover shadow-lg"
               />
             </div>
           </div>
@@ -1639,7 +1681,10 @@ export default function Home() {
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
-                className="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className={cn(
+                  "overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm",
+                  cardHover,
+                )}
               >
                 <Image
                   src={blogImg}
@@ -1648,19 +1693,19 @@ export default function Home() {
                 />
 
                 <div className="p-6">
-                  <h4 className="text-[19px] font-bold leading-7 text-[var(--first-color)]">
-                    <Link href="">
+                  <h4 className="text-xl font-bold leading-7 text-blue-900">
+                    <Link href="#">
                       10 Tips to Pass Your Driving Test on the First Try
                     </Link>
                   </h4>
 
-                  <p className="mt-3 text-[15px] leading-7 text-slate-600">
+                  <p className="mt-3 text-sm leading-7 text-slate-600">
                     Nervous about your road test? Discover practical tips,
                     common...
                   </p>
 
                   <div className="mt-5">
-                    <Link href="" className={outlineBtn}>
+                    <Link href="#" className={outlineBtn}>
                       Read More
                     </Link>
                   </div>

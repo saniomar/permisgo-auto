@@ -1,63 +1,87 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-
-// styles
-import appointmentStyles from "../appointment/styles/appointment.module.css"
-
-// Icon
+import Image from "next/image";
+import Link from "next/link";
 
 // Image
-import appoinHero from "../../../../public/image/appoin-hero.png"
+import appoinHero from "../../../../public/image/appoin-hero.png";
 
-// Component
-import Testimonials from '@/app/components/testimonials'
-import WhyChoose from '@/app/components/why-choose'
-import AppointmentBooking from '@/app/components/appointment-booking-calander'
+// Components
+import WhyChoose from "@/app/components/why-choose";
+import AppointmentBooking from "@/components/appointment-booking-calander";
+import Testimonials from "@/components/testimonials";
 
-
-const appointment = () => {
-
+const Appointment = () => {
   return (
     <>
-      <section>
-        <div className={appointmentStyles.appointment_hero}>
-          <div className="container-fluid">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-6">
-                <h1>Book Your Driving Lesson</h1>
-                <p>Schedule your driving lesson with our certified instructors. Choose your preferred date, time, and location to start your learning journey.</p>
-                <Link href="" className='btn btn-lg'>Book Appointment</Link>
-              </div>
-              <div className="col-lg-6 col-md-6">
-                <Image src={appoinHero} layout='responsive' alt=''></Image>
-              </div>
+      {/* Hero Section */}
+      <section className="bg-white">
+        <div className="px-4 py-8 sm:px-6 md:px-8 lg:px-12 lg:py-14">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 md:grid-cols-2">
+            {/* Left Content */}
+            <div className="text-center md:text-left">
+              <h1 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+                Book Your Driving Lesson
+              </h1>
+
+              <p className="mt-4 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+                Schedule your driving lesson with our certified instructors.
+                Choose your preferred date, time, and location to start your
+                learning journey.
+              </p>
+
+              <Link
+                href="#appointment-booking"
+                className="mt-6 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-500"
+              >
+                Book Appointment
+              </Link>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex justify-center md:justify-end">
+              <Image
+                src={appoinHero}
+                alt="Book driving lesson"
+                priority
+                // placeholder="blur"
+                quality={85}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 50vw, 560px"
+                className="h-auto w-full max-w-md object-contain sm:max-w-lg lg:max-w-xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <AppointmentBooking />
+      {/* Appointment Booking */}
+      <div id="appointment-booking">
+        <AppointmentBooking />
+      </div>
 
       <WhyChoose />
+
       <Testimonials />
 
-      <section>
-        <div id={appointmentStyles.booking_btn_section}>
-          <div className="container-fluid">
-            <div id={appointmentStyles.booking_btn_inner_section}>
-              <div className="text-center">
-                <h3>Start Your Driving Journey Today</h3>
-                <Link href="" className='btn btn-lg'>Book Your Lesson</Link>
-              </div>
-            </div>
+      {/* Booking CTA Section */}
+      <section className="bg-white px-4 py-8 sm:px-6 md:px-8 lg:px-12 lg:py-14">
+        <div className="mx-auto max-w-7xl">
+          <div className="rounded-2xl bg-blue-900 px-4 py-10 text-center sm:px-8 lg:py-14">
+            <h3 className="mx-auto max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+              Start Your Driving Journey Today
+            </h3>
+
+            <Link
+              href="#appointment-booking"
+              className="mt-6 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-500"
+            >
+              Book Your Lesson
+            </Link>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default appointment
+export default Appointment;
