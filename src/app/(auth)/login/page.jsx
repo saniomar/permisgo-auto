@@ -112,7 +112,7 @@ const StudentLogin = () => {
 
                 <div className="flex justify-end">
                   <Link
-                    href="/student-forget-password"
+                    href="/forget-password"
                     className="text-[12px] font-bold text-[#103677] transition hover:text-[#2563eb] hover:underline"
                   >
                     Forgot Password?
@@ -158,7 +158,7 @@ const StudentLogin = () => {
               <p className="mt-4 text-center text-[12.5px] text-slate-600">
                 Don&apos;t have an account?{" "}
                 <Link
-                  href="/student-register"
+                  href="/register"
                   className="font-bold text-[#103677] transition hover:text-[#2563eb] hover:underline"
                 >
                   Register Now

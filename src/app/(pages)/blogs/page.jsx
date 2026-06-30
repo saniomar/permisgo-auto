@@ -1,143 +1,159 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import blogCss from "./styles/blog.module.css"
+import Image from "next/image";
+import Link from "next/link";
 
 // Image
-import blogPage from "../../../../public/image/blog-page.jpg"
+import blogPage from "../../../../public/image/blog-page.jpg";
 
-// Icon
-import { FaUser } from "react-icons/fa";
-import { MdOutlineDateRange } from "react-icons/md";
-import { FaSquarePen } from "react-icons/fa6";
-import { BiSolidCommentDots } from "react-icons/bi";
+// Icons
+import { FaArrowRight } from "react-icons/fa6";
 
+export async function getPost() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 3600 },
+  });
 
-export async function getPost () {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts")
-    return await res.json()
+  if (!res.ok) {
+    throw new Error("Failed to fetch blog posts");
+  }
+
+  return await res.json();
 }
 
+const Blog = async () => {
+  const posts = await getPost();
 
-const blog = async () => {
-
-    const posts = await getPost()
-    
+  const featuredPost = posts[0];
+  const blogPosts = posts.slice(1, 13);
 
   return (
-    <>
-        <div className={blogCss.blog_section}>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-8">
-                        {
-                            posts.map((items) => {
-                                return (
-                                    <div key={items.id}>
-                                        <div className={blogCss.blog_box}>
-                                            <Link href={`/blogs/${items.id}`}>
-                                                <h3>{items.title}</h3>
-                                            </Link>
-                                            <div className='d-flex justify-content-start align-items-center gap-4'>
-                                                <div>
-                                                    <span className='mb-0'><FaUser className={blogCss.blogTopIcon} /> Ahmed Sadi</span>
-                                                </div>
-                                                <div>
-                                                    <span className='mb-0'><MdOutlineDateRange className={blogCss.blogTopIcon} /> 2023-08-03</span>
-                                                </div>
-                                                <div>
-                                                    <span className='mb-0'><FaSquarePen className={blogCss.blogTopIcon} /> Driving School</span>
-                                                </div>
-                                                <div>
-                                                    <span className='mb-0'><BiSolidCommentDots className={blogCss.blogTopIcon} /> 3 Comments</span>
-                                                </div>
-                                            </div>
-                                            <div className="py-4">
-                                                <Image src={blogPage} layout='responsive' alt='' className='rounded-4'></Image>
-                                            </div>
-                                            <p>{items.body}...</p>
-                                            <Link href={`/blogs/${items.id}`} className={`btn ${blogCss.blogBtn}`}>Read More</Link>
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+    <main className="min-h-screen bg-[#f5f5f7] px-4 py-10 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-[1180px]">
+        {/* Header */}
+        <header className="mx-auto mb-12 max-w-[760px] text-center">
+          <span className="mb-4 inline-flex rounded-full bg-white px-4 py-2 text-[12px] font-semibold tracking-wide text-slate-500 shadow-sm">
+            Driving School Blog
+          </span>
 
-                    <div className="col-lg-4">
-                        <div className={blogCss.blog_right_part}>
-                            <h4 className='mb-4 text-center'>Our Recent Blog Post</h4>
-                            <div className={blogCss.blog_right_related_box}>
-                                <Link href="">
-                                    <div className='d-flex justify-content-start align-items-center gap-3'>
-                                        <div>
-                                            <Image src={blogPage} className={blogCss.blog_relate_img} layout='responsive' alt=''></Image>
-                                        </div>
-                                        <div>
-                                            <h5>Best Driving School Tips for Beginners attempt is a goal for many learners...</h5>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+          <h1 className="text-[38px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#1d1d1f] sm:text-[52px] lg:text-[64px]">
+            Guides, tips, and stories for smarter learners.
+          </h1>
 
-                            <div className={blogCss.blog_right_related_box}>
-                                <Link href="">
-                                    <div className='d-flex justify-content-start align-items-center gap-3'>
-                                        <div>
-                                            <Image src={blogPage} className={blogCss.blog_relate_img} layout='responsive' alt=''></Image>
-                                        </div>
-                                        <div>
-                                            <h5>Best Driving School Tips for Beginners attempt is a goal for many learners...</h5>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+          <p className="mx-auto mt-5 max-w-[620px] text-[16px] leading-7 text-[#6e6e73] sm:text-[18px]">
+            Explore simple, useful, and practical driving school articles
+            created to help students learn with confidence.
+          </p>
+        </header>
 
-                            <div className={blogCss.blog_right_related_box}>
-                                <Link href="">
-                                    <div className='d-flex justify-content-start align-items-center gap-3'>
-                                        <div>
-                                            <Image src={blogPage} className={blogCss.blog_relate_img} layout='responsive' alt=''></Image>
-                                        </div>
-                                        <div>
-                                            <h5>Best Driving School Tips for Beginners attempt is a goal for many learners...</h5>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+        {/* Featured Post */}
+        {featuredPost && (
+          <section className="mb-10">
+            <Link
+              href={`/blogs/${featuredPost.id}`}
+              className="group grid overflow-hidden rounded-[28px] bg-white transition duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] lg:grid-cols-2"
+            >
+              <div className="relative min-h-[260px] overflow-hidden sm:min-h-[340px] lg:min-h-[420px]">
+                <Image
+                  src={blogPage}
+                  alt={featuredPost.title}
+                  fill
+                  priority
+                  placeholder="blur"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                />
+              </div>
 
-                            <div className={blogCss.blog_right_related_box}>
-                                <Link href="">
-                                    <div className='d-flex justify-content-start align-items-center gap-3'>
-                                        <div>
-                                            <Image src={blogPage} className={blogCss.blog_relate_img} layout='responsive' alt=''></Image>
-                                        </div>
-                                        <div>
-                                            <h5>Best Driving School Tips for Beginners attempt is a goal for many learners...</h5>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
+              <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+                <span className="mb-4 text-[13px] font-semibold text-[#0071e3]">
+                  Featured Article
+                </span>
 
-                            <div className={blogCss.blog_right_related_box}>
-                                <Link href="">
-                                    <div className='d-flex justify-content-start align-items-center gap-3'>
-                                        <div>
-                                            <Image src={blogPage} className={blogCss.blog_relate_img} layout='responsive' alt=''></Image>
-                                        </div>
-                                        <div>
-                                            <h5>Best Driving School Tips for Beginners attempt is a goal for many learners...</h5>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                <h2 className="text-[30px] font-semibold capitalize leading-[1.12] tracking-[-0.03em] text-[#1d1d1f] sm:text-[42px]">
+                  {featuredPost.title}
+                </h2>
+
+                <p className="mt-5 line-clamp-3 text-[15px] leading-7 text-[#6e6e73] sm:text-[16px]">
+                  {featuredPost.body}
+                </p>
+
+                <div className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-[#0071e3]">
+                  Read article
+                  <FaArrowRight className="text-[12px] transition group-hover:translate-x-1" />
                 </div>
-            </div>
-        </div>
-    </>
-  )
-}
+              </div>
+            </Link>
+          </section>
+        )}
 
-export default blog
+        {/* Section Title */}
+        <div className="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+          <div>
+            <h2 className="text-[28px] font-semibold tracking-[-0.03em] text-[#1d1d1f] sm:text-[36px]">
+              Latest articles
+            </h2>
+            <p className="mt-2 text-[15px] text-[#6e6e73]">
+              Organized learning resources for students.
+            </p>
+          </div>
+
+          <Link
+            href="#"
+            className="text-[15px] font-semibold text-[#0071e3] hover:underline"
+          >
+            View all
+          </Link>
+        </div>
+
+        {/* Blog Grid */}
+        <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <article
+              key={post.id}
+              className="group overflow-hidden rounded-[24px] bg-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(0,0,0,0.07)]"
+            >
+              <Link href={`/blogs/${post.id}`} className="block">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={blogPage}
+                    alt={post.title}
+                    fill
+                    placeholder="blur"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.04]"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <span className="text-[12px] font-semibold text-[#0071e3]">
+                      Driving Tips
+                    </span>
+
+                    <span className="text-[12px] text-[#86868b]">
+                      Aug 03, 2023
+                    </span>
+                  </div>
+
+                  <h3 className="line-clamp-2 text-[21px] font-semibold capitalize leading-[1.18] tracking-[-0.02em] text-[#1d1d1f]">
+                    {post.title}
+                  </h3>
+
+                  <p className="mt-3 line-clamp-3 text-[14px] leading-6 text-[#6e6e73]">
+                    {post.body}
+                  </p>
+
+                  <div className="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-[#0071e3]">
+                    Read more
+                    <FaArrowRight className="text-[11px] transition group-hover:translate-x-1" />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </section>
+      </div>
+    </main>
+  );
+};
+
+export default Blog;

@@ -221,7 +221,7 @@ const StudentRegister = () => {
               <p className="mt-3 text-center text-[12px] text-slate-600">
                 Already have an account?{" "}
                 <Link
-                  href="/student-login"
+                  href="/login"
                   className="font-bold text-[#103677] transition hover:text-[#2563eb] hover:underline"
                 >
                   Login Now
