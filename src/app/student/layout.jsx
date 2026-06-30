@@ -1,42 +1,64 @@
+// import DashboardTopbar from "@/components/layout/DashboardTopbar";
+// import StudentSidebar from "@/components/layout/StudentSidebar";
+
+// export default function StudentLayout({ children }) {
+//   return (
+//     <div className="flex h-screen bg-gray-100">
+//       {/* Desktop Sidebar ONLY */}
+//       <div className="hidden md:block">
+//         <StudentSidebar />
+//       </div>
+
+//       {/* Main Area */}
+//       <div className="flex flex-col flex-1">
+//         <DashboardTopbar />
+
+//         <main className="flex-1 overflow-y-auto p-4 md:p-6">{children}</main>
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import Head from "next/head";
-import Script from "next/script";
-// Components
-import Footer from "../../components/student-dashboard/dashboard-footer";
-import Navbar from "../../components/student-dashboard/dashboard-navbar";
-import BottomMenu from "../../components/student-dashboard/student-dashboard-bottom-menu";
+import DashboardTopbar from "@/components/layout/DashboardTopbar";
+import StudentSidebar from "@/components/layout/StudentSidebar";
+import { useState } from "react";
 
-// export const metadata = {
-//   title: "Home | One of the best Driving School",
-//   description: "Driving School",
-// };
+export default function StudentLayout({ children }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <Head>
-        <title>Home | One of the best Driving School</title>
-        <meta name="description" content="Driving School" />
-      </Head>
-      <body suppressHydrationWarning={true}>
-        <Navbar />
-        {children}
-        <BottomMenu />
-        <Footer />
+    <div className="flex h-screen bg-gray-100">
+      {/* DESKTOP SIDEBAR */}
+      <div className="hidden md:block">
+        <StudentSidebar />
+      </div>
 
-        <Script
-          src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-          crossorigin="anonymous"
-        ></Script>
-        <Script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-          integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-          crossorigin="anonymous"
-        ></Script>
-      </body>
-    </html>
+      {/* MAIN AREA */}
+      <div className="flex flex-col flex-1">
+        {/* TOPBAR */}
+        <DashboardTopbar onMenuClick={() => setMobileOpen(true)} />
+
+        {/* CONTENT */}
+        <main className="flex-1 overflow-y-auto p-4 md:p-6">{children}</main>
+
+        {/* MOBILE SIDEBAR OVERLAY */}
+        {mobileOpen && (
+          <>
+            {/* BACKDROP */}
+            <div
+              className="fixed inset-0 bg-black/40 z-40 md:hidden"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            {/* DRAWER */}
+            <div className="fixed left-0 top-0 h-full w-72 bg-white z-50 md:hidden">
+              <StudentSidebar setMobileOpen={setMobileOpen} />
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

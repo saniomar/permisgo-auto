@@ -1,12 +1,11 @@
 import Link from "next/link";
 
 // Styles
-import studentDashboardSidebarCss from "../../../styles/student-dashboard-sidebar.module.css";
 
 const dashboardSidebar = () => {
   return (
     <>
-      <div className={studentDashboardSidebarCss.sidebar}>
+      <div className={""}>
         <ul>
           <li>
             <Link href="">Dashboard</Link>
