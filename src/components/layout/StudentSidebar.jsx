@@ -15,8 +15,10 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { FiChevronRight, FiMenu, FiX } from "react-icons/fi";
-import { MdDashboard, MdSupportAgent } from "react-icons/md";
+import { HiAcademicCap } from "react-icons/hi";
+import { MdDashboard, MdOutlineTraffic, MdSupportAgent } from "react-icons/md";
 import { PiTrafficSignFill } from "react-icons/pi";
+import { RiChatHistoryLine } from "react-icons/ri";
 
 const menu = [
   { name: "Dashboard", href: "/student/dashboard", icon: MdDashboard },
@@ -34,8 +36,22 @@ const menu = [
     ],
   },
 
+  {
+    name: "Academic Info",
+    icon: HiAcademicCap,
+    children: [
+      { name: "Exam Topic", href: "/student/academic-Info/exam-topic" },
+      {
+        name: "Knowledge Sheets",
+        href: "/student/academic-Info/knowledge-sheets",
+      },
+    ],
+  },
+
+  { name: "My History", href: "/student/my-history", icon: RiChatHistoryLine },
   { name: "Offers", href: "/student/offers", icon: FaTag },
   { name: "Driving Info", href: "/student/driving-info", icon: FaCar },
+  { name: "Traffic Law", href: "/student/traffic-law", icon: MdOutlineTraffic },
   { name: "Book Driving", href: "/student/book-lesson", icon: FaAddressBook },
   { name: "Road Signs", href: "/student/road-signs", icon: PiTrafficSignFill },
   { name: "References", href: "/student/references", icon: BsBook },

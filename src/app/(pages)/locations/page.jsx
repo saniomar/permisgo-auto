@@ -1,26 +1,23 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { GoogleMap, useJsApiLoader, LoadScript, useLoadScript, Marker, InfoWindow } from '@react-google-maps/api'
-import locationCss from "./styles/locations.module.css"
+import {
+  GoogleMap,
+  InfoWindow,
+  LoadScript,
+  Marker,
+} from "@react-google-maps/api";
+import Link from "next/link";
+import { useState } from "react";
 
-// Icon
-import { FaStarHalfAlt, FaStar } from "react-icons/fa";
-
-
-const containerStyle = {
-  width: "100%",
-  height: "500px",
-};
+// Icons
+import { FaChevronDown, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const center = {
   lat: 48.856614,
   lng: 2.352221,
 };
 
-// Multiple marker locations
-const location = [
+const locationsData = [
   {
     id: 1,
     name: "Dhaka City",
@@ -72,214 +69,302 @@ const location = [
   },
 ];
 
+const reviews = [
+  {
+    id: 1,
+    text: "Top-notch driving school! Everything went smoothly from start to finish...",
+    author: "Guillaume B. on 05/02/2025",
+  },
+  {
+    id: 2,
+    text: "Top-notch driving school! Everything went smoothly from start to finish...",
+    author: "Guillaume B. on 05/02/2025",
+  },
+  {
+    id: 3,
+    text: "Top-notch driving school! Everything went smoothly from start to finish...",
+    author: "Guillaume B. on 05/02/2025",
+  },
+  {
+    id: 4,
+    text: "Top-notch driving school! Everything went smoothly from start to finish...",
+    author: "Guillaume B. on 05/02/2025",
+  },
+];
 
-const locations = () => {
+const faqs = [
+  {
+    id: 1,
+    question: "Accordion Item #1",
+    answer:
+      "This is the first item’s accordion body. It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
+  },
+  {
+    id: 2,
+    question: "Accordion Item #2",
+    answer:
+      "This is the second item’s accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
+  },
+  {
+    id: 3,
+    question: "Accordion Item #3",
+    answer:
+      "This is the third item’s accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element.",
+  },
+];
 
+const RatingStars = ({ small = false }) => {
+  return (
+    <ul className="mt-3 flex items-center gap-2 text-yellow-400">
+      <li className={small ? "text-base" : "text-[25px]"}>
+        <FaStar />
+      </li>
+      <li className={small ? "text-base" : "text-[25px]"}>
+        <FaStar />
+      </li>
+      <li className={small ? "text-base" : "text-[25px]"}>
+        <FaStar />
+      </li>
+      <li className={small ? "text-base" : "text-[25px]"}>
+        <FaStar />
+      </li>
+      <li className={small ? "text-base" : "text-[25px]"}>
+        <FaStarHalfAlt />
+      </li>
+    </ul>
+  );
+};
+
+const Locations = () => {
   const [activeMarker, setActiveMarker] = useState(null);
+  const [activeFaq, setActiveFaq] = useState(1);
+
+  const toggleFaq = (id) => {
+    setActiveFaq(activeFaq === id ? null : id);
+  };
 
   return (
     <>
-      <div className={locationCss.location_first}>
-        <div className="container">
+      {/* Top Section */}
+      <section className="py-[50px] max-[500px]:py-[30px]">
+        <div className="mx-auto w-full max-w-[1140px] px-4">
           <div className="text-center">
-            <h1>At every turn, an agency within easy reach</h1>
-            <h4>73 branches & 847 meeting points</h4>
+            <h1 className="text-4xl font-bold leading-tight text-slate-950 max-[500px]:text-3xl">
+              At every turn, an agency within easy reach
+            </h1>
+
+            <h4 className="mt-3 text-xl font-semibold text-orange-500">
+              73 branches & 847 meeting points
+            </h4>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className={locationCss.location_second}>
-        <div className="container-fluid">
-          <LoadScript googleMapsApiKey="AIzaSyA25FlEBZJiHYxKd4TAANFTfIvAn6zlqe4">
-            <div className="row">
-              <div className="col-lg-3">
-                {/* Sidebar */}
-                <div className={locationCss.googleLocationSidebar}>
-                  <h3>Locations</h3>
-                  <hr />
-                  <div className="mt-4">
-                    <ul>
-                      {location.map((loc) => (
-                        <li
-                          key={loc.id}
-                          style={{
-                            padding: "10px",
-                            marginBottom: "10px",
-                            borderRadius: "5px",
-                            cursor: "pointer",
-                            borderBottom: "1px solid #ddd",
-                            background: activeMarker === loc.id ? "var(--second-light-color)" : "var(--first-light-color)",
-                          }}
-                          onClick={() => setActiveMarker(loc.id)}
-                        >
-                          <h5>{loc.name}</h5>
-                          <p className='mb-0'>{loc.description}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+      {/* Map Section */}
+      <section className="pb-[50px] max-[500px]:pb-[30px]">
+        <div className="mx-auto w-full px-4">
+          <LoadScript
+            googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
+          >
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+              {/* Sidebar */}
+              <div className="lg:col-span-3">
+                <div className="h-[500px] w-full overflow-y-scroll rounded-xl border border-slate-200 bg-white p-4 shadow-sm max-[500px]:mb-5 max-[500px]:h-[300px]">
+                  <h3 className="text-2xl font-bold text-slate-950">
+                    Locations
+                  </h3>
+
+                  <hr className="my-4 border-slate-200" />
+
+                  <ul className="space-y-3">
+                    {locationsData.map((loc) => (
+                      <li
+                        key={loc.id}
+                        onClick={() => setActiveMarker(loc.id)}
+                        className={`cursor-pointer rounded-md border-b border-slate-200 p-[10px] transition duration-300 ${
+                          activeMarker === loc.id
+                            ? "bg-orange-100"
+                            : "bg-blue-50 hover:bg-blue-100"
+                        }`}
+                      >
+                        <h5 className="text-lg font-bold text-slate-950">
+                          {loc.name}
+                        </h5>
+
+                        <p className="mb-0 text-sm text-slate-600">
+                          {loc.description}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              <div className="col-lg-9">
-                <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-
-                  {location.map((loc) => (
-                    <Marker
-                      key={loc.id}
-                      position={{ lat: loc.lat, lng: loc.lng }}
-                      onClick={() => setActiveMarker(loc.id)}
-                    >
-                      {activeMarker === loc.id && (
-                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                          <div>
-                            <h4>{loc.name}</h4>
-                            <p>{loc.description}</p>
-                          </div>
-                        </InfoWindow>
-                      )}
-                    </Marker>
-                  ))}
-
-                </GoogleMap>
+              {/* Google Map */}
+              <div className="lg:col-span-9">
+                <div className="h-[500px] w-full overflow-hidden rounded-xl max-[500px]:h-[300px]">
+                  <GoogleMap
+                    mapContainerStyle={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    center={center}
+                    zoom={13}
+                  >
+                    {locationsData.map((loc) => (
+                      <Marker
+                        key={loc.id}
+                        position={{ lat: loc.lat, lng: loc.lng }}
+                        onClick={() => setActiveMarker(loc.id)}
+                      >
+                        {activeMarker === loc.id && (
+                          <InfoWindow
+                            onCloseClick={() => setActiveMarker(null)}
+                          >
+                            <div>
+                              <h4 className="font-bold">{loc.name}</h4>
+                              <p>{loc.description}</p>
+                            </div>
+                          </InfoWindow>
+                        )}
+                      </Marker>
+                    ))}
+                  </GoogleMap>
+                </div>
               </div>
             </div>
           </LoadScript>
         </div>
-      </div>
+      </section>
 
-      <div className={locationCss.location_trust}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
-              <div className={locationCss.location_trust_left}>
-                <h3>They trust us</h3>
-                <h5>Over 1,000,000 satisfied students</h5>
-                <ul>
-                  <li><FaStar /></li>
-                  <li><FaStar /></li>
-                  <li><FaStar /></li>
-                  <li><FaStar /></li>
-                  <li><FaStarHalfAlt  /></li>
-                </ul>
-                <h4><span>4.5</span> stars</h4>
-                <p>on the App Store and the Google Play Store, but also on review accreditation sites</p>
-                <Link href="/reviews" className='btn btn-lg'>Checkout Our Reviews</Link>
+      {/* Trust Section */}
+      <section className="bg-slate-50 py-[50px] max-[500px]:py-[30px]">
+        <div className="mx-auto w-full max-w-[1140px] px-4">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+            {/* Left */}
+            <div className="lg:col-span-4">
+              <div className="max-[500px]:mb-5">
+                <h3 className="text-[40px] font-bold leading-tight text-blue-950 max-[500px]:text-[35px]">
+                  They trust us
+                </h3>
+
+                <h5 className="mt-3 text-lg font-semibold text-slate-800">
+                  Over 1,000,000 satisfied students
+                </h5>
+
+                <RatingStars />
+
+                <h4 className="mt-3 text-xl font-semibold text-slate-900">
+                  <span className="text-[45px] font-bold text-orange-500">
+                    4.5
+                  </span>{" "}
+                  stars
+                </h4>
+
+                <p className="mt-3 text-base leading-relaxed text-slate-600">
+                  on the App Store and the Google Play Store, but also on review
+                  accreditation sites
+                </p>
+
+                <Link
+                  href="/reviews"
+                  className="mt-4 inline-block rounded-md bg-orange-500 px-6 py-3 text-lg font-semibold text-white transition duration-300 hover:bg-blue-950"
+                >
+                  Checkout Our Reviews
+                </Link>
               </div>
             </div>
-            <div className="col-lg-8">
-              <div className="row">
-                <div className="col-lg-6 mb-3">
-                  <div className={locationCss.location_reviewBox}>
-                    <p>Top-notch driving school! Everything went smoothly from start to finish...</p>
-                    <small>Guillaume B. on 05/02/2025</small>
-                    <ul>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStarHalfAlt  /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-6 mb-3">
-                  <div className={locationCss.location_reviewBox}>
-                    <p>Top-notch driving school! Everything went smoothly from start to finish...</p>
-                    <small>Guillaume B. on 05/02/2025</small>
-                    <ul>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStarHalfAlt  /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-6 mb-3">
-                  <div className={locationCss.location_reviewBox}>
-                    <p>Top-notch driving school! Everything went smoothly from start to finish...</p>
-                    <small>Guillaume B. on 05/02/2025</small>
-                    <ul>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStarHalfAlt  /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-lg-6 mb-3">
-                  <div className={locationCss.location_reviewBox}>
-                    <p>Top-notch driving school! Everything went smoothly from start to finish...</p>
-                    <small>Guillaume B. on 05/02/2025</small>
-                    <ul>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStar /></li>
-                      <li><FaStarHalfAlt  /></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <section>
-        <div id={locationCss.locationFaq}>
-          <div className="container">
-            <div className="text-center">
-              <h2>Do you have any questions?</h2>
-              <p>Find all our answers in one click</p>
-            </div>
+            {/* Reviews */}
+            <div className="lg:col-span-8">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {reviews.map((review) => (
+                  <div
+                    key={review.id}
+                    className="rounded-md bg-white p-[15px] shadow-sm"
+                  >
+                    <p className="text-base leading-relaxed text-slate-700">
+                      {review.text}
+                    </p>
 
-            <div className="py-4">
-              <div className="accordion" id="accordionExample">
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                      <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                    <small className="text-sm text-slate-500">
+                      {review.author}
+                    </small>
+
+                    <RatingStars small />
                   </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                      <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div className="accordion-body">
-                      <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
-  )
-}
 
-export default locations
+      {/* FAQ Section */}
+      <section className="py-[50px] max-[500px]:py-[30px]">
+        <div className="mx-auto w-full max-w-[1140px] px-4">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-blue-950 max-[500px]:text-3xl">
+              Do you have any questions?
+            </h2>
+
+            <p className="mt-2 text-slate-600">
+              Find all our answers in one click
+            </p>
+          </div>
+
+          <div className="py-4">
+            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+              {faqs.map((item, index) => {
+                const isActive = activeFaq === item.id;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={
+                      index !== faqs.length - 1
+                        ? "border-b border-slate-200"
+                        : ""
+                    }
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(item.id)}
+                      className={`flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-base font-semibold transition duration-300 ${
+                        isActive
+                          ? "bg-blue-950 text-white"
+                          : "bg-white text-slate-900 hover:bg-orange-50"
+                      }`}
+                    >
+                      <span>{item.question}</span>
+
+                      <FaChevronDown
+                        className={`text-base transition duration-300 ${
+                          isActive ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        isActive ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="px-5 py-4 text-base leading-relaxed text-slate-600">
+                          {item.answer}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Locations;
