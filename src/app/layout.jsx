@@ -1,8 +1,8 @@
 "use client";
+import ReduxProvider from "../provider/provider";
+import AppToast from "../components/common/AppToast";
 import Head from "next/head";
 import "../globals.css";
-import ReduxProvider from "@/provider/provider";
-import AppToast from "@/components/common/AppToast";
 
 export default function RootLayout({ children }) {
   return (
