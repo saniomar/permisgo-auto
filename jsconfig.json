@@ -8,9 +8,10 @@
 
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
+      // "public": ["./public/"]
     }
   }
 }

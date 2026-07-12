@@ -1741,9 +1741,9 @@ import "swiper/css/navigation";
 
 import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 
-import Footer from "../components/footer.jsx";
-import Navbar from "../components/navbar.jsx";
-import Testimonials from "../components/testimonials.jsx";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Testimonials from "@/components/testimonials";
 
 import blogImg from "../../public/image/blog.jpg";
 import broomLogo from "../../public/image/broomLogo.png";
