@@ -85,7 +85,7 @@ export const verifyTeacher = (
   verificationStatus,
   rejectionReason = "",
 ) => {
-  return axiosInstance.patch(`/admin/teachers/${teacherId}/verify`, {
+  return axios.patch(`/admin/teachers/${teacherId}/verify`, {
     verificationStatus,
     rejectionReason,
   });
@@ -139,39 +139,47 @@ export const cancelBooking = (id, data) => {
 // Lessons
 // =======================
 
-export const getLessons = (params = {}) => {
-  return axios.get("/lessons", {
-    params,
-  });
-};
+export const getLessons = (params = {}) => axios.get("/lessons", { params });
 
-export const getLesson = (id) => {
-  return axios.get(`/lessons/${id}`);
-};
+export const getLessonStats = () => axios.get("/lessons/stats");
 
-export const createLesson = (data) => {
-  return axios.post("/lessons", data);
-};
+export const getLesson = (id) => axios.get(`/lessons/${id}`);
 
-export const updateLesson = (id, data) => {
-  return axios.patch(`/lessons/${id}`, data);
-};
+export const createLesson = (data) => axios.post("/lessons", data);
 
-export const startLesson = (id) => {
-  return axios.patch(`/lessons/${id}/start`);
-};
+export const updateLesson = (id, data) => axios.patch(`/lessons/${id}`, data);
 
-export const confirmAttendance = (id, data) => {
-  return axios.patch(`/lessons/${id}/attendance`, data);
-};
+export const startLesson = (id) => axios.patch(`/lessons/${id}/start`);
 
-export const completeLesson = (id, data = {}) => {
-  return axios.patch(`/lessons/${id}/complete`, data);
-};
+export const confirmAttendance = (id, data = {}) =>
+  axios.patch(`/lessons/${id}/attendance`, data);
 
-export const cancelLesson = (id, data) => {
-  return axios.patch(`/lessons/${id}/cancel`, data);
-};
+export const completeLesson = (id, data = {}) =>
+  axios.patch(`/lessons/${id}/complete`, data);
+
+export const confirmLessonCompletion = (id) =>
+  axios.patch(`/lessons/${id}/confirm-completion`);
+
+export const submitLessonFeedback = (id, data) =>
+  axios.patch(`/lessons/${id}/feedback`, data);
+
+export const requestLessonReschedule = (id, data) =>
+  axios.post(`/lessons/${id}/reschedule-request`, data);
+
+export const resolveLessonReschedule = (id, data) =>
+  axios.patch(`/lessons/${id}/resolve-reschedule`, data);
+
+export const requestLessonCancellation = (id, data) =>
+  axios.post(`/lessons/${id}/cancel-request`, data);
+
+export const resolveLessonCancellation = (id, data) =>
+  axios.patch(`/lessons/${id}/resolve-cancellation`, data);
+
+export const cancelLesson = (id, data) =>
+  axios.patch(`/lessons/${id}/cancel`, data);
+
+export const markLessonNoShow = (id, data) =>
+  axios.patch(`/lessons/${id}/no-show`, data);
 
 // =======================
 // Payments / Invoices
@@ -199,6 +207,16 @@ export const getDocuments = (params = {}) => {
   return axios.get("/documents", {
     params,
   });
+};
+
+export const getDocumentUsers = (params = {}) => {
+  return axios.get("/documents/users", {
+    params,
+  });
+};
+
+export const getUserDocuments = (userId) => {
+  return axios.get(`/documents/user/${userId}`);
 };
 
 export const getDocumentStats = () => {
